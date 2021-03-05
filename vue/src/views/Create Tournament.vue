@@ -17,6 +17,9 @@
 <template>
   <h1>Create New Tounament</h1>
   <p>The name of the tournament</p>
+
+
+
 </template>
 
 
@@ -30,7 +33,21 @@
 
 <script>
 export default {
+    data() {
+        return {
+            tournament: [
+                name: 'tournament name',
+                date: 'date',
+                time: 'time',
+                participants[
 
+                ]
+
+
+
+            ]
+        }
+    }
 
 
 
