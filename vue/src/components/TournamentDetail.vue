@@ -22,10 +22,10 @@ export default {
             }
         }
 
-        };
-    }
+        },
+    };
 
-};
+
 </script>
 
 
