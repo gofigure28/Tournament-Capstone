@@ -26,7 +26,7 @@ CREATE TABLE tournaments(
         start_date              date                    ,
         number_of_participants  int             NOT NULL,
         team_id                 serial                  ,
-        ranking_of_teams        int             NOT NULL,
+        ranking_of_teams        int                     ,
         match_id                int             NOT NULL,
         
 CONSTRAINT       PK_tournament_id     PRIMARY KEY (tournament_id)              

@@ -26,7 +26,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 	public Tournament create(String name, int matchID, int tournamentID, Match match, Time startTime, int numberOfPlayers) {
 		try {
 			String query = "insert into tournanments "
-					+ "(name, match_id, tournament_id, start_time, number_of_participants, )"
+					+ "(tournament_name, match_id, tournament_id, start_time, number_of_participants, )"
 					+ " values(?, ?, ?)";
 		jdbcTemplate.update(query, name, matchID, tournamentID, startTime, numberOfPlayers);
 		} catch (Exception ex) {
