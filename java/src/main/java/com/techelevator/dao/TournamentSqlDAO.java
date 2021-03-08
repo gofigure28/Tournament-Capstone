@@ -23,10 +23,12 @@ public class TournamentSqlDAO implements TournamentDAO {
 	}
 
 	@Override
-	public Tournament create(String name, int gameID, Time startTime) {
+	public Tournament create(String name, int matchID, int tournamentID, Match match, Time startTime, int numberOfPlayers) {
 		try {
-			String query = "insert into tournanments (name, game_ID, start_time) values(?, ?, ?)";
-		jdbcTemplate.update(query, name, gameID, startTime);
+			String query = "insert into tournanments "
+					+ "(name, match_id, tournament_id, start_time, number_of_participants, )"
+					+ " values(?, ?, ?)";
+		jdbcTemplate.update(query, name, matchID, tournamentID, startTime, numberOfPlayers);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			throw ex;
@@ -66,10 +68,5 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  
 	 }
 
-	@Override
-	public Tournament create(String name, int gameID, String startTime) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

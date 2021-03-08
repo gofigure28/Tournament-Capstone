@@ -4,6 +4,8 @@ import com.techelevator.model.Tournament;
 import com.techelevator.dao.TournamentDAO;
 import com.techelevator.model.Match;
 
+import java.sql.Time;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -19,7 +21,6 @@ import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.HttpStatus;
 
-
 @RestController
 @CrossOrigin
 public class TournamentController {
@@ -27,6 +28,10 @@ public class TournamentController {
 	public String authToken = "";
 	
 	private TournamentDAO tournamentDAO;
+	
+	private Match match;
+	
+	
 	
 	public void setAuthToken(String authToken) {
 		this.authToken = authToken;
@@ -38,9 +43,22 @@ public class TournamentController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(value ="/make-tournament", method = RequestMethod.POST)
 	public Tournament makeTournament(@RequestBody Tournament newTournament) throws Exception {
+		/*return new Tournament(
+				newTournament.getName(), 
+				newTournament.getMatchID(), 
+				newTournament.getTournamentID(),
+				newTournament.getMatch(),
+				newTournament.getStartTime(),
+				newTournament.getNumberOfPlayers()
+				); */
 		
-		return tournamentDAO.create(newTournament.getName(), newTournament.getMatchID(), 
-				newTournament.getStartTime());
+		return tournamentDAO.create(
+				newTournament.getName(), 
+				newTournament.getMatchID(), 
+				newTournament.getTournamentID(),
+				newTournament.getMatch(),
+				newTournament.getStartTime(),
+				newTournament.getNumberOfPlayers());
 	}
 	
 	/*@RequestMapping(value ="/alltournaments", method = RequestMethod.GET)
