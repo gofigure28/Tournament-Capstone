@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 
-login.container {
+class-center.container {
   display: flex;
   justify-content: center;
   align-items: center;
