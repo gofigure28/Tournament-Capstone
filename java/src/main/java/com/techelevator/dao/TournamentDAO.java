@@ -13,7 +13,7 @@ public interface TournamentDAO {
 	
 	Tournament get(int id);
 
-	Tournament create(String name, int matchID, int tournamentID, Match match, Time startTime, int numberOfPlayers)
+	Tournament create(String name, int matchID, Match match, Time startTime, int numberOfPlayers)
 			throws Exception;
 }
 	
