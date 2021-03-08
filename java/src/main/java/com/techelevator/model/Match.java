@@ -1,14 +1,16 @@
 package com.techelevator.model;
 
+import java.sql.Time;
+
 public class Match {
 	private int tournamentID;
 	private int matchID;
-	private String startTime;
+	private Time startTime;
 	private String teamA;
 	private String teamB;
 	private String winner;
 	
-	public Match(int tournamentID, int matchID, String startTime, String teamA, String teamB, String winner) {
+	public Match(int tournamentID, int matchID, Time startTime, String teamA, String teamB, String winner) {
 		this.tournamentID = tournamentID;
 		this.matchID = matchID;
 		this.startTime = startTime;
@@ -29,10 +31,10 @@ public class Match {
 	public void setMatchID(int matchID) {
 		this.matchID = matchID;
 	}
-	public String getStartTime() {
+	public Time getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(String startTime) {
+	public void setStartTime(Time startTime) {
 		this.startTime = startTime;
 	}
 	public String getTeamA() {
