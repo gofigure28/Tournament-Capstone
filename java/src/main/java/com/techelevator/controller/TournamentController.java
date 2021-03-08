@@ -10,11 +10,14 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpStatus;
 
 
 @RestController
@@ -32,22 +35,18 @@ public class TournamentController {
 	private final String BASE_URL = "http://localhost:8080/";
 	private final RestTemplate restTemplate = new RestTemplate();
 	
-	
-	@RequestMapping(value ="/tournaments", method = RequestMethod.POST)
-	public Tournament makeTournament() {
-		Tournament tournament = null;
-		try {
-			 tournament = restTemplate.exchange(BASE_URL + "tournaments", HttpMethod.POST, makeAuthEntity(), Tournament.class).getBody();
-		} catch(RestClientResponseException ex) {
-			
-		}
-		return tournament;
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value ="/make-tournament", method = RequestMethod.POST)
+	public Tournament makeTournament(@RequestBody Tournament newTournament) {
+		
+		return tournamentDAO.create(newTournament.getName(), newTournament.getMatchID(), 
+				newTournament.getStartTime());
 	}
 	
 	@RequestMapping(value ="/alltournaments", method = RequestMethod.GET)
 	public Tournament getTournament() {
 		Match fakeMatch = new Match(1, 2, "w", "o", "w", "w");
-		return new Tournament(1, 2, fakeMatch, "fe", 3);
+		return new Tournament("fake", 1, 2, fakeMatch, "fe", 3);
 	}
 	
 	private HttpEntity makeAuthEntity() {	

@@ -20,6 +20,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE tournaments(
+        name                    varchar(32)     NOT NULL,
         tournament_id           serial          NOT NULL,
         start_time              time            NOT NULL,
         start_date              date            NOT NULL,
