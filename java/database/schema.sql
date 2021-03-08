@@ -86,5 +86,5 @@ SELECT * FROM team;
 --      constraint  name                constraint-type         columns  value        
 --ADD CONSTRAINT pk_person_address    PRIMARY KEY             (person_id,address_id);
 
-ROLLBACK;
---COMMIT TRANSACTION;
+--ROLLBACK;
+COMMIT TRANSACTION;
