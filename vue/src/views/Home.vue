@@ -1,7 +1,8 @@
 <template>
   <div class="home" style="background-color: red">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
-    <center> <h3> Compliments of team:</h3><h3 style="color: blue">"internal server error!" </h3></center>
+    <center> <h2> Compliments of team:</h2><h2 style="color: blue">"internal server error!" </h2></center>
+    <center><h3>Please select from the options above...</h3></center>
  
   </div>
 </template>
