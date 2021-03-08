@@ -1,5 +1,4 @@
 
-
 <template>
 <div>
     <div nav_tournaments>
@@ -9,27 +8,20 @@
 </div>
 
 </template>
-
-
-
+ 
 
 
 <script>
-import Tournament from '@/components/TournamentDetail';
+import Tournament from "@/components/TournamentDetail";
 
 export default {
-    components: {
-        TournamentDetail
-    }
+  components: {
+    TournamentDetail,
+    Bracket,
+  },
+
 };
 </script>
-
-
-
-
-
-
-
 
 
 
