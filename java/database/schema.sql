@@ -71,7 +71,7 @@ CONSTRAINT       PK_team_id     PRIMARY KEY (team_id , team_name)
                                                                 -- INSERT STATEMENTS
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
-
+INSERT INTO tournaments(tournament_name, tournament_id, start_time, number_of_participants, match_id) VALUES ('Curling', 2, 3, 8, 2);
 
 
                                                                 -- SELECT STATEMENTS
@@ -86,6 +86,4 @@ SELECT * FROM team;
 --ALTER TABLE 
 --      constraint  name                constraint-type         columns  value        
 --ADD CONSTRAINT pk_person_address    PRIMARY KEY             (person_id,address_id);
-
-ROLLBACK;
---COMMIT TRANSACTION;
+COMMIT TRANSACTION;
