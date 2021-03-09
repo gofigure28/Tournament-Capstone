@@ -36,6 +36,13 @@ public class TournamentSqlDAO implements TournamentDAO {
 		}
 		return null;
 	}
+	
+	@Override
+	public Tournament getName(String name) {
+		String query = "SELECT tournament_name FROM tournaments WHERE id = ?";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(query);
+		return null;
+	}
 
 	@Override
 	public List<Tournament> all() {
@@ -68,6 +75,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  return tournament;
 	  
 	 }
+
 
 
 }
