@@ -91,13 +91,18 @@ export default {
 </script>
 
 <style scoped>
-form.label {
+
+
+.sr-only {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1100px;
-  padding: 8px 8px 8px 8px;
-  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 240;
+  height: 40px;
+  margin: 20px;
 }
+
+
 </style>
