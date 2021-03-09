@@ -89,14 +89,25 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 0px;
+  font-weight: bold;
+ color: #0072ce;
   width: 240;
   height: 40px;
   margin: 20px;
 }
 
 input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 240;
+  height: 40px;
+  margin: 20px;
+}
+router-link {
   display: flex;
   justify-content: center;
   align-items: center;
