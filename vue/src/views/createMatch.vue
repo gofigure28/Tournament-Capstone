@@ -1,7 +1,7 @@
 
 <template>
   <div>
-   <center><h1>Create A New Tournament</h1></center> 
+   <center><h1>Create A new Match</h1></center> 
  <tournament-form/>
 
      
@@ -11,10 +11,10 @@
 
 
 <script>
-import tournamentForm from '../components/tournamentForm'
+import matchForm from '../components/matchForm'
 
 export default {
-  components: {tournamentForm},
+  components: {matchForm},
 
   methods: {},
 };

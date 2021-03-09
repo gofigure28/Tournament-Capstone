@@ -37,6 +37,13 @@ export default new Vuex.Store({
       state.token = '';
       state.user = {};
       axios.defaults.headers.common = {};
-    }
+    },
+    SAVE_TOURNAMENT(state) {
+      
+    },
+    SAVE_MATCH(state) {
+      
+    },
+
   }
 })
