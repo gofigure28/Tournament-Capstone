@@ -21,4 +21,17 @@ export default {
 
 </script>
 <style>
+tournament-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 8px 8px 8px 8px;
+  margin: 0 auto;
+  color: #0072ce;
+}
+h1{
+  padding: 12px;
+  margin: auto;
+}
 </style>

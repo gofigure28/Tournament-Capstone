@@ -7,7 +7,7 @@
       <router-link v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>
 
     </div>
-    <img src="/assets/logo.png" alt="Party Up Logo">
+    <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
     <router-view />
   </div>
 </template>
@@ -32,12 +32,12 @@ export default {
   background-color:#fff;
   border-radius: 4px;
   font-size: 14px;
-  font-family: '微软雅黑',arail;
   cursor: pointer;
   }
-  img{
+  .logo{
     display: flex;
     justify-content: center;
+    padding: 4rem;
   }
 
 #app {
