@@ -7,11 +7,11 @@ const http = axios.create({
 export default {
 
     getAll(){
-        return http.get("/all-tournaments");
+        return http.get("/tournaments");
     },
 
     addTournament(tournament){
-        return http.post("/all-tournaments", tournament);
+        return http.post("/tournaments", tournament);
     }
 
 

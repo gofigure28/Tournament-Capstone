@@ -47,13 +47,13 @@ public class TournamentController {
 	private final RestTemplate restTemplate = new RestTemplate();
 	
 	
-	@RequestMapping(value = "/all-tournaments", method = RequestMethod.GET)
+	@RequestMapping(value = "/tournaments", method = RequestMethod.GET)
 	public List<Tournament> listAll() {
 		return tournamentDAO.all();
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value ="/make-tournament", method = RequestMethod.POST)
+	@RequestMapping(value ="/createTournament", method = RequestMethod.POST)
 	public Tournament makeTournament(@RequestBody Tournament newTournament) throws Exception {
 		
 		return tournamentDAO.create(
@@ -64,7 +64,7 @@ public class TournamentController {
 				newTournament.getNumberOfPlayers());
 	}
 	
-	@RequestMapping(value ="/all-tournaments/{id}", method = RequestMethod.GET)
+	@RequestMapping(value ="/tournaments/{id}", method = RequestMethod.GET)
 	public String nameGet(@PathVariable int id) {
 		return tournamentDAO.getName(id);
 	}

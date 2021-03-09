@@ -4,19 +4,13 @@
       class="name-input"
       type="text"
       placeholder="Name"
-      v-model="tournament.name"
+      v-model="tournament.tournament_name"
     />
     <input
       class="starting-time-input"
       type="time"
       placeholder="Starting Time"
-      v-model="tournament.startingTime"
-    />
-    <input
-      class="starting-date-input"
-      type="date"
-      placeholder="Starting Date"
-      v-model="tournament.startingDate"
+      v-model="tournament.startTime"
     />
     <input
       class="number-of-players-input"
@@ -28,29 +22,31 @@
   </form>
 </template>
 <script>
+import tournamentServices from '../services/TournamentService';
 export default {
   name: "tournament-form",
   data() {
     return {
       tournament: {
-        name: "",
-        startingTime: "",
-        startingDate: "",
+        tournament_name: "",
+        startTime: "",
         numberOfPlayers: "",
       },
     };
   },
   methods: {
     saveTournament() {
-      this.$store.commit("SAVE_TOURNAMENT", this.tournament);
-      this.book = {
-        name: "",
-        startingTime: "",
-        startingDate: "",
+      this.$store.commit("SAVE_TOURNAMENT", this.tournament).then((response) =>{
+      this.tournament= response.data;
+      });
+      this.tournament= {
+        tournament_name: "",
+        startTime: "",
         numberOfPlayers: "",
       };
+      tournamentServices.addTournament(this.$store.addTournament)
       this.$router.push({ path: "createTournament" });
-    }
+    },
   },
 };
 
