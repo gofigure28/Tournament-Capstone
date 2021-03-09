@@ -1,23 +1,27 @@
 <template>
   <form class="new-tournament-form" v-on:submit.prevent="saveTournament">
+    <label for="name-input" class="sr-only">Tournament Name</label>
     <input
       class="name-input"
       type="text"
       placeholder="Name"
       v-model="tournament.name"
     />
+    <label for="starting-time-input" class="sr-only">Start Time</label>
     <input
       class="starting-time-input"
       type="time"
       placeholder="Starting Time"
       v-model="tournament.startingTime"
     />
+    <label for="starting-date-input" class="sr-only">Start Date</label>
     <input
       class="starting-date-input"
       type="date"
       placeholder="Starting Date"
       v-model="tournament.startingDate"
     />
+    <label for="numper-of-players-input" class="sr-only"># of Players</label>
     <input
       class="number-of-players-input"
       type="number"
@@ -56,6 +60,17 @@ export default {
 
 </script>
 <style>
+
+.new-tournament-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 8px 8px 8px 8px;
+  margin: 0 auto;
+  color: #0072ce;
+}
+
 button {
   padding: 10px 20px;
   border: 1px solid #ddd;
