@@ -71,7 +71,7 @@ export default {
   color: #0072ce;
 }
 
-button {
+button.button {
   padding: 10px 20px;
   border: 1px solid #ddd;
   color: #fff;

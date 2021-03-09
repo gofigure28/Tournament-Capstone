@@ -28,7 +28,7 @@
       placeholder="Number of Players"
       v-model="match.numberOfPlayers"
     />
-    <button>Save</button>
+    <button class= "button" type='submit'>Save</button>
   </form>
 </template>
 <script>
@@ -59,8 +59,9 @@ export default {
 }
 </script>
 <style>
-.new-match-form {
+form.new-match-form {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   width: 100%;
   max-width: 1200px;
