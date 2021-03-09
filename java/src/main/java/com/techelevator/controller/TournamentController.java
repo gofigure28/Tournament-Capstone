@@ -61,22 +61,8 @@ public class TournamentController {
 				newTournament.getMatch(),
 				newTournament.getStartTime(),
 				newTournament.getNumberOfPlayers());
-		
-		/*return new Tournament(
-		newTournament.getName(), 
-		newTournament.getMatchID(), 
-		newTournament.getTournamentID(),
-		newTournament.getMatch(),
-		newTournament.getStartTime(),
-		newTournament.getNumberOfPlayers()
-		); */
 	}
 	
-	/*@RequestMapping(value ="/alltournaments", method = RequestMethod.GET) 
-	public Tournament getTournament() {
-		Match fakeMatch = new Match(1, 2, "w", "o", "3:00", "w");
-		return new Tournament("fake", 1, 2, fakeMatch, "fe", 3);
-	}*/
 	
 	private HttpEntity makeAuthEntity() {	
 		HttpHeaders headers = new HttpHeaders();
