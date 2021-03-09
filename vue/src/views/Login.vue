@@ -95,6 +95,17 @@ export default {
   height: 40px;
   margin: 20px;
 }
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 240;
+  height: 40px;
+  margin: 20px;
+}
 .btn{
   padding: 10px 20px;
   border: 1px solid #ddd;

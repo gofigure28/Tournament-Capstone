@@ -44,4 +44,14 @@ button {
   cursor: pointer;
 }
 
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 40px;
+  margin: 20px;
+}
+
 </style>
