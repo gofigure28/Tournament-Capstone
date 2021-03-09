@@ -20,11 +20,16 @@ export default {
 
 <style scoped>
 /* Global styles */
-.btn {
-  padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
+.btn{
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  color: #333;
+  background-color:#fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: '微软雅黑',arail;
   cursor: pointer;
-  text-transform: capitalize;
+  
 }
 .btn__danger {
   color: #fff;
