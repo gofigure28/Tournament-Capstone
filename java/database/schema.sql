@@ -33,6 +33,7 @@ CONSTRAINT       PK_tournament_id     PRIMARY KEY (tournament_id)
 );
 
 CREATE TABLE games(
+        game_name               varchar(32)     NOT NULL,
         game_id                 serial          NOT NULL,
         start_time              time            NOT NULL,
         start_date              date            NOT NULL,
@@ -44,12 +45,13 @@ CONSTRAINT       PK_game_id             PRIMARY KEY (game_id)
 );
 
 CREATE TABLE matches(
-        tournament_id           serial          NOT NULL,
-        game_id                 serial          NOT NULL,
+        tournament_id           serial                  ,
+        game_id                 serial                  ,
         start_time              time            NOT NULL,
         start_date              date            NOT NULL,
         game_title              varchar(64)     NOT NULL,
-        team_id                 serial          NOT NULL,
+        team_id                 serial                  ,
+        match_id                serial          NOT NULL,
         number_of_players       int             NOT NULL,
         
 CONSTRAINT       PK_match_id     PRIMARY KEY (tournament_id, game_id)              
@@ -71,7 +73,7 @@ CONSTRAINT       PK_team_id     PRIMARY KEY (team_id , team_name)
                                                                 -- INSERT STATEMENTS
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
-INSERT INTO tournaments(tournament_name, tournament_id, start_time, number_of_participants, match_id) VALUES ('Curling', 2, '3:00' , 8, 2);
+DELETE FROM tournaments;
 
 
                                                                 -- SELECT STATEMENTS
