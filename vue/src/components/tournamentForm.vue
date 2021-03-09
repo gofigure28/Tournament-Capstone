@@ -24,7 +24,7 @@
       placeholder="Number of Players"
       v-model="tournament.numberOfPlayers"
     />
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    <button class= "button" type='submit'>Save</button>
   </form>
 </template>
 <script>

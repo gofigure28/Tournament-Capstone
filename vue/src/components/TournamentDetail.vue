@@ -12,6 +12,7 @@ export default {
     data() {
         return{
         tournament: {
+            tournament_name: "",
             tournament_id: "",
             start_time: "",
             start_date: "",

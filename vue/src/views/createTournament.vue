@@ -16,7 +16,9 @@ import tournamentForm from '../components/tournamentForm'
 export default {
   components: {tournamentForm},
 
-  methods: {},
+  methods: {
+    
+  },
 };
 
 </script>

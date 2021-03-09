@@ -38,11 +38,11 @@ export default new Vuex.Store({
       state.user = {};
       axios.defaults.headers.common = {};
     },
-    SAVE_TOURNAMENT(state) {
-      
+    SAVE_TOURNAMENT(state , tournament) {
+      state.tournament = tournament;
     },
-    SAVE_MATCH(state) {
-      
+    SAVE_MATCH(state , match) {
+      state.match = match;
     },
 
   }
