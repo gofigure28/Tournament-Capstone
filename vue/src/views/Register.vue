@@ -91,21 +91,23 @@ export default {
 </script>
 
 <style scoped>
-.sr-only {
+.form-register {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
- color: #0072ce;
-  height: 40px;
-  margin: 20px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 8px 8px 8px 8px;
+  margin: 0 auto;
+  color: #0072ce;
+}
+
+h1{
+  padding: 12px;
+  margin: auto;
 }
 
 input {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border: 1px solid black;
+    border: 1px solid black;
   border-radius: 8px;
   height: 40px;
   margin: 20px;

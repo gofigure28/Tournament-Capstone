@@ -32,7 +32,9 @@
         required
       />
       <router-link :to="{ name: 'register' }">Create New Account</router-link>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
     </form>
   </div>
 </template>
@@ -76,31 +78,31 @@ export default {
 </script>
 
 <style scoped>
-.text-center {
+.form-signin {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
   margin: 0 auto;
+  color: #0072ce;
 }
+
+h1{
+  padding: 12px;
+  margin: auto;
+}
+
 .text-center .sr-only {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 0px;
   font-weight: bold;
- color: #0072ce;
+  color: #0072ce;
   width: 240;
   height: 40px;
   margin: 20px;
 }
 
 input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid black;
   border-radius: 8px;
   width: 240;
@@ -108,20 +110,17 @@ input {
   margin: 20px;
 }
 router-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid black;
   border-radius: 8px;
   width: 240;
   height: 40px;
   margin: 20px;
 }
-.btn{
+.btn {
   padding: 10px 20px;
   border: 1px solid #ddd;
   color: #fff;
-  background-color:#0072ce;
+  background-color: #0072ce;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
