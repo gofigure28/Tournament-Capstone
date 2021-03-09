@@ -50,7 +50,7 @@ export default {
         numberOfPlayers: "",
       };
       this.$router.push({ path: "createTournament" });
-    },
+    }
   },
 };
 

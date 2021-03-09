@@ -7,7 +7,7 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import createTournament from '../views/createTournament'
 import createMatch from '../views/createMatch'
-import tournamentList from '../components/tournamentList'
+import viewAll from '../views/ViewAllTournaments'
 
 Vue.use(Router)
 
@@ -68,9 +68,9 @@ const router = new Router({
     },
 
     {
-      path: "/all-tournaments",
-      name: "all-tournaments",
-      component: tournamentList
+      path: "/tournaments",
+      name: "tournaments",
+      component: viewAll
     }
 
   ]
