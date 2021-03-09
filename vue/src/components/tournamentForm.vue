@@ -1,37 +1,57 @@
 <template>
   <form class="new-tournament-form" v-on:submit.prevent="saveTournament">
-    <input class="name-input" type="text" placeholder="Name" v-model="tournament.name" />
-    <input class="starting-time-input" type="text" placeholder="Starting Time" v-model="tournament.startingTime" />
-    <input class="number-of-players-input" type="number" placeholder="Number of Players" v-model="tournament.numberOfPlayers" />
+    <input
+      class="name-input"
+      type="text"
+      placeholder="Name"
+      v-model="tournament.name"
+    />
+    <input
+      class="starting-time-input"
+      type="time"
+      placeholder="Starting Time"
+      v-model="tournament.startingTime"
+    />
+    <input
+      class="starting-date-input"
+      type="date"
+      placeholder="Starting Date"
+      v-model="tournament.startingDate"
+    />
+    <input
+      class="number-of-players-input"
+      type="number"
+      placeholder="Number of Players"
+      v-model="tournament.numberOfPlayers"
+    />
     <button>Save</button>
   </form>
 </template>
 <script>
 export default {
-    name: "tournament-form",
-    data() {
-        return {
-            tournament: {
-                name: '',
-                match: '',
-                startingTime: '',
-                numberOfPlayers: ''
-            }
-        }
+  name: "tournament-form",
+  data() {
+    return {
+      tournament: {
+        name: "",
+        startingTime: "",
+        numberOfPlayers: "",
+      },
+    };
+  },
+  methods: {
+    saveTournament() {
+      this.$store.commit("SAVE_TOURNAMENT", this.tournament);
+      this.book = {
+        name: "",
+        startingTime: "",
+        startingDate: "",
+        numberOfPlayers: "",
+      };
+      this.$router.push({ path: "createTournament" });
     },
-    methods: {
-        saveTournament() {
-            this.$store.commit('SAVE_TOURNAMENT', this.tournament);
-            this.book = {
-                name: '',
-                match: '',
-                startingTime: '',
-                numberOfPlayers: ''
-            };
-            this.$router.push({path: 'createTournament'})
-        },
-    }
-}
+  },
+};
 </script>
 <style>
 button {
@@ -53,5 +73,4 @@ input {
   height: 40px;
   margin: 20px;
 }
-
 </style>
