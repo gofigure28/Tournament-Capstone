@@ -32,7 +32,7 @@
         required
       />
       <router-link :to="{ name: 'register' }">Create New Account</router-link>
-      <button type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
   </div>
 </template>
@@ -94,5 +94,14 @@ export default {
   width: 240;
   height: 40px;
   margin: 20px;
+}
+.btn{
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  color: #fff;
+  background-color:#0072ce;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 }
 </style>

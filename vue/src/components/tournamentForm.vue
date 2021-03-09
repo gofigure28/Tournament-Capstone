@@ -34,5 +34,14 @@ export default {
 }
 </script>
 <style>
+button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  color: #fff;
+  background-color: #0072ce;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
 </style>
