@@ -69,7 +69,7 @@ const router = new Router({
     {
       path: "/tournaments",
       name: "all-tournaments",
-      componenet: 
+      component: viewAllTournaments
     }
   ]
 })
