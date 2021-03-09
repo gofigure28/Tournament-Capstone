@@ -31,8 +31,19 @@ public class TournamentSqlDAO implements TournamentDAO {
 					+ " values(?, ?, ?, ?)";
 		jdbcTemplate.update(query, name, matchID, startTime, numberOfPlayers);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			ex.printStackTrace();	
 			throw ex;
+		}
+		return null;
+	}
+	
+	@Override
+	public String getName(int id) {
+		Tournament foundName = null;
+		String query = "SELECT tournament_name FROM tournaments WHERE tournament_id =" + id;
+		SqlRowSet result = jdbcTemplate.queryForRowSet(query);
+		if(result.next()) {
+			return result.getString("tournament_name");
 		}
 		return null;
 	}
@@ -68,6 +79,9 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  return tournament;
 	  
 	 }
+	
+	
+
 
 
 }

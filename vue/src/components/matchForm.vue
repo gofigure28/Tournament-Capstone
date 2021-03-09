@@ -1,59 +1,58 @@
 <template>
-  <form class="new-tournament-form" v-on:submit.prevent="saveTournament">
+ <form class="new-match-form" v-on:submit.prevent="saveMatch">
     <input
       class="name-input"
       type="text"
       placeholder="Name"
-      v-model="tournament.name"
+      v-model="match.name"
     />
     <input
       class="starting-time-input"
       type="time"
       placeholder="Starting Time"
-      v-model="tournament.startingTime"
+      v-model="match.startingTime"
     />
     <input
       class="starting-date-input"
       type="date"
       placeholder="Starting Date"
-      v-model="tournament.startingDate"
+      v-model="match.startingDate"
     />
     <input
       class="number-of-players-input"
       type="number"
       placeholder="Number of Players"
-      v-model="tournament.numberOfPlayers"
+      v-model="match.numberOfPlayers"
     />
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    <button>Save</button>
   </form>
 </template>
 <script>
 export default {
-  name: "tournament-form",
-  data() {
-    return {
-      tournament: {
-        name: "",
-        startingTime: "",
-        startingDate: "",
-        numberOfPlayers: "",
-      },
-    };
-  },
-  methods: {
-    saveTournament() {
-      this.$store.commit("SAVE_TOURNAMENT", this.tournament);
-      this.book = {
-        name: "",
-        startingTime: "",
-        startingDate: "",
-        numberOfPlayers: "",
-      };
-      this.$router.push({ path: "createTournament" });
+    name: "match-form",
+    data() {
+        return {
+            match: {
+                name: '',
+                match: '',
+                startingTime: '',
+                numberOfPlayers: ''
+            }
+        }
     },
-  },
-};
-
+    methods: {
+        saveMatch() {
+            this.$store.commit('SAVE_MATCH', this.match);
+            this.book = {
+                name: '',
+                match: '',
+                startingTime: '',
+                numberOfPlayers: ''
+            };
+            this.$router.push({path: 'createMatch'})
+        },
+    }
+}
 </script>
 <style>
 button {
@@ -75,4 +74,5 @@ input {
   height: 40px;
   margin: 20px;
 }
+
 </style>
