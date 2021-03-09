@@ -1,8 +1,29 @@
 <template>
-  <form class="new-match-form" v-on:submit.prevent="saveTournament">
-    <input class="name-input" type="text" placeholder="Name" v-model="match.name" />
-    <input class="starting-time-input" type="text" placeholder="Starting Time" v-model="match.startingTime" />
-    <input class="number-of-players-input" type="number" placeholder="Number of Players" v-model="match.numberOfPlayers" />
+ <form class="new-match-form" v-on:submit.prevent="saveMatch">
+    <input
+      class="name-input"
+      type="text"
+      placeholder="Name"
+      v-model="match.name"
+    />
+    <input
+      class="starting-time-input"
+      type="time"
+      placeholder="Starting Time"
+      v-model="match.startingTime"
+    />
+    <input
+      class="starting-date-input"
+      type="date"
+      placeholder="Starting Date"
+      v-model="match.startingDate"
+    />
+    <input
+      class="number-of-players-input"
+      type="number"
+      placeholder="Number of Players"
+      v-model="match.numberOfPlayers"
+    />
     <button>Save</button>
   </form>
 </template>

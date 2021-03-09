@@ -1,7 +1,7 @@
 
 <template>
   <div>
-   <center><h1>Create A new Match</h1></center> 
+   <center><h1>Create A New Match</h1></center> 
  <tournament-form/>
 
      

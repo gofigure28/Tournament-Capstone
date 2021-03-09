@@ -24,7 +24,7 @@
       placeholder="Number of Players"
       v-model="tournament.numberOfPlayers"
     />
-    <button>Save</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
   </form>
 </template>
 <script>
@@ -35,6 +35,7 @@ export default {
       tournament: {
         name: "",
         startingTime: "",
+        startingDate: "",
         numberOfPlayers: "",
       },
     };
@@ -52,6 +53,7 @@ export default {
     },
   },
 };
+
 </script>
 <style>
 button {
