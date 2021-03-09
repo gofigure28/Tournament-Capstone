@@ -12,7 +12,7 @@
     <router-view />
   </div>
 </template>
-
+f
 
 <script>
 
@@ -22,7 +22,17 @@ export default {
 </script>
 
 <style scoped>
+
 /* Global styles */
+html{
+  background-image: url()
+
+}
+
+.app{
+  background-color:aquamarine;
+}
+
 .btn{
   display: flex;
   justify-content: center;
