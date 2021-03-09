@@ -25,7 +25,7 @@
     <input
       class="number-of-players-input"
       type="number"
-      placeholder="Number of Players"
+      placeholder="Number of Teams"
       v-model="tournament.numberOfPlayers"
     />
     <button class= "button" type='submit'>Save</button>
