@@ -109,6 +109,7 @@ input.form-control {
   border-radius: 8px;
   width: 240;
   height: 40px;
+  margin: 20px;
 }
 router-link {
   border: 1px solid black;
