@@ -2,17 +2,18 @@
   <div id="app">
     
     <div id="nav">
-      <router-link color="blue" v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;
+      <router-link color="blue" v-bind:to="{ name: 'home' }">Home</router-link>
       <router-link color="blue"  v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>&nbsp;|&nbsp;
       <router-link color="blue" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>&nbsp;|&nbsp;
-      <router-link color="blue" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
+      <router-link color="blue" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link> <br>
+      <router-link color="blue" v-bind:to="{ name: 'browseTournament' }">Browse Tournaments</router-link>
 
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
     <router-view />
   </div>
 </template>
-f
+
 
 <script>
 
