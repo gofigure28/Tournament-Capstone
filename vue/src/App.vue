@@ -29,6 +29,8 @@
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
     <div class="bubbels">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
     </div>
     <router-view />
   </div>
@@ -50,6 +52,57 @@ export default {
   background-size:400% 400%;
   position:relative;
   animation: change 8s ease-in-out infinite;
+}
+
+.bubbels{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index:0;
+  overflow:hidden;
+  top:0;
+  left:0;
+    z-index: 0;
+  
+}
+
+.bubble{
+  position: absolute;
+  bottom: 0;
+  background: #f1f1f1;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: flying 10s infinite ease-in;
+}
+
+.bubble:nth-child(1){
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  animation-duration: 8s;
+}
+.bubble:nth-child(2){
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+@keyframes flying{
+  
+  0%{
+    bottom: -100px;
+    transform: translateX(0);
+  }
+    50%{
+    transform: translateX(100px);
+  }
+    100%{
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
+  
 }
 
 @keyframes change{
