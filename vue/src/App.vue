@@ -28,10 +28,6 @@
       </button>
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
-    <div class="bubbels">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
     <router-view />
   </div>
 </template>

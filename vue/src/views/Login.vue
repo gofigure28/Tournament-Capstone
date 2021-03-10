@@ -118,9 +118,9 @@ router-link {
   padding: 20px 0px 0px 0px;
   margin: 20px;
 }
+
 .btn {
   padding: 10px 20px;
-  margin: 20px;
   max-width: 200px;
   border: 1px solid #ddd;
   color: #fff;
