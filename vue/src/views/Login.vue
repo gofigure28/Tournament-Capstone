@@ -1,7 +1,7 @@
 <template>
   <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
-      <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Please Sign In:</h1>
       <div class="alert alert-danger" role="alert" v-if="invalidCredentials">
         Invalid username and password!
       </div>
@@ -32,7 +32,7 @@
         required
       />
       <router-link :to="{ name: 'register' }">Create New Account</router-link>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
+      <button class="btn" type="submit">
         Sign in
       </button>
     </form>
@@ -81,6 +81,7 @@ export default {
 .form-signin {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
@@ -99,25 +100,28 @@ h1{
   color: #0072ce;
   width: 240;
   height: 40px;
-  margin: 20px;
+padding: 20px 0px 0px 0px;
+  margin: 10px;
 }
 
-input {
+input.form-control {
   border: 1px solid black;
   border-radius: 8px;
   width: 240;
   height: 40px;
-  margin: 20px;
 }
 router-link {
   border: 1px solid black;
   border-radius: 8px;
   width: 240;
   height: 40px;
+  padding: 20px 0px 0px 0px;
   margin: 20px;
 }
 .btn {
   padding: 10px 20px;
+  margin: 20px;
+  max-width: 200px;
   border: 1px solid #ddd;
   color: #fff;
   background-color: #0072ce;

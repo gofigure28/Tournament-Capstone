@@ -94,6 +94,7 @@ export default {
 .form-register {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
@@ -106,7 +107,7 @@ h1{
   margin: auto;
 }
 
-input {
+input.form-control {
     border: 1px solid black;
   border-radius: 8px;
   height: 40px;
@@ -115,6 +116,7 @@ input {
 
 .btn {
   padding: 10px 20px;
+  max-width: 200px;
   border: 1px solid #ddd;
   color: #fff;
   background-color: #0072ce;
