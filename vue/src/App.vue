@@ -107,8 +107,3 @@ text-decoration: none;
   margin-bottom: 1rem;
 }
 </style>
-
-
-
-
-

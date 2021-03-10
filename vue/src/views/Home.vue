@@ -17,16 +17,13 @@
         <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
       </button>
       </div>
- 
   </div>
 </template>
-
 <script>
 export default {
   name: "home"
 };
 </script>
-
 <style scoped>
 .home {
   display: flex;
@@ -37,32 +34,27 @@ export default {
   max-width: 1400px;
   padding: 8px 8px 8px 8px;
   margin: 0 auto;
-  color: #0072ce;
+  color: #0072CE;
 }
-
 .routerlink{
   text-decoration: none;
   color: white;
 }
-
 h1{
    font-family: 'Optima';
   font-size:35px;
   color:black;
   font-style:italic;
 }
-
 h4{
   color:#282828;
   margin: auto;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
-
 h3{
   color: ##0072ce;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
-
 button {
   padding: 10px 20px;
   width: 200px;
@@ -70,13 +62,12 @@ button {
   max-width: 200px;
   border: 1px solid #ddd;
   color: #fff;
-  background-color: #0072ce;
+  background-color: #0072CE;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
    
 }
-
 .nav-buttons {
   display: flex;
   flex-direction: column;
@@ -84,7 +75,5 @@ button {
   flex-wrap: wrap;
   height: auto;
   width: 200px;
-
 }
-
 </style>
