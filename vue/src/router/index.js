@@ -71,8 +71,7 @@ const router = new Router({
       path: "/tournaments",
       name: "tournaments",
       component: viewAll
-    }
-
+    },
   ]
 })
 
