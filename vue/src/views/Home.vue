@@ -56,6 +56,7 @@ h3{
 
 button {
   padding: 10px 20px;
+  width: 200px;
   margin: auto;
   max-width: 200px;
   border: 1px solid #ddd;
