@@ -1,8 +1,12 @@
 package com.techelevator.dao;
 
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.format.DateTimeFormatter; 
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -24,10 +28,11 @@ public class TournamentSqlDAO implements TournamentDAO {
 	}
 
 	@Override
-	public Tournament create(String name, int matchID, Match match, Time startTime, int numberOfPlayers) {
+	public Tournament create(String name, int matchID, Match match, LocalDateTime startTime, int numberOfPlayers) {
 		try {
+			
 			String query = "insert into tournaments "
-					+ "(tournament_name, match_id, start_time, number_of_participants)"
+					+ "(tournament_name, match_id, start_date, number_of_participants)"
 					+ " values(?, ?, ?, ?)";
 		jdbcTemplate.update(query, name, matchID, startTime, numberOfPlayers);
 		} catch (Exception ex) {
@@ -74,7 +79,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  tournament.setMatchID(rw.getInt("match_id"));
 	  tournament.setName(rw.getString("tournament_name"));
 	  tournament.setNumberOfPlayers(rw.getInt("number_of_participants"));
-	  tournament.setStartTime(rw.getTime("start_time"));
+	  tournament.setStartTime(rw.getTimestamp("start_time").toLocalDateTime());
 	  tournament.setTournamentID(rw.getInt("tournament_id"));
 	  return tournament;
 	  

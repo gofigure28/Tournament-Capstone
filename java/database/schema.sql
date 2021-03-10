@@ -22,8 +22,7 @@ CREATE TABLE users (
 CREATE TABLE tournaments(
         tournament_name         varchar(64)     NOT NULL,
         tournament_id           serial          NOT NULL,
-        start_time              time            NOT NULL,
-        start_date              date                    ,
+        start_date              timestamp               ,
         number_of_participants  int             NOT NULL,
         team_id                 serial                  ,
         ranking_of_teams        int                     ,
