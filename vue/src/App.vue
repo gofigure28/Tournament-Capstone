@@ -28,6 +28,11 @@
       </button>
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
+    <div class="bubbels">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
     <router-view />
   </div>
 </template>
@@ -44,7 +49,7 @@ export default {
   width:100%;
   flex-direction: row;
  text-decoration: none;
-  background:repeating-linear-gradient(30deg, #b019df, #23A6D5,  #f79efa , #23D5AB); 
+  background:repeating-linear-gradient(30deg, #3a86f7, #23A6D5,  #9efaf2 , #23D5AB); 
   background-size:400% 400%;
   position:relative;
   animation: change 8s ease-in-out infinite;
@@ -54,18 +59,17 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index:0;
+  z-index:-1;
   overflow:hidden;
   top:0;
   left:0;
-    z-index: 0;
   
 }
 
 .bubble{
   position: absolute;
   bottom: 0;
-  background: #f1f1f1;
+  background: #b1e9ff;
   border-radius: 50%;
   opacity: 0.5;
   animation: flying 10s infinite ease-in;
@@ -74,16 +78,24 @@ export default {
 .bubble:nth-child(1){
   width: 40px;
   height: 40px;
-  left: 20%;
+  left: 1.5%;
   animation-duration: 8s;
 }
 .bubble:nth-child(2){
   width: 20px;
   height: 20px;
-  left: 20%;
+  left: 2%;
   animation-duration: 5s;
   animation-delay: 1s;
 }
+.bubble:nth-child(3){
+  width: 50px;
+  height: 50px;
+  left: 1%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
 
 @keyframes flying{
   
@@ -133,7 +145,7 @@ export default {
   margin: 6px;
   border: 1px solid #4fa4f3;
   border-radius: 4px;
-  background-color:#dcdcdc;
+  background:linear-gradient(#f3f2f2, #f1f1f1, #aaaaaa)
   }
   .logo{
     display: flex;
@@ -145,7 +157,6 @@ export default {
     margin: 10px;
   }
 #app {
-  background: #fff;
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   padding-top: 0;
@@ -173,6 +184,7 @@ export default {
   margin: 0;
   margin-bottom: 1rem;
 }
+
 </style>
 
 

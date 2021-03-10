@@ -17,14 +17,18 @@
         <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
       </button>
       </div>
+ 
   </div>
 </template>
+
 <script>
 export default {
   name: "home"
 };
 </script>
+
 <style scoped>
+
 .home {
   display: flex;
   flex-direction: column;
@@ -34,40 +38,53 @@ export default {
   max-width: 1400px;
   padding: 8px 8px 8px 8px;
   margin: 0 auto;
-  color: #0072CE;
+  color: #ffffff;
 }
+
 .routerlink{
   text-decoration: none;
   color: white;
 }
+
 h1{
    font-family: 'Optima';
   font-size:35px;
   color:black;
   font-style:italic;
 }
+
 h4{
   color:#282828;
   margin: auto;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
+
 h3{
   color: ##0072ce;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
+
 button {
+  display:flexbox;
   padding: 10px 20px;
-  width: 200px;
-  margin: auto;
-  max-width: 200px;
-  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 3px solid rgb(255, 255, 255);
   color: #fff;
-  background-color: #0072CE;
+  background-color: #0072ce;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-   
+   background:repeating-linear-gradient(45deg, #6495ff, #23A6D5, #23D5AB);  
 }
+
+button:hover{
+  background-color: #000;
+  /*  Making button bigger on hover  */
+  padding: 15px 35px;
+  transform: scale(1.1);
+}
+
 .nav-buttons {
   display: flex;
   flex-direction: column;
@@ -75,5 +92,7 @@ button {
   flex-wrap: wrap;
   height: auto;
   width: 200px;
+
 }
+
 </style>
