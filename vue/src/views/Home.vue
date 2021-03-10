@@ -46,7 +46,10 @@ export default {
 }
 
 h1{
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+   font-family: 'Optima';
+  font-size:35px;
+  color:black;
+  font-style:italic;
 }
 
 h4{
