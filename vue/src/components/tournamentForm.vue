@@ -71,6 +71,7 @@ export default {
 form.new-tournament-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
@@ -80,6 +81,17 @@ form.new-tournament-form {
 }
 .new-tournament-form .sr-only{
   padding: 8px 0px 8px 0px;
+  border: 0px;
+  border-radius: 8px;
+  height: 20;
+  margin: auto;
+}
+
+form input{
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 40px;
+  width: 60%;
   margin: auto;
 }
 

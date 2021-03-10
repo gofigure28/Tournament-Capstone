@@ -63,6 +63,7 @@ export default {
 form.new-match-form {
   display: flex;
   flex-direction: column;
+align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
@@ -75,7 +76,16 @@ form.new-match-form {
   margin: auto;
 }
 
+form input{
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 40px;
+  width: 60%;
+  margin: auto;
+}
+
 button.button {
+  width: 80px;
   padding: 10px 0px 10px 0px;
   margin: 20px;
   border: 1px solid #ddd;

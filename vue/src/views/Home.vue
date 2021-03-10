@@ -1,7 +1,7 @@
 <template>
   <div class="home" style="background-color: white">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
-    <center> <h2> Compliments of team:</h2><h2 style="color: blue">"internal server error!" </h2></center>
+    <center> <h4> Compliments of team:</h4><h4>"Internal Server Error!" </h4></center>
     <center><h3>Please select from the options below...</h3></center>
     <div class="nav-buttons" >
       <button class="create-tourn">
@@ -9,6 +9,12 @@
       </button>
       <button class="create-match">
         <router-link class="routerlink" color="white" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
+      </button>
+      <button class="view-tourns">
+        <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllTournaments' }">View All Tourneys</router-link>
+      </button>
+      <button class="view-matches">
+        <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
       </button>
       </div>
  
@@ -39,12 +45,13 @@ export default {
   color: white;
 }
 
-h2{
+h4{
   color:#282828;
+  margin: auto;
 }
 
 h3{
-  color: #282828;
+  color: ##0072ce;
 }
 
 button {
@@ -61,10 +68,12 @@ button {
 
 .nav-buttons {
   display: flex;
-  align-items: ;
+  flex-direction: column;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   height: auto;
-  width: auto;
+  width: 200px;
+
 }
 
 </style>
