@@ -45,13 +45,19 @@ export default {
   color: white;
 }
 
+h1{
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
 h4{
   color:#282828;
   margin: auto;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 h3{
   color: ##0072ce;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 button {
