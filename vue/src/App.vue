@@ -46,13 +46,13 @@ export default {
   width:100%;
   flex-direction: row;
 text-decoration: none;
-  background:repeating-linear-gradient(170deg,#231d7a, #0072ce, #8ec2ff); 
+  background: #0072ce; 
 }
 .btn{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 10px;
+  padding: 5px 5px;
   border: 1px solid #ddd;
   color: #333;
   background-color:#dcdcdc;

@@ -71,7 +71,7 @@ button {
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  background:repeating-linear-gradient(170deg,#231d7a, #0072ce, #8ec2ff); 
+   
 }
 
 .nav-buttons {
