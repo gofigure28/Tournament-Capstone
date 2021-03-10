@@ -10,16 +10,9 @@
     <label for="starting-time-input" class="sr-only">Start Time</label>
     <input
       class="starting-time-input"
-      type="time"
+      type="datetime-local"
       placeholder="Starting Time"
       v-model="tournament.startTime"
-    />
-    <label for="starting-date-input" class="sr-only">Start Date</label>
-    <input
-      class="starting-date-input"
-      type="date"
-      placeholder="Starting Date"
-      v-model="tournament.startingDate"
     />
     <label for="numper-of-players-input" class="sr-only"># of Players</label>
     <input

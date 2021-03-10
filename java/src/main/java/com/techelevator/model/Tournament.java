@@ -1,17 +1,20 @@
 package com.techelevator.model;
 
 import java.sql.Time;
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Tournament {
 
 	private int tournamentID;
 	private int matchID;
 	private Match match;
-	private Time startTime;
+	private LocalDateTime startTime;
 	private int numberOfPlayers;
 	private String name;
 	
-	public Tournament(String name, int tournamentID, int matchID, Match match, Time startTime, int numberOfPlayers) {
+	public Tournament(String name, int tournamentID, int matchID, Match match, LocalDateTime startTime, int numberOfPlayers) {
 		this.tournamentID = tournamentID;
 		this.matchID = matchID;
 		this.match = match;
@@ -50,10 +53,10 @@ public class Tournament {
 	public void setMatch(Match match) {
 		this.match = match;
 	}
-	public Time getStartTime() {
+	public LocalDateTime getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Time time) {
+	public void setStartTime(LocalDateTime time) {
 		this.startTime = time;
 	}
 	public int getNumberOfPlayers() {
