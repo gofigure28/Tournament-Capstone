@@ -68,18 +68,36 @@ export default {
 
 </script>
 <style>
-.new-tournament-form {
+form.new-tournament-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
+  border-radius: 8px;
   margin: 0 auto;
   color: #0072ce;
 }
+.new-tournament-form .sr-only{
+  padding: 8px 0px 8px 0px;
+  border: 0px;
+  border-radius: 8px;
+  height: 20;
+  margin: auto;
+}
+
+form input{
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 40px;
+  width: 60%;
+  margin: auto;
+}
 
 button.button {
-  padding: 10px 20px;
+  padding: 10px 0px 10px 0px;
+  margin: 20px;
   border: 1px solid #ddd;
   color: #fff;
   background-color: #0072ce;
@@ -88,13 +106,4 @@ button.button {
   cursor: pointer;
 }
 
-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 8px;
-  height: 40px;
-  margin: 20px;
-}
 </style>
