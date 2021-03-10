@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <div id="nav">
+    <div class="nav" id="nav">
       <router-link color="blue" v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;
       <router-link color="blue"  v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>&nbsp;|&nbsp;
       <router-link color="blue" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>&nbsp;|&nbsp;
@@ -29,6 +29,10 @@ export default {
   background-color:aquamarine;
 }
 
+.nav{
+text-decoration: none;
+}
+
 .btn{
   display: flex;
   justify-content: center;
@@ -41,6 +45,7 @@ export default {
   font-size: 14px;
   cursor: pointer;
   }
+  
   .logo{
     display: flex;
     justify-content: center;
