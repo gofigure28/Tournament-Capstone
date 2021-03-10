@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
     <div class="nav" id="nav">
       <button class="btn_icon">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
@@ -27,35 +26,28 @@
         <img class="icon" src="/assets/bracket.png" alt="Browse"/>
       </router-link>
       </button>
-
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
     <router-view />
   </div>
 </template>
-
-
 <script>
-
 export default {
-
 }
 </script>
-
 <style scoped>
-
 /* Global styles */
-
 .app{
   background-color:aquamarine;
 }
-
 .nav{
   display: flex;
+  justify-content: center;
+  width:100%;
   flex-direction: row;
 text-decoration: none;
+background-color:#0072CE; 
 }
-
 .btn{
   display: flex;
   justify-content: center;
@@ -71,12 +63,10 @@ text-decoration: none;
   .btn_icon{
   padding: 10px 10px;
   margin: 6px;
-  border: 1px solid #0072ce;
+  border: 1px solid #0072CE;
   border-radius: 4px;
   background-color:#dcdcdc;
-
   }
-  
   .logo{
     display: flex;
     justify-content: center;
@@ -86,7 +76,6 @@ text-decoration: none;
     max-width: 24px;
     margin: 10px;
   }
-
 #app {
   background: #fff;
   margin: 2rem 0 4rem 0;
@@ -117,3 +106,8 @@ text-decoration: none;
   margin-bottom: 1rem;
 }
 </style>
+
+
+
+
+
