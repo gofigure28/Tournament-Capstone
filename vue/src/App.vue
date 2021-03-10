@@ -41,7 +41,7 @@ text-decoration: none;
   padding: 10px 20px;
   border: 1px solid #ddd;
   color: #333;
-  background-color:#fff;
+  background-color:#dcdcdc;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
