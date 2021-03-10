@@ -52,6 +52,7 @@ public class TournamentController {
 		return tournamentDAO.all();
 	}
 	
+		
 	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(value ="/createTournament", method = RequestMethod.POST)
 	public Tournament makeTournament(@RequestBody Tournament newTournament) throws Exception {

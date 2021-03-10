@@ -5,14 +5,14 @@
       class="name-input"
       type="text"
       placeholder="Name"
-      v-model="tournament.tournament_name"
+      v-model="tournament.name"
     />
     <label for="starting-time-input" class="sr-only">Start Time</label>
     <input
       class="starting-time-input"
       type="time"
       placeholder="Starting Time"
-      v-model="tournament.startingTime"
+      v-model="tournament.startTime"
     />
     <label for="starting-date-input" class="sr-only">Start Date</label>
     <input
@@ -28,7 +28,7 @@
       placeholder="Number of Players"
       v-model="tournament.numberOfPlayers"
     />
-    <button class= "button" type='submit'>Save</button>
+    <button class="button" type="submit">Save</button>
   </form>
 </template>
 <script>
@@ -38,31 +38,36 @@ export default {
   data() {
     return {
       tournament: {
-        tournament_name: "",
+        name: "",
         startTime: "",
         numberOfPlayers: "",
       },
     };
   },
   methods: {
-    saveTournament() {
-      this.$store.commit("SAVE_TOURNAMENT", this.tournament).then((response) =>{
+    saveTournament(){
+     /* this.$store.commit("SAVE_TOURNAMENT", this.tournament).then((response) =>{
       this.tournament= response.data;
       });
       this.tournament= {
         tournament_name: "",
         startTime: "",
         numberOfPlayers: "",
-      };
-      tournamentServices.addTournament(this.$store.addTournament)
-      this.$router.push({ path: "createTournament" });
-    },
-  },
+      }; */
+      tournamentServices.addTournament(this.tournament).then((response) =>{
+      if(response === 201){
+      this.$router.push("home");
+      }
+      }).catch(error =>{
+      console.log(error);
+      this.$router.push("home");
+      })
+  }
+},
 };
 
 </script>
 <style>
-
 .new-tournament-form {
   display: flex;
   flex-direction: column;
