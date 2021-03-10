@@ -20,9 +20,18 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   padding: 8px 8px 8px 8px;
   margin: 0 auto;
+  color: #0072ce;
+}
+
+h2{
+  color:#282828;
+}
+
+h3{
+  color: #282828;
 }
 
 </style>
