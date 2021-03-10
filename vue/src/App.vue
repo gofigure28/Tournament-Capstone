@@ -2,11 +2,31 @@
   <div id="app">
     
     <div class="nav" id="nav">
-      <router-link color="blue" v-bind:to="{ name: 'home' }">Home</router-link>&nbsp;|&nbsp;
-      <router-link color="blue"  v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>&nbsp;|&nbsp;
-      <router-link color="blue" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>&nbsp;|&nbsp;
-      <router-link color="blue" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link> <br>
-      <router-link color="blue" v-bind:to="{ name: 'browseTournament' }">Browse Tournaments</router-link>
+      <button class="btn_icon">
+      <router-link color="blue" v-bind:to="{ name: 'home' }">
+        <img class="icon" src="/assets/home.png" alt="Home"/>
+        </router-link>
+      </button>
+      <button class="btn_icon">
+      <router-link color="blue"  v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
+        <img class="icon" src="/assets/logout.png" alt="Logout"/>
+        </router-link>
+        </button>
+        <button class="btn_icon">
+      <router-link color="blue" v-btn:to="{ name: 'createTournament' }">
+        <img class="icon" src="/assets/calendar.png" alt="New Tournament"/>
+      </router-link>
+        </button>
+        <button class="btn_icon">
+      <router-link color="blue" v-bind:to="{ name: 'createMatch' }">
+        <img class="icon" src="/assets/plus.png" alt="New Match"/>
+        </router-link>
+        </button>
+        <button class="btn_icon">
+      <router-link color="blue" v-bind:to="{ name: 'browseTournament' }">
+        <img class="icon" src="/assets/bracket.png" alt="Browse"/>
+      </router-link>
+      </button>
 
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
@@ -31,6 +51,8 @@ export default {
 }
 
 .nav{
+  display: flex;
+  flex-direction: row;
 text-decoration: none;
 }
 
@@ -38,7 +60,7 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: 1px solid #ddd;
   color: #333;
   background-color:#dcdcdc;
@@ -46,11 +68,23 @@ text-decoration: none;
   font-size: 14px;
   cursor: pointer;
   }
+  .btn_icon{
+  padding: 10px 10px;
+  margin: 6px;
+  border: 1px solid #0072ce;
+  border-radius: 4px;
+  background-color:#dcdcdc;
+
+  }
   
   .logo{
     display: flex;
     justify-content: center;
     padding: 4rem;
+  }
+  .icon{
+    max-width: 24px;
+    margin: 10px;
   }
 
 #app {

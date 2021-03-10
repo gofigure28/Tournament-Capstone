@@ -49,11 +49,11 @@ export default {
       }; */
       tournamentServices.addTournament(this.tournament).then((response) =>{
       if(response === 201){
-      this.$router.push("home");
+      this.$router.push("/viewAllTournaments");
       }
       }).catch(error =>{
       console.log(error);
-      this.$router.push("home");
+      this.$router.push("/viewAllTournaments");
       })
   }
 },
