@@ -7,13 +7,15 @@
 </template>
 
 <script>
-import tournamentList from '../components/TournamentList';
+
 export default {
     name: "tournament-list",
     data(){
         return{
-            tournamentList: {
-                name: '',
+            Tournament=Detail: {
+                tournament_name: "",
+                tournament_id: "",
+                number_of_participants: ""
                 
             }
             
