@@ -46,7 +46,7 @@ export default {
   width:100%;
   flex-direction: row;
 text-decoration: none;
-background-color:#0072CE; 
+  background:repeating-linear-gradient(170deg,#231D7A, #0072CE, #8EC2FF); 
 }
 .btn{
   display: flex;
@@ -106,8 +106,3 @@ background-color:#0072CE;
   margin-bottom: 1rem;
 }
 </style>
-
-
-
-
-
