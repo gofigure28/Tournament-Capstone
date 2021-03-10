@@ -59,35 +59,41 @@ export default {
 }
 </script>
 <style>
+
 form.new-match-form {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
+  border-radius: 8px;
   margin: 0 auto;
   color: #0072ce;
 }
+.new-match-form .sr-only{
+  padding: 8px 0px 8px 0px;
+  margin: auto;
+}
 
-button {
-  padding: 10px 20px;
+form input{
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 40px;
+  width: 60%;
+  margin: auto;
+}
+
+button.button {
+  width: 80px;
+  padding: 10px 0px 10px 0px;
+  margin: 20px;
   border: 1px solid #ddd;
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-}
-
-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 8px;
-  height: 40px;
-  margin: 20px;
 }
 
 </style>
