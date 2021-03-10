@@ -68,8 +68,8 @@ const router = new Router({
     },
 
     {
-      path: "/tournaments",
-      name: "tournaments",
+      path: "/browseTournament",
+      name: "browseTournament",
       component: viewAll
     },
   ]

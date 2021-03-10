@@ -12,7 +12,7 @@ export default {
     name: "tournament-list",
     data(){
         return{
-            Tournament=Detail: {
+            Tournament: {
                 tournament_name: "",
                 tournament_id: "",
                 number_of_participants: ""
@@ -21,13 +21,7 @@ export default {
             
         }
     },
-    component: {
-        tournamentList
-    },
-
-    methods: {
-        
-    }
+ 
 
 }
 </script>
