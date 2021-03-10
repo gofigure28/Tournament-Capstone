@@ -12,12 +12,7 @@ export default {
     name: "tournament-list",
     data(){
         return{
-            Tournament: {
-                tournament_name: "",
-                tournament_id: "",
-                number_of_participants: ""
-                
-            }
+          
             
         }
     },

@@ -7,7 +7,7 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import createTournament from '../views/createTournament'
 import createMatch from '../views/createMatch'
-import viewAll from '../views/ViewAllTournaments'
+import browseTournament from '../views/ViewAllTournaments'
 
 Vue.use(Router)
 
@@ -70,7 +70,7 @@ const router = new Router({
     {
       path: "/browseTournament",
       name: "browseTournament",
-      component: viewAll
+      component: browseTournament
     },
   ]
 })

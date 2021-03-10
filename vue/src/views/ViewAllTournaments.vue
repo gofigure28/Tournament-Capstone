@@ -7,17 +7,19 @@
 
 
 <script>
-import TournamentList from '../components/TournamentList'
-
 export default{
-    components: {TournamentList},
+    
+}
 
-    methods: {
 
-    },
-};
 
 </script>
+
+
+
+
+
+
 <style>
 
 h1{
