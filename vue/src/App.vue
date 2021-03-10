@@ -28,6 +28,8 @@
       </button>
     </div>
     <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
+    <div class="bubbels">
+    </div>
     <router-view />
   </div>
 </template>
@@ -37,17 +39,34 @@ export default {
 </script>
 <style scoped>
 /* Global styles */
-.app{
-  background-color:aquamarine;
-}
+
 .nav{
   display: flex;
   justify-content: center;
   width:100%;
   flex-direction: row;
-text-decoration: none;
-  background:repeating-linear-gradient(170deg,#231D7A, #0072CE, #8EC2FF); 
+ text-decoration: none;
+  background:repeating-linear-gradient(30deg, #b019df, #23A6D5,  #f79efa , #23D5AB); 
+  background-size:400% 400%;
+  position:relative;
+  animation: change 8s ease-in-out infinite;
 }
+
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+
+  }
+    50%{
+    background-position: 100% 50%;
+    
+  }
+    100%{
+    background-position: 0 50%;
+    
+  }
+}
+
 .btn{
   display: flex;
   justify-content: center;
@@ -63,7 +82,7 @@ text-decoration: none;
   .btn_icon{
   padding: 10px 10px;
   margin: 6px;
-  border: 1px solid #0072CE;
+  border: 1px solid #4fa4f3;
   border-radius: 4px;
   background-color:#dcdcdc;
   }

@@ -41,7 +41,10 @@ export default {
   color: white;
 }
 h1{
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+   font-family: 'Optima';
+  font-size:35px;
+  color:black;
+  font-style:italic;
 }
 h4{
   color:#282828;
@@ -63,7 +66,14 @@ button {
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  background:repeating-linear-gradient(170deg,#231D7A, #0072CE, #8EC2FF); 
+   background:repeating-linear-gradient(150deg, #684dff, #23A6D5, #23D5AB);  
+}
+
+button:hover{
+  background-color: #000;
+  /*  Making button bigger on hover  */
+  padding: 15px 35px;
+  transform: scale(1.1);
 }
 .nav-buttons {
   display: flex;
