@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router/index'
 import store from './store/index'
 import axios from 'axios'
-import './css/reset.css';
+import './css/stylesheet.css';
 
 Vue.config.productionTip = false
 

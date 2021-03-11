@@ -47,8 +47,8 @@ export default {
   width:100%;
   border-radius: 8px;
   flex-direction: row;
+  background-color: #b1e9ff;
  text-decoration: none;
-  background:repeating-linear-gradient(30deg, #3a86f7, #23A6D5,  #9efaf2 , #23D5AB); 
   background-size:400% 400%;
   position:relative;
 
@@ -143,11 +143,11 @@ export default {
   padding: 10px 10px;
   margin: 6px;
   border-radius: 4px;
-  background:linear-gradient(#f3f2f2, #f1f1f1, #aaaaaa)
+  background-color: #e1e1e1;
   }
 
   .btn_icon:hover{
-      background:linear-gradient( #aaaaaa, #f3f2f2,  #aaaaaa);
+      background-color: #bbbbbb;
   }
   .logo{
     display: flex;

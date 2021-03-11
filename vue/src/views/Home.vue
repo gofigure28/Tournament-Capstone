@@ -1,7 +1,7 @@
 <template>
   <div class="home" style="background-color: white">
     <div class ="logo">
-      <img class="logo" src="https://s.pngkit.com/png/small/17-178115_trophy-png-graphic-library-trophy-icon-svg.png" alt="Trophy Logo"/>
+      <img class="logo" src="/assets/Winners.png" alt="Trophy Logo"/>
     </div>
     <div class="textbox">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
@@ -43,6 +43,7 @@ export default {
 
 .logo{
   margin-top:10px;
+  max-width: 200px;
 }
 
 .home {

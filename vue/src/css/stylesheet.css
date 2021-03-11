@@ -59,7 +59,7 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #0072ce;
+  background-color: #eeeeee;
   background-size:400% 400%;
   position:relative;
   animation: change 30s ease-in-out infinite;
