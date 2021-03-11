@@ -8,6 +8,7 @@ import store from '../store/index'
 import createTournament from '../views/createTournament'
 import createMatch from '../views/createMatch'
 import browseTournament from '../views/ViewAllTournaments'
+import playerProfile from '../views/playerProfile'
 
 Vue.use(Router)
 
@@ -71,6 +72,12 @@ const router = new Router({
       path: "/browseTournament",
       name: "browseTournament",
       component: browseTournament
+    },
+
+    {
+      path: "/playerProfile",
+      name: "playerProfile",
+      component: playerProfile
     },
   ]
 })

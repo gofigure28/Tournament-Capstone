@@ -28,7 +28,7 @@
         </router-link>
       </button>
        <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'user' }">
+        <router-link color="blue" v-bind:to="{ name: 'playerProfile' }">
           <img class="icon" src="/assets/user.png" alt="Profile" />
         </router-link>
       </button>
