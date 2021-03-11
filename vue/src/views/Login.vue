@@ -124,7 +124,8 @@ router-link {
 .btn {
   padding: 10px 20px;
   max-width: 200px;
-  border: 10px solid #fff;
+  margin-top:20px;
+  margin-bottom: 200px;
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;

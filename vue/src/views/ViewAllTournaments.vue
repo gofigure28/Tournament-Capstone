@@ -1,6 +1,9 @@
 <template>
   <div class="tournament-container">
-    <tournament-card v-for="tournament in $store.state.tournaments" v-bind:key="tournament.tournamentID" />
+   <h1> List of Tournaments </h1>
+    <tournament-card v-for="tournament in $store.state.tournaments"
+                     v-bind:key="tournament.tournamentID" 
+                     v-bind:tournament="tournament"/>
     
   </div>
 </template>

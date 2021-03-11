@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <div class="navTop" id ="nav">
+      <button class="btn_top" name="top">
+        <router-link color="blue" v-bind:to="{ name: 'home' }">
+          <img class="icon" src="/assets/trophy.png" alt="Logout" />
+        </router-link>
+      </button> 
+    </div>
        <router-view />
     <div class="nav" id="nav">
       <button class="btn_icon"  v-if="$store.state.token != ''">
@@ -40,6 +47,18 @@ export default {};
 </script>
 <style scoped>
 /* Global styles */
+
+.navTop{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  flex-direction: row;
+  background-color: #fff;
+  text-decoration: none;
+  background-size: 400% 400%;
+  position: relative;
+}
 .nav {
   display: flex;
   justify-content: center;
@@ -48,74 +67,8 @@ export default {};
   flex-direction: row;
   background-color: #b1e9ff;
   text-decoration: none;
-  background-size: 400% 400%;
+  background-size: 500%;
   position: relative;
-}
-
-.bubbels {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.bubble {
-  position: absolute;
-  bottom: 0;
-  background: #b1e9ff;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: flying 10s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-  width: 40px;
-  height: 40px;
-  left: 1.5%;
-  animation-duration: 8s;
-}
-.bubble:nth-child(2) {
-  width: 20px;
-  height: 20px;
-  left: 2%;
-  animation-duration: 5s;
-  animation-delay: 1s;
-}
-.bubble:nth-child(3) {
-  width: 50px;
-  height: 50px;
-  left: 1%;
-  animation-duration: 7s;
-  animation-delay: 1s;
-}
-
-@keyframes flying {
-  0% {
-    bottom: -100px;
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 1080px;
-    transform: translateX(-200px);
-  }
-}
-
-@keyframes change {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
 }
 
 .btn {
@@ -135,7 +88,7 @@ export default {};
   width: inherit;
 }
 .btn_icon:hover {
-  background-color: #bbbbbb;
+  background-color: #43a9fc;
 }
 .logo {
   display: flex;
@@ -154,6 +107,11 @@ export default {};
   padding-top: 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  background-image:url('/assets/design.png');
+  background-size:150%;
+  background-repeat:no-repeat;
+  width:100%;
+  height:auto;
 }
 @media screen and (min-width: 550px) {
   #app {
