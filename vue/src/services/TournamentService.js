@@ -14,7 +14,7 @@ export default {
         return http.post("/createTournament", tournament);
     },
 
-    getCards(){
+    getTournaments(){
         return http.get("/tournaments/");
     }
 
