@@ -1,5 +1,6 @@
 <template>
     <div>
+    <h1>{{tournament.tournament_name}}</h1>;
     </div>
 </template>
 
@@ -12,20 +13,20 @@ export default {
         return{
         tournament: {
             tournament_name: "",
-            tournament_id: "",
+            tournament_id: 0,
             start_time: "",
             start_date: "",
             number_of_participants: "",
-            team_id: "",
+            team_id: 0,
             ranking_of_teams: "",
-            match_id: ""
+            match_id: 0
             }
         }
 
     },
     created() {
-        tournamentService.getCards(this.$route.params.id).then((response) =>{
-            this.tournament = response.data.tournament;
+        tournamentService.getCards().then((response) =>{
+            this.tournament = response.data;
         })
     }
 }
