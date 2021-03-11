@@ -1,9 +1,10 @@
 <template>
   <div id="app">
+       <router-view />
     <div class="nav" id="nav">
       <button class="btn_icon"  v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
-        <img class="icon" src="/assets/home.png"  alt="Home"/>
+        <img class="icon" src="/assets/home.png" alt="Home"/>
         </router-link>
       </button>
       <button class="btn_icon"  v-if="$store.state.token != ''">
@@ -27,12 +28,6 @@
       </router-link>
       </button>
     </div>
-    <div class="bubbels">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-    </div>
-    <router-view />
   </div>
 </template>
 <script>
