@@ -135,7 +135,7 @@ export default {};
   width: inherit;
 }
 .btn_icon:hover {
-  background-color: #bbbbbb;
+  background-color: #48a4f0;
 }
 .logo {
   display: flex;
