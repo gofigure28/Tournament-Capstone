@@ -3,7 +3,7 @@
     <div class="nav" id="nav">
       <button class="btn_icon"  v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
-        <img class="icon" src="/assets/home.png" alt="Home"/>
+        <img class="icon" src="/assets/home.png"  alt="Home"/>
         </router-link>
       </button>
       <button class="btn_icon"  v-if="$store.state.token != ''">
@@ -53,49 +53,6 @@ export default {
   position:relative;
 
 }
-
-.bubbels{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index:-1;
-  overflow:hidden;
-  top:0;
-  left:0;
-  
-}
-
-.bubble{
-  position: absolute;
-  bottom: 0;
-  background: #b1e9ff;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: flying 10s infinite ease-in;
-}
-
-.bubble:nth-child(1){
-  width: 40px;
-  height: 40px;
-  left: 1.5%;
-  animation-duration: 8s;
-}
-.bubble:nth-child(2){
-  width: 20px;
-  height: 20px;
-  left: 2%;
-  animation-duration: 5s;
-  animation-delay: 1s;
-}
-.bubble:nth-child(3){
-  width: 50px;
-  height: 50px;
-  left: 1%;
-  animation-duration: 7s;
-  animation-delay: 1s;
-}
-
-
 @keyframes flying{
   
   0%{
@@ -146,8 +103,15 @@ export default {
 
   }
   .btn_icon:hover{
-      background-color: #bbbbbb;
+      background-color: #48a4f0;
+
   }
+.btn_icon:nth-child(1):hover{
+  background-image:url("/assets/home_white.png");
+
+    
+}
+
   .logo{
     display: flex;
     justify-content: center;
