@@ -59,15 +59,37 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:#ebebeb;
+  background:repeating-linear-gradient(30deg, #3a86f7, #23A6D5,  #9efaf2 , #23D5AB); 
+  background-size:400% 400%;
+  position:relative;
+  animation: change 8s ease-in-out infinite;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+
+  }
+    50%{
+    background-position: 100% 50%;
+    
+  }
+    100%{
+    background-position: 0 50%;
+    
+  }
+}
+
 @media screen and (min-width: 620px) {
   body {
     font-size: 1.9rem;
     line-height: 1.31579;
+  }
+  .nav{
+    
   }
 }
 /*END RESETS*/

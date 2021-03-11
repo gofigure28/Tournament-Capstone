@@ -6,16 +6,16 @@
         <img class="icon" src="/assets/home.png" alt="Home"/>
         </router-link>
       </button>
-      <button class="btn_icon">
-      <router-link color="blue"  v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">
+      <button class="btn_icon"  v-if="$store.state.token != ''">
+      <router-link color="blue"  v-bind:to="{ name: 'logout' }">
         <img class="icon" src="/assets/logout.png" alt="Logout"/>
         </router-link>
         </button>
-        <button class="btn_icon">
-      <router-link color="blue" v-btn:to="{ name: 'createTournament' }">
-        <img class="icon" src="/assets/calendar.png" alt="New Tournament"/>
-      </router-link>
-        </button>
+      <button class="btn_icon">
+        <router-link color="blue" v-bind:to="{ name: 'createTournament'}">
+        </router-link>
+        <img class="icon" src="/assets/calendar.png" alt="New Tournament">
+      </button>
         <button class="btn_icon">
       <router-link color="blue" v-bind:to="{ name: 'createMatch' }">
         <img class="icon" src="/assets/plus.png" alt="New Match"/>
@@ -27,7 +27,6 @@
       </router-link>
       </button>
     </div>
-    <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
     <div class="bubbels">
       <div class="bubble"></div>
       <div class="bubble"></div>
@@ -42,7 +41,6 @@ export default {
 </script>
 <style scoped>
 /* Global styles */
-
 .nav{
   display: flex;
   justify-content: center;
@@ -52,7 +50,7 @@ export default {
   background:repeating-linear-gradient(30deg, #3a86f7, #23A6D5,  #9efaf2 , #23D5AB); 
   background-size:400% 400%;
   position:relative;
-  animation: change 8s ease-in-out infinite;
+
 }
 
 .bubbels{
@@ -133,7 +131,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 10px 10px;
-  border: 1px solid #ddd;
+
   color: #333;
   background-color:#dcdcdc;
   border-radius: 4px;
@@ -143,9 +141,12 @@ export default {
   .btn_icon{
   padding: 10px 10px;
   margin: 6px;
-  border: 1px solid #4fa4f3;
   border-radius: 4px;
   background:linear-gradient(#f3f2f2, #f1f1f1, #aaaaaa)
+  }
+
+  .btn_icon:hover{
+      background:linear-gradient( #aaaaaa, #f3f2f2,  #aaaaaa);
   }
   .logo{
     display: flex;
@@ -158,7 +159,8 @@ export default {
   }
 #app {
   margin: 2rem 0 4rem 0;
-  padding: 1rem;
+  padding: 0;
+  background-color: #ffffff;
   padding-top: 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
@@ -169,7 +171,7 @@ export default {
   }
 }
 #app > * {
-  max-width: 50rem;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

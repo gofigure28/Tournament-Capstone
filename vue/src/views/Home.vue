@@ -1,8 +1,13 @@
 <template>
   <div class="home" style="background-color: white">
+    <div class ="logo">
+      <img class="logo" src="/assets/logo.png" alt="Party Up Logo"/>
+    </div>
+    <div class="textbox">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
     <center> <h4> Compliments of team:</h4><h4>"Internal Server Error!" </h4></center>
     <center><h3>Please select from the options below...</h3></center>
+    </div>
     <div class="nav-buttons" >
       <button class="create-tourn">
         <router-link class="routerlink" color="white" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>
@@ -29,6 +34,17 @@ export default {
 
 <style scoped>
 
+
+.textbox{
+  margin-bottom: 50px;
+  background-repeat:no-repeat;
+  object-fit:contain;
+}
+
+.logo{
+  margin-top:10px;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -38,7 +54,7 @@ export default {
   max-width: 1400px;
   padding: 8px 8px 8px 8px;
   margin: 0 auto;
-  color: #ffffff;
+  color: #3a86f7;
 }
 
 .routerlink{
@@ -47,20 +63,18 @@ export default {
 }
 
 h1{
-   font-family: 'Optima';
+   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size:35px;
-  color:black;
-  font-style:italic;
+  color:rgb(0, 0, 0);
+  margin-bottom:20px;
 }
-
 h4{
-  color:#282828;
   margin: auto;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-style: italic;
 }
 
 h3{
-  color: ##0072ce;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
@@ -69,7 +83,8 @@ button {
   padding: 10px 20px;
   width: 100%;
   margin-bottom: 10px;
-  border: 3px solid rgb(255, 255, 255);
+  border: 1px solid rgb(141, 141, 141);
+
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;

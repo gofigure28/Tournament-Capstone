@@ -78,6 +78,7 @@ export default {
 </script>
 
 <style scoped>
+
 .form-signin {
   display: flex;
   flex-direction: column;
@@ -99,8 +100,8 @@ h1{
   font-weight: bold;
   color: #0072ce;
   width: 240;
-  height: 40px;
-padding: 20px 0px 0px 0px;
+  height: 10px;
+padding: 0px 0px 0px 0px;
   margin: 10px;
 }
 
@@ -123,7 +124,7 @@ router-link {
 .btn {
   padding: 10px 20px;
   max-width: 200px;
-  border: 1px solid #ddd;
+  border: 10px solid rgb(247, 247, 247);
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;
