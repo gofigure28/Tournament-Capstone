@@ -28,7 +28,7 @@
       <option value="Tournament">something</option>
     </select>
 
-<p>Torurnament 4</p>
+<p>Tournament 4</p>
     <select name="" id="">
      
       <option value="Tournament">Number of participants</option>
@@ -45,6 +45,7 @@
 
 <script>
 export default {};
+
 </script>
 
 
