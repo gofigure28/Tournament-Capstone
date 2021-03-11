@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Profile View</h1>
-    <center><h2>Player's Name here</h2></center>
+    <center><h2>Player's Profile</h2></center>
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,15 +22,11 @@
 
     <body>
       <header>
-        <img
-          id="te-logo"
-          src="vector_long_logo_dark.png"
-          alt="Tech Elevator Logo"
-        />
+     
       </header>
 
       <main id="main-grid">
-        <h1 id="headline">Student Smith</h1>
+        <h1 id="headline">Gamertag</h1>
 
         <div id="student-picture">
           <img src="https://via.placeholder.com/350X350" alt="Student Image" />
