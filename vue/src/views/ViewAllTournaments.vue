@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <h1>View all Tournaments</h1>
-    <tournament-card/>
-=======
   <div class="tournament-container">
     <tournament-card v-bind:tournament="tournament in $store.state.tournaments" v-bind:key="tournament_id" />
     
@@ -15,7 +10,7 @@
 
 
 <script>
-import tournamentCard from './tournamentCard.vue';
+import tournamentCard from "../components/tournamentCard";
 //import tournamentCard from '@/components/TournamentCard.vue';
 
 export default {
@@ -33,7 +28,6 @@ export default {
 
 /*
 <h1>View all Tournaments</h1>
->>>>>>> fc37f6f4b3d926040b29b7e7acf7e382f64b2508
     <p>Tournament 1</p>
     <select name="" id="">
       
@@ -69,31 +63,4 @@ export default {
       <option value="Tournament">something</option>
       <option value="Tournament">something</option>
     </select>
-<<<<<<< HEAD
-  </div>
-</template>
-
-
-
-
-
-<script>
-import tournamentCard from '../components/tournamentCard';
-export default {
-  components: {
-    tournamentCard
-  }
-
-};
-
-</script>
-
-
-
-
-
-<style>
-</style>
-=======
     */
->>>>>>> fc37f6f4b3d926040b29b7e7acf7e382f64b2508

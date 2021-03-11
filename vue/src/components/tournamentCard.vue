@@ -1,35 +1,10 @@
 <template>
-<<<<<<< HEAD
-  <h1>{{this.title}}</h1>
+    <div>
+    </div>
 </template>
 
 <script>
 import tournamentService from "../services/TournamentService";
-export default {
-
-    name:'tournament-card',
-    data() {
-        return{
-            
-        }
-    },
-    created() {
-        tournamentService.getCards(this.$route.params.id).then((response) =>{
-            this.title = response.data.name;
-        });
-    }
-
-}
-</script>
-
-<style>
-
-</style>S
-=======
-    
-</template>
-
-<script>
 export default {
     name: 'tournament-card',
     components: { },
@@ -47,7 +22,11 @@ export default {
             }
         }
 
-    methods: {
+    },
+    created() {
+        tournamentService.getCards(this.$route.params.id).then((response) =>{
+            this.tournament = response.data.tournament;
+        })
     }
 }
 </script>
@@ -55,4 +34,3 @@ export default {
 <style scoped>
 
 </style>
->>>>>>> fc37f6f4b3d926040b29b7e7acf7e382f64b2508
