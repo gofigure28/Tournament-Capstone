@@ -82,4 +82,7 @@ export default {};
 </script>
 
 <style>
+.student-picture{
+  border-radius:8px;
+}
 </style>
