@@ -45,6 +45,7 @@ export default {
   display: flex;
   justify-content: center;
   width:100%;
+  border-radius: 8px;
   flex-direction: row;
  text-decoration: none;
   background:repeating-linear-gradient(30deg, #3a86f7, #23A6D5,  #9efaf2 , #23D5AB); 
@@ -161,6 +162,7 @@ export default {
   margin: 2rem 0 4rem 0;
   padding: 0;
   background-color: #ffffff;
+  border-radius: 8px;
   padding-top: 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
