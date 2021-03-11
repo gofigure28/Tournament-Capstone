@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="nav" id="nav">
-      <button class="btn_icon">
+      <button class="btn_icon"  v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
         <img class="icon" src="/assets/home.png" alt="Home"/>
         </router-link>
@@ -11,17 +11,17 @@
         <img class="icon" src="/assets/logout.png" alt="Logout"/>
         </router-link>
         </button>
-      <button class="btn_icon">
+      <button class="btn_icon"  v-if="$store.state.token != ''">
         <router-link color="blue" v-bind:to="{ name: 'createTournament'}">
         </router-link>
         <img class="icon" src="/assets/calendar.png" alt="New Tournament">
       </button>
-        <button class="btn_icon">
+        <button class="btn_icon" v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'createMatch' }">
         <img class="icon" src="/assets/plus.png" alt="New Match"/>
         </router-link>
         </button>
-        <button class="btn_icon">
+        <button class="btn_icon" v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'browseTournament' }">
         <img class="icon" src="/assets/bracket.png" alt="Browse"/>
       </router-link>
