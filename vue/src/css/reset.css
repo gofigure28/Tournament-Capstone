@@ -62,7 +62,7 @@ body {
   background-color: #0072ce;
   background-size:400% 400%;
   position:relative;
-  animation: change 8s ease-in-out infinite;
+  animation: change 30s ease-in-out infinite;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
