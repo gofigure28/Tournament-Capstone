@@ -1,6 +1,6 @@
 <template>
   <div class="tournament-container">
-    <tournament-card v-bind:tournament="tournament in $store.state.tournaments" v-bind:key="tournament_id" />
+    <tournament-card v-for="tournament in $store.state.tournaments" v-bind:key="tournament.tournamentID" />
     
   </div>
 </template>
@@ -11,10 +11,18 @@
 
 <script>
 import tournamentCard from "../components/tournamentCard";
+import tournamentService from "../services/TournamentService";
 //import tournamentCard from '@/components/TournamentCard.vue';
 
 export default {
-  components: { tournamentCard },};
+  components: { tournamentCard },
+  created() {
+        tournamentService.getTournaments().then((response) =>{
+            this.$store.commit('STORE_TOURNAMENTS', response.data);
+        })
+    }
+  
+  };
 
 </script>
 

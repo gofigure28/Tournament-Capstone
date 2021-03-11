@@ -19,7 +19,8 @@ if(currentToken != null) {
 export default new Vuex.Store({
   state: {
     token: currentToken || '',
-    user: currentUser || {}
+    user: currentUser || {},
+    tournaments: []
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -44,6 +45,10 @@ export default new Vuex.Store({
     SAVE_MATCH(state , match) {
       state.match = match;
     },
+
+    STORE_TOURNAMENTS(state, tournaments){
+      state.tournaments = tournaments;
+    }
 
   }
 })
