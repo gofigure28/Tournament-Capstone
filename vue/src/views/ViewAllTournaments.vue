@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>View all Tournaments</h1>
+    <tournament-card/>
     <p>Tournament 1</p>
     <select name="" id="">
       
@@ -44,7 +45,13 @@
 
 
 <script>
-export default {};
+import tournamentCard from '../components/tournamentCard';
+export default {
+  components: {
+    tournamentCard
+  }
+
+};
 
 </script>
 

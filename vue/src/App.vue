@@ -2,15 +2,9 @@
   <div id="app">
        <router-view />
     <div class="nav" id="nav">
-<<<<<<< HEAD
       <button class="btn_icon"  v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
         <img class="icon" src="/assets/home.png" alt="Home"/>
-=======
-      <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'home' }">
-          <img class="icon" src="/assets/home.png" alt="Home" />
->>>>>>> f8c1c000d6a8c786b772e9009f7b063f8e56ea40
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">

@@ -1,5 +1,5 @@
 <template>
-  <div class="home" style="background-color: white">
+  <div class="home">
     <div class ="logo">
       <img class="logo" src="/assets/partyup.png" alt="Trophy Logo"/>
     </div>
@@ -50,9 +50,7 @@ export default {
   align-items: center;
   width: 100%;
   max-width: 1400px;
-  padding: 8px 8px 8px 8px;
   margin: 0 auto;
-  color: #3a86f7;
 }
 
 .routerlink{
@@ -65,6 +63,8 @@ h1{
   font-size:35px;
   color:rgb(0, 0, 0);
   margin-bottom:20px;
+  text-shadow:5px 5px 5px  rgb(150, 150, 150);
+  font-style:italic;
 }
 h4{
   margin: auto;
@@ -81,7 +81,6 @@ button {
   padding: 10px 20px;
   width: 100%;
   margin-bottom: 10px;
-
   color: #83c7ff;
   background-color: #d0f7ff;
   border-radius: 4px;

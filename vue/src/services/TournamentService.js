@@ -12,6 +12,10 @@ export default {
 
     addTournament(tournament){
         return http.post("/createTournament", tournament);
+    },
+
+    getCards(){
+        return http.get("/tournaments/");
     }
 
 
