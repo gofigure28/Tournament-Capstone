@@ -16,7 +16,7 @@
         <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
       </button>
       <button class="view-tourns">
-        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllTournaments' }">View All Tourneys</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'browseTournament' }">View All Tourneys</router-link>      
       </button>
       <button class="view-matches">
         <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
