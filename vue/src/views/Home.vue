@@ -10,16 +10,16 @@
     </div>
     <div class="nav-buttons" >
       <button class="create-tourn">
-        <router-link class="routerlink" color="white" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>
       </button>
       <button class="create-match">
-        <router-link class="routerlink" color="white" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
       </button>
       <button class="view-tourns">
-        <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllTournaments' }">View All Tourneys</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllTournaments' }">View All Tourneys</router-link>
       </button>
       <button class="view-matches">
-        <router-link class="routerlink" color="white" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
       </button>
       </div>
  
@@ -33,7 +33,6 @@ export default {
 </script>
 
 <style scoped>
-
 
 .textbox{
   margin-bottom: 50px;
@@ -59,7 +58,7 @@ export default {
 
 .routerlink{
   text-decoration: none;
-  color: white;
+  color: #0072ce;
 }
 
 h1{
@@ -83,14 +82,12 @@ button {
   padding: 10px 20px;
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid rgb(141, 141, 141);
 
-  color: #fff;
-  background-color: #0072ce;
+  color: #0072ce;
+  background-color: #d0f7ff;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-   background:repeating-linear-gradient(45deg, #6495ff, #23A6D5, #23D5AB);  
 }
 
 button:hover{

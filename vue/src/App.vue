@@ -140,10 +140,9 @@ export default {
   cursor: pointer;
   }
   .btn_icon{
-  padding: 10px 10px;
-  margin: 6px;
-  border-radius: 4px;
-  background:linear-gradient(#f3f2f2, #f1f1f1, #aaaaaa)
+  background: #d0f7ff;
+  width: inherit;
+
   }
 
   .btn_icon:hover{
