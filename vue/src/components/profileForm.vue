@@ -26,145 +26,60 @@
       </header>
 
       <main id="main-grid">
-        <h1 id="headline">Gamertag</h1>
+        <h1 id="headline">xXENCOR3Xx</h1>
 
         <div id="student-picture">
-          <img src="https://via.placeholder.com/350X350" alt="Student Image" />
+          <img src="/assets/profile.png" alt="Student Image" />
         </div>
         <div id="student-quote" class="student-gray">
           <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            porttitor ipsum diam, mattis maximus magna facilisis sed. Donec
-            luctus metus vulputate turpis eleifend mollis. Praesent ut aliquet
-            justo.
+           <i>Repersenting Team internal server error, I pride myself in taking down the best of the best. COME GET YOU SOME!!!!</i>
           </h2>
         </div>
 
-        <div id="student-profile">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            posuere vulputate erat, tempor finibus diam cursus vitae. Fusce
-            rutrum, urna accumsan tincidunt accumsan, neque erat condimentum
-            risus, consequat volutpat lacus mauris ac tortor. Integer quam
-            purus, imperdiet ac ante non, pharetra scelerisque justo. Cras
-            bibendum vulputate elit at tincidunt. Ut id auctor turpis, in
-            vulputate neque. Integer pellentesque orci augue, a varius orci
-            ultrices sit amet. Nullam metus erat, gravida in nulla eu, tristique
-            cursus ipsum. Etiam dictum nec nulla sed tempus.
-          </p>
-          <p>
-            Donec sit amet mollis massa, sed aliquam leo. Integer turpis purus,
-            commodo ut enim eget, accumsan tempor felis. Quisque posuere, leo
-            sed commodo lacinia, diam eros tempus arcu, eget tincidunt dui elit
-            ac velit. Curabitur felis lorem, convallis sit amet est eu,
-            imperdiet porttitor mi. Etiam accumsan quam nec eros egestas, sed
-            eleifend tortor scelerisque. Suspendisse pellentesque turpis lacus,
-            in fringilla neque fringilla sit amet. Donec gravida gravida est,
-            sed lacinia nisl rhoncus ut. Quisque rutrum orci ac nisi
-            scelerisque, eget iaculis massa aliquet. Sed aliquet quis dolor non
-            placerat. Suspendisse faucibus, elit at suscipit pharetra, augue
-            velit elementum dolor, ac pellentesque leo sem sed nibh. Ut sit amet
-            sapien nisl. Praesent a justo vel turpis porta volutpat sed
-            malesuada massa.
-          </p>
-        </div>
+    
 
         <div id="student-contact" class="student-gray italic-text">
+            
           <p>
-            Cohort[0]: Java | Cleveland<br />
-            student.smith@fakemail.com<br />
-            123-456-7890
+            Contact Info <br>
+            Get You Some | Charlotte,NC<br />
+            teamInternalServerError@gamermail.com<br />
+            Dial 1-900-MIX-A-LOT
           </p>
         </div>
 
         <div id="experience-grid">
           <div id="experience-code">
-            <h3><i class="fas fa-code"></i> code</h3>
-            <p>
-              Proin imperdiet, nibh at maximus efficitur, arcu turpis vulputate
-              ex, vel molestie dui quam non ipsum. Cras ex purus, mollis id
-              risus at, vestibulum suscipit mauris. Nunc auctor mauris nec
-              pulvinar condimentum. Aliquam ut elit vehicula, ultrices purus a,
-              euismod ex. Ut rhoncus gravida nisl. Proin eu rhoncus mi. In
-              rutrum dapibus metus, a auctor est lobortis ut. In imperdiet a est
-              in hendrerit.
-            </p>
+            <h3><i class="fas fa-code"></i> Teams</h3>
+            <select name="" id="">Teams</select>
+      
           </div>
           <div id="experience-database">
-            <h3><i class="fas fa-database"></i> database</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              posuere vulputate erat, tempor finibus diam cursus vitae. Fusce
-              rutrum, urna accumsan tincidunt accumsan, neque erat condimentum
-              risus, consequat volutpat lacus mauris ac tortor. Integer quam
-              purus, imperdiet ac ante non, pharetra scelerisque justo. Cras
-              bibendum vulputate elit at tincidunt. Ut id auctor turpis, in
-              vulputate neque. Integer pellentesque orci augue, a varius orci
-              ultrices sit amet.
-            </p>
+            <h3><i class="fas fa-database"></i> Tournaments</h3>
+            <select name="" id=""> Tournaments</select>
           </div>
           <div id="experience-web">
-            <h3><i class="fas fa-info"></i> web</h3>
-            <p>
-              Quisque rutrum orci ac nisi scelerisque, eget iaculis massa
-              aliquet. Sed aliquet quis dolor non placerat. Suspendisse
-              faucibus, elit at suscipit pharetra, augue velit elementum dolor,
-              ac pellentesque leo sem sed nibh. Ut sit amet sapien nisl. Sed
-              aliquet quis dolor non placerat. Suspendisse faucibus, elit at
-              suscipit pharetra, augue velit elementum dolor, ac pellentesque
-              leo sem sed nibh. Ut sit amet sapien nisl. Praesent a justo vel
-              turpis porta volutpat sed malesuada massa.
-            </p>
+            <h3><i class="fas fa-info"></i> Rankings</h3>
+            <select name="" id=""> Rankings</select>
           </div>
           <div id="experience-design">
-            <h3><i class="fas fa-palette"></i> design</h3>
-            <p>
-              Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in,
-              nibh. Quisque volutpat condimentum velit. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos
-              himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis,
-              tortor neque adipiscing diam, a cursus ipsum ante quis turpis.
-              Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi
-              a tellus consequat imperdiet. Vestibulum sapien. Proin quam.
-            </p>
+            <h3><i class="fas fa-palette"></i> Matches</h3>
+             <select name="" id=""> Rankings</select>
           </div>
         </div>
       </main>
       <footer>
-        <p>Copyright: Tech Elevator, 2020 &copy;</p>
+        <p>Copyright: teamInternalServerError, 2021 &copy;</p>
       </footer>
     </body>
-    <select name="" id="">
-      Teams
-    </select>
-    <select name="" id="">
-      Tournaments
-    </select>
-    <select name="" id="">
-      Rankings
-    </select>
-    <select name="" id="">
-      Matches
-    </select>
   </div>
 </template>
-
-
-
-
-
-
 
 
 <script>
 export default {};
 </script>
-
-
-
-
-
-
 
 <style>
 </style>
