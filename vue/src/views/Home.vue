@@ -84,7 +84,7 @@ button {
   width: 100%;
   margin-bottom: 10px;
 
-  color: #0072ce;
+  color: #83c7ff;
   background-color: #d0f7ff;
   border-radius: 4px;
   font-size: 14px;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover{
-  background-color: #000;
+  background-color: #48a4f0;
   /*  Making button bigger on hover  */
   padding: 15px 35px;
   transform: scale(1.1);
