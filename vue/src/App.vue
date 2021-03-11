@@ -7,7 +7,9 @@
         </router-link>
       </button> 
     </div>
+    <transition name="fade" mode="out-in">
        <router-view />
+    </transition>
     <div class="nav" id="nav">
       <button class="btn_icon"  v-if="$store.state.token != ''">
       <router-link color="blue" v-bind:to="{ name: 'home' }">
@@ -47,6 +49,14 @@ export default {};
 </script>
 <style scoped>
 /* Global styles */
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+  transform: translateX(2em);
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: all .3s ease;
+}
 
 .navTop{
   display: flex;

@@ -61,6 +61,10 @@ export default {
 
 </script>
 <style>
+form input {
+  border: 0px !important;
+}
+
 form.new-tournament-form {
   display: flex;
   flex-direction: column;
@@ -68,7 +72,7 @@ form.new-tournament-form {
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
-  border-radius: 8px;
+  border-radius: 80px;
   margin: 0 auto;
   color: #0072ce;
 }
@@ -81,7 +85,7 @@ form.new-tournament-form {
 }
 
 .new-tournament-form .form-control{
-  border: 1px solid black;
+  border: 1px solid rgb(196, 196, 196);
   border-radius: 8px;
   height: 40px;
   width: 60%;
@@ -91,7 +95,6 @@ form.new-tournament-form {
 button.button {
   padding: 10px 0px 10px 0px;
   margin: 20px;
-  border: 1px solid #ddd;
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;

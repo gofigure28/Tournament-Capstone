@@ -8,16 +8,24 @@
     </div>
     <div class="nav-buttons" >
       <button class="create-tourn">
-        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createTournament' }">Create a Tournament</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createTournament' }">
+          <h4> Create a Tournament </h4>
+        </router-link>
       </button>
       <button class="create-match">
-        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createMatch' }">Create a Match</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'createMatch' }">
+          <h4> Create a Match </h4>
+        </router-link>
       </button>
       <button class="view-tourns">
-        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'browseTournament' }">View All Tourneys</router-link>      
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'browseTournament' }">
+          <h4>View All Tourneys</h4>  
+        </router-link>      
       </button>
       <button class="view-matches">
-        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllMatches' }">View All Matches</router-link>
+        <router-link class="routerlink" color="#0072ce" v-bind:to="{ name: 'viewAllMatches' }">
+          <h4>View All Matches</h4>
+        </router-link>
       </button>
       </div>
  
@@ -31,6 +39,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 .textbox{
   margin-bottom: 50px;
@@ -56,6 +65,7 @@ export default {
 .routerlink{
   text-decoration: none;
   color: #0072ce;
+  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 h1{
