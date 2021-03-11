@@ -2,21 +2,21 @@
   <form class="new-tournament-form" v-on:submit.prevent="saveTournament">
     <label for="name-input" class="sr-only">Tournament Name</label>
     <input
-      class="name-input"
+      class="form-control"
       type="text"
       placeholder="Name"
       v-model="tournament.name"
     />
     <label for="starting-time-input" class="sr-only">Start Time</label>
     <input
-      class="starting-time-input"
+      class="form-control"
       type="datetime-local"
       placeholder="Starting Time"
       v-model="tournament.startTime"
     />
     <label for="numper-of-players-input" class="sr-only"># of Players</label>
     <input
-      class="number-of-players-input"
+      class="form-control"
       type="number"
       placeholder="Number of Teams"
       v-model="tournament.numberOfPlayers"
@@ -80,7 +80,7 @@ form.new-tournament-form {
   margin: auto;
 }
 
-form input{
+.new-tournament-form .form-control{
   border: 1px solid black;
   border-radius: 8px;
   height: 40px;
