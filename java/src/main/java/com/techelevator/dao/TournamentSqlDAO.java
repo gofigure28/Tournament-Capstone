@@ -79,7 +79,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  tournament.setMatchID(rw.getInt("match_id"));
 	  tournament.setName(rw.getString("tournament_name"));
 	  tournament.setNumberOfPlayers(rw.getInt("number_of_participants"));
-	  tournament.setStartTime(rw.getTimestamp("start_time").toLocalDateTime());
+	  tournament.setStartTime(rw.getTimestamp("start_date").toLocalDateTime());
 	  tournament.setTournamentID(rw.getInt("tournament_id"));
 	  return tournament;
 	  
