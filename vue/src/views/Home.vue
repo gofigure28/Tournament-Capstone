@@ -1,12 +1,10 @@
 <template>
   <div class="home" style="background-color: white">
     <div class ="logo">
-      <img class="logo" src="/assets/Winners.png" alt="Trophy Logo"/>
+      <img class="logo" src="/assets/partyup.png" alt="Trophy Logo"/>
     </div>
     <div class="textbox">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
-    <center> <h4> Compliments of team:</h4><h4>"Internal Server Error!" </h4></center>
-    <center><h3>Please select from the options below...</h3></center>
     </div>
     <div class="nav-buttons" >
       <button class="create-tourn">
@@ -105,6 +103,7 @@ button:hover{
   flex-wrap: wrap;
   height: auto;
   width: 200px;
+  margin-bottom:50px;
 
 }
 
