@@ -9,6 +9,7 @@ import createTournament from '../views/createTournament'
 import createMatch from '../views/createMatch'
 import browseTournament from '../views/ViewAllTournaments'
 import playerProfile from '../views/playerProfile'
+import organizerPage from '../views/organizerPage'
 
 Vue.use(Router)
 
@@ -79,6 +80,12 @@ const router = new Router({
       name: "playerProfile",
       component: playerProfile
     },
+
+    {
+      path: "/organizerPage",
+      name: "organizerPage",
+      component: organizerPage
+    }
   ]
 })
 
