@@ -64,7 +64,7 @@ export default {};
   width: 100%;
   border-radius: 8px;
   flex-direction: row;
-  background-color: #fff;
+  background-color: #b1e9ff;
   text-decoration: none;
   background-size: 400% 400%;
   position: relative;
@@ -79,7 +79,6 @@ export default {};
   text-decoration: none;
   background-size: 500%;
   position: relative;
-  z-index: 999;
 }
 
 .btn {
@@ -113,7 +112,7 @@ export default {};
 #app {
   margin: 2rem 0 4rem 0;
   padding: 0;
-  background-color: #d3edff;
+  background-color: #eff9ff;
   border-radius: 8px;
   padding-top: 0;
   position: relative;
