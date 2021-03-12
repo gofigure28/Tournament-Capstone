@@ -51,7 +51,7 @@ export default {};
 /* Global styles */
 .fade-enter, .fade-leave-to{
   opacity: 0;
-  transform: translateX(2em);
+  transform: translateY(-2em);
 }
 
 .fade-enter-active, .fade-leave-active{
@@ -79,6 +79,7 @@ export default {};
   text-decoration: none;
   background-size: 500%;
   position: relative;
+  z-index: 999;
 }
 
 .btn {
@@ -112,16 +113,17 @@ export default {};
 #app {
   margin: 2rem 0 4rem 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #d3edff;
   border-radius: 8px;
   padding-top: 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
-  background-image:url('/assets/design.png');
+  /*background-image:url('/assets/design.png');*/
   background-size:150%;
   background-repeat:no-repeat;
   width:100%;
   height:auto;
+  overflow:hidden;
 }
 @media screen and (min-width: 550px) {
   #app {
