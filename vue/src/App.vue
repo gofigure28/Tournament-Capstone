@@ -51,7 +51,7 @@ export default {};
 /* Global styles */
 .fade-enter, .fade-leave-to{
   opacity: 0;
-  transform: translateY(-2em);
+  transform: translateX(2em);
 }
 
 .fade-enter-active, .fade-leave-active{
@@ -122,7 +122,6 @@ export default {};
   background-repeat:no-repeat;
   width:100%;
   height:auto;
-  overflow:hidden;
 }
 @media screen and (min-width: 550px) {
   #app {
