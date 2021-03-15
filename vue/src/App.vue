@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <div class="navTop" id ="nav">
-      <button class="btn_top" name="top">
+    <div class="navTop" id="nav">
+      <button class="btn_top" name="top" v-if="$store.state.token != ''">
         <router-link color="blue" v-bind:to="{ name: 'home' }">
-          <img class="icon" src="/assets/trophy.png" alt="Logout" />
+          <img class="icon" src="/assets/search.png" alt="Search" />
         </router-link>
-      </button> 
+      </button>
     </div>
     <transition name="fade" mode="out-in">
-       <router-view />
+      <router-view />
     </transition>
     <div class="nav" id="nav">
-      <button class="btn_icon"  v-if="$store.state.token != ''">
-      <router-link color="blue" v-bind:to="{ name: 'home' }">
-        <img class="icon" src="/assets/home.png" alt="Home"/>
+      <button class="btn_icon" v-if="$store.state.token != ''">
+        <router-link color="blue" v-bind:to="{ name: 'home' }">
+          <img class="icon" src="/assets/home.png" alt="Home" />
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
@@ -36,7 +36,7 @@
           <img class="icon" src="/assets/bracket.png" alt="Browse" />
         </router-link>
       </button>
-       <button class="btn_icon" v-if="$store.state.token != ''">
+      <button class="btn_icon" v-if="$store.state.token != ''">
         <router-link color="blue" v-bind:to="{ name: 'playerProfile' }">
           <img class="icon" src="/assets/user.png" alt="Profile" />
         </router-link>
@@ -49,16 +49,18 @@ export default {};
 </script>
 <style scoped>
 /* Global styles */
-.fade-enter, .fade-leave-to{
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
   transform: translateX(2em);
 }
 
-.fade-enter-active, .fade-leave-active{
-  transition: all .3s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
 }
 
-.navTop{
+.navTop {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -118,10 +120,10 @@ export default {};
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
   /*background-image:url('/assets/design.png');*/
-  background-size:150%;
-  background-repeat:no-repeat;
-  width:100%;
-  height:auto;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 @media screen and (min-width: 550px) {
   #app {
