@@ -14,6 +14,7 @@ export default {
         tournament: {
             tournament_name: "",
             tournament_id: "",
+            tournament_status: "",
             start_time: "",
             start_date: "",
             number_of_participants: "",
