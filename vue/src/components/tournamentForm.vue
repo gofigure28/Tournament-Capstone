@@ -58,13 +58,11 @@ export default {
   }
 },
 };
-
 </script>
 <style>
 form input {
   border: 0px !important;
 }
-
 form.new-tournament-form {
   display: flex;
   flex-direction: column;
@@ -74,7 +72,7 @@ form.new-tournament-form {
   padding: 8px 8px 8px 8px;
   border-radius: 80px;
   margin: 0 auto;
-  color: #0072ce;
+  color: #0072CE;
 }
 .new-tournament-form .sr-only{
   padding: 8px 0px 8px 0px;
@@ -83,7 +81,6 @@ form.new-tournament-form {
   height: 20;
   margin: auto;
 }
-
 .new-tournament-form .form-control{
   border: 1px solid rgb(196, 196, 196);
   border-radius: 8px;
@@ -91,15 +88,13 @@ form.new-tournament-form {
   width: 60%;
   margin: auto;
 }
-
 button.button {
   padding: 10px 0px 10px 0px;
   margin: 20px;
   color: #fff;
-  background-color: #0072ce;
+  background-color: #0072CE;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
 }
-
 </style>
