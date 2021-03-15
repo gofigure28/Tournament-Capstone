@@ -6,7 +6,7 @@ import java.sql.Time;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.techelevator.model.Match;
+import com.techelevator.model.Games;
 
 public interface TournamentDAO {
 	
@@ -14,9 +14,11 @@ public interface TournamentDAO {
 	
 	Tournament get(int id);
 
-	Tournament create(String name, int matchID, Match match, LocalDateTime startTime, int numberOfPlayers)
+	Tournament create(String name, int matchID, Games games, LocalDateTime startTime, int numberOfPlayers)
 			throws Exception;
 	
 	String getName(int id);
+	
+	Tournament addTeamsToGames(String teamNam);
 }
 	

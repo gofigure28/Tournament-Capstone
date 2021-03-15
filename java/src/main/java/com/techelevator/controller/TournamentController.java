@@ -2,7 +2,7 @@ package com.techelevator.controller;
 
 import com.techelevator.model.Tournament;
 import com.techelevator.dao.TournamentDAO;
-import com.techelevator.model.Match;
+import com.techelevator.model.Games;
 
 import java.util.List;
 import java.sql.Time;
@@ -32,7 +32,7 @@ public class TournamentController {
 	
 	private TournamentDAO tournamentDAO;
 	
-	private Match match;
+	private Games match;
 	
 	public TournamentController(TournamentDAO tournamentDAO) {
 		this.tournamentDAO = tournamentDAO;

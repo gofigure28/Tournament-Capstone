@@ -9,12 +9,12 @@ public class Tournament {
 
 	private int tournamentID;
 	private int matchID;
-	private Match match;
+	private Games match;
 	private LocalDateTime startTime;
 	private int numberOfPlayers;
 	private String name;
 	
-	public Tournament(String name, int tournamentID, int matchID, Match match, LocalDateTime startTime, int numberOfPlayers) {
+	public Tournament(String name, int tournamentID, int matchID, Games match, LocalDateTime startTime, int numberOfPlayers) {
 		this.tournamentID = tournamentID;
 		this.matchID = matchID;
 		this.match = match;
@@ -47,10 +47,10 @@ public class Tournament {
 	public void setMatchID(int matchID) {
 		this.matchID = matchID;
 	}
-	public Match getMatch() {
+	public Games getMatch() {
 		return match;
 	}
-	public void setMatch(Match match) {
+	public void setMatch(Games match) {
 		this.match = match;
 	}
 	public LocalDateTime getStartTime() {

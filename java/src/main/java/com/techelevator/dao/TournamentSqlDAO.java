@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
-import com.techelevator.model.Match;
+import com.techelevator.model.Games;
 import com.techelevator.model.Tournament;
 
 import java.sql.Time;
@@ -28,7 +28,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 	}
 
 	@Override
-	public Tournament create(String name, int matchID, Match match, LocalDateTime startTime, int numberOfPlayers) {
+	public Tournament create(String name, int matchID, Games games, LocalDateTime startTime, int numberOfPlayers) {
 		try {
 			
 			String query = "insert into tournaments "
@@ -55,7 +55,7 @@ public class TournamentSqlDAO implements TournamentDAO {
 
 	@Override
 	public List<Tournament> all() {
-		String query = "SELECT * FROM tournaments;";
+		String query = "SELECT * FROM tournaments";
 		List<Tournament> allTournaments = new ArrayList<>();
 		SqlRowSet result = jdbcTemplate.queryForRowSet(query);
 		while(result.next()) {
@@ -84,6 +84,12 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  return tournament;
 	  
 	 }
+
+	@Override
+	public Tournament addTeamsToGames(String teamNam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

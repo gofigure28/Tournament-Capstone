@@ -1,6 +1,8 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS users , tournaments , games , matches , team;
+DROP TABLE IF EXISTS team_games, tournament_games, tournament_teams;
+
+DROP TABLE IF EXISTS users , tournaments , games , matches , teams;
 DROP SEQUENCE IF EXISTS seq_user_id;
 
 CREATE SEQUENCE seq_user_id
@@ -34,40 +36,49 @@ CONSTRAINT       PK_tournament_id     PRIMARY KEY (tournament_id)
 CREATE TABLE games(
         game_name               varchar(32)     NOT NULL,
         game_id                 serial          NOT NULL,
-        start_time              time            NOT NULL,
-        start_date              date            NOT NULL,
+        start_time              timestamp       NOT NULL,
         organizer               varchar(32)     NOT NULL,
         number_of_players       int             NOT NULL,
+        winning_team            int                     ,
         
+CONSTRAINT       FK_winning_team        FOREIGN KEY (winning_team) REFERENCES teams(team_id),
 CONSTRAINT       PK_game_id             PRIMARY KEY (game_id)              
-
 );
 
-CREATE TABLE matches(
-        tournament_id           serial                  ,
-        game_id                 serial                  ,
-        start_time              time            NOT NULL,
-        start_date              date            NOT NULL,
-        game_title              varchar(64)     NOT NULL,
-        team_id                 serial                  ,
-        match_id                serial          NOT NULL,
-        number_of_players       int             NOT NULL,
-        
-CONSTRAINT       PK_match_id     PRIMARY KEY (tournament_id, game_id)              
-        
-);
-
-CREATE TABLE team(
-        tournament_id           serial          NOT NULL,
-        game_id                 serial          NOT NULL,
+CREATE TABLE teams(
         team_name               varchar(64)     NOT NULL,
         team_id                 serial          NOT NULL,
         list_of_players         varchar(64)     NOT NULL,
         
-CONSTRAINT       PK_team_id     PRIMARY KEY (team_id , team_name)              
-
-
+CONSTRAINT       PK_team_id_id     PRIMARY KEY (team_id)  
 );
+
+CREATE TABLE team_games(
+        team_id                 int,
+        game_id                 int,
+        round_number            int 
+        
+CONSTRAINT      FK_team_id_id         FOREIGN KEY (team_id)    REFERENCES teams(team_id),
+CONSTRAINT      FK_game_id            FOREIGN KEY (game_Id)    REFERENCES games(game_id)
+   
+);
+
+CREATE TABLE tournament_games(
+        tournament_id           int,
+        game_id                 int,
+        
+CONSTRAINT      FK_tournament_id_id      FOREIGN KEY (tournament_id)    REFERENCES tournaments(tournament_id),
+CONSTRAINT      FK_game_id_i             FOREIGN KEY (game_Id)          REFERENCES games(game_id)
+);
+
+CREATE TABLE tournament_teams(
+        team_id                 int,
+        tournament_id           int,
+        
+CONSTRAINT      FK_team_id_id            FOREIGN KEY (team_id)          REFERENCES teams(team_id),
+CONSTRAINT      FK_tournament_id         FOREIGN KEY (tournament_id)    REFERENCES tournaments(tournament_id)
+);
+
 
                                                                 -- INSERT STATEMENTS
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
