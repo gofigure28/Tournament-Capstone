@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <center><h2>Player's Profile</h2></center>
     <head>
@@ -30,9 +31,9 @@
         <h1 id="headline">xXENCOR3Xx</h1>
 
         <div id="student-picture">
-          <img src="/assets/profile.png" alt="Student Image" />
+          <img src="/assets/profile.png" alt="Profile Pic" />
         </div>
-        <div id="student-quote" class="student-gray">
+        <div id="player-quote" class="player-quote">
           <h2>
            <i>Repersenting Team internal server error, I pride myself in taking down the best of the best. COME GET YOU SOME!!!!</i>
           </h2>
@@ -40,7 +41,7 @@
 
     
 
-        <div id="student-contact" class="student-gray italic-text">
+        <div id="player-contact" class="profile-details">
             
           <p>
             Contact Info <br>
@@ -71,7 +72,7 @@
         </div>
       </main>
       <footer>
-        <p>Copyright: teamInternalServerError, 2021 &copy;</p>
+        <p>Copyright: team InternalServerError, 2021 &copy;</p>
       </footer>
     </body>
   </div>
@@ -85,7 +86,57 @@ export default {};
 <style>
 .student_picture{
   border-radius:25px;
+  position: center;
+}
+
+.profile-details{
+  display: flex;
+  padding: 20px;
+  line-height: 2em;
 }
 
 
 </style>
+
+
+/*
+
+thought a form made sense, but this just broke the page 
+<form class="ui form" @submit.prevent="updateProfile">
+          <div class="field" :class="{ error: errors.has('name') }">
+            <label>Full Name</label>
+            <input type="text" name="name" v-model="name" v-validate="'required'">
+            <span v-show="errors.has('name')" class="is-danger">{{ errors.first('name') }}</span>
+          </div>
+
+          <div class="field" :class="{ error: errors.has('name') }">
+            <label>Username</label>
+            <input type="text" name="username" v-model="username" v-validate="'required'">
+            <span v-show="errors.has('username')" class="is-danger">{{ errors.first('username') }}</span>
+          </div>
+
+          <div class="field" :class="{ error: errors.has('email') }">
+            <label>Email</label>
+            <input type="email" name="email" v-model="email" v-validate="'required|email'" placeholder="Email">
+            <span v-show="errors.has('email')" class="is-danger">{{ errors.first('email') }}</span>
+          </div>
+
+          <div class="field">
+            <label>Bio</label>
+            <textarea v-model="bio" rows="5" placeholder="A breif bio of you"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Location</label>
+            <input type="text" v-model="location" placeholder="Your location">
+          </div>
+
+          <div class="field">
+            <label>Website URL</label>
+            <input type="url" v-model="websiteUrl" placeholder="Website URL">
+          </div>
+
+          <button class="ui button primary">Update profile</button>
+        </form>*/
+
+

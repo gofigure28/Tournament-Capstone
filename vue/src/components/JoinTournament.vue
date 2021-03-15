@@ -6,7 +6,11 @@
       v-bind:key="tournament.tournamentID"
       v-bind:tournament="tournament"
     />
-  </div>
+  
+  <label for="joinTournament" class="sr-only">Join Tournament</label>
+      <router-link :to="{ name: 'joinTournament' }">joinTournament</router-link>
+      <button class="btn" type="submit">
+ </div>
 </template>
 
 <script>
@@ -14,8 +18,6 @@ import TournamentList from "../components/TournamentList";
 import JoinTournamentService from "../services/JoinTournamentService";
 
 export default {
-  
-  name: "tournament-form",
   data() {
     return {
       tournament: {
@@ -26,18 +28,26 @@ export default {
     };
   },
   methods: {
-    addTournamentTeam(){
-      joinTournamentService.addTournamentTeam(this.tournament).then((response) =>{
-      if(response === 201){
-      this.$router.push("/viewAllTournaments");
+    saveTournament(){
+     this.$store.commit("SAVE_TOURNAMENT", this.tournament).then((response) =>{
+      this.tournament= response.data;
+      });
+      this.tournament= {
+        tournament_name: "",
+        startTime: "",
+        numberOfPlayers: "",
+        teamID: "this.teamID"
       }
-      }).catch(error =>{
-      console.log(error);
-      this.$router.push("/viewAllTournaments");
-      })
-  }
 },
-};
+computed: {
+    active() {
+      return this.$store.state.tournamentCard.filter(
+        (tournament) => tournament.status === "Active"
+      );
+    },
+    
+  };
+
 </script>
 
 <style scoped>
