@@ -1,6 +1,7 @@
 package com.techelevator.controller;
 
 import com.techelevator.model.Tournament;
+import com.techelevator.model.TournamentTeam;
 import com.techelevator.dao.TournamentDAO;
 import com.techelevator.model.Games;
 
@@ -68,6 +69,16 @@ public class TournamentController {
 	@RequestMapping(value ="/tournaments/{id}", method = RequestMethod.GET)
 	public String nameGet(@PathVariable int id) {
 		return tournamentDAO.getName(id);
+	}
+	
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value ="/add-team", method = RequestMethod.POST)
+	public Tournament addTeam(@RequestBody TournamentTeam tournamentTeam) {
+		return tournamentDAO.addTeamToTournament(
+				tournamentTeam.getTeamID(),
+				tournamentTeam.getTeamID()
+				);
+		
 	}
 	
 	

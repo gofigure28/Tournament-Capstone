@@ -19,6 +19,11 @@ public interface TournamentDAO {
 	
 	String getName(int id);
 	
-	Tournament addTeamsToGames(String teamNam);
+	Tournament generateGameList();
+	
+	Tournament randomizeTeamList();
+
+	Tournament addTeamToTournament(int teamID, int tournamentID);
+	
 }
 	
