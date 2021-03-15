@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import com.techelevator.model.Games;
 import com.techelevator.model.Tournament;
+import com.techelevator.model.TournamentTeam;
 
 import java.sql.Time;
 
@@ -73,6 +74,29 @@ public class TournamentSqlDAO implements TournamentDAO {
 		return null;
 	}
 
+
+	@Override
+	public Tournament addTeamToTournament(int teamID, int tournamentID) {
+		String query = "INSERT INTO tournament_teams (team_id, tournament_id) VALUES (?, ?);";
+		jdbcTemplate.update(query, teamID, tournamentID);
+		
+		
+		return null;
+	}
+
+	@Override
+	public Tournament generateGameList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Tournament randomizeTeamList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
 	private Tournament mapRow(SqlRowSet rw) {
 	  
 	  Tournament tournament = new Tournament();
@@ -84,13 +108,13 @@ public class TournamentSqlDAO implements TournamentDAO {
 	  return tournament;
 	  
 	 }
-
-	@Override
-	public Tournament addTeamsToGames(String teamNam) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
+	private TournamentTeam mapRowToTournamentTeam(SqlRowSet rw) {
+	 TournamentTeam tournamentTeam = new TournamentTeam();
+	 tournamentTeam.setTeamID(rw.getInt("team_id"));
+	 tournamentTeam.setTournamentID(rw.getInt("tournament_id"));
+	 return tournamentTeam;
+	}
 	
 
 
