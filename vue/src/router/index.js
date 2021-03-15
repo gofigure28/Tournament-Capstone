@@ -10,6 +10,8 @@ import createMatch from '../views/createMatch'
 import browseTournament from '../views/ViewAllTournaments'
 import playerProfile from '../views/playerProfile'
 import organizerPage from '../views/organizerPage'
+import TournamentBracket from '../views/TournamentBracket'
+
 
 Vue.use(Router)
 
@@ -85,6 +87,12 @@ const router = new Router({
       path: "/organizerPage",
       name: "organizerPage",
       component: organizerPage
+    },
+
+    {
+      path:"/bracketPage",
+      name: "bracketPage",
+      component: TournamentBracket
     }
   ]
 })
