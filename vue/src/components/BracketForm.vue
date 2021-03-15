@@ -33,14 +33,14 @@
     <body>
       <header class="hero"> 
         <div class="hero-wrap">
-          <p class="intro" id="intro">Team Internal Server Error presents</p>
-          &nbsp;
-          <h1 id="headline">The Winners Cup</h1>
+          
+         
+        <center> <h1 id="headline">The Winners Cup</h1> </center>
         </div>
       </header>
 
       <section id="bracket">
-        <div class="container">
+        <div class="container" >
           <div class="split split-one">
             <div class="round round-one current">
               <div class="round-details">
@@ -260,9 +260,23 @@ body {
   margin: 0;
 }
 
+#headline{
+  color: white;
+  font-size: 40px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  height: 50%;
+  width: 50%;
+  
+}
+
+
 .hero {
   
-  background-color: #007cee;
+  background-image: url('/assets/trophy.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 150px 0 0 0;
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -321,7 +335,6 @@ body {
 }
 
 .container {
-  background-image: url("trophy: .png;");
   max-width: 1100px;
   margin: 0 auto;
   display: block;
