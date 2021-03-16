@@ -44,9 +44,9 @@
               <div class="round-details">
                 Round 1<br /><span class="date">Insert Date Here</span>
               </div>
-              <ul class="matchup">
-                <li class="team team-top">Duke<span></span></li>
-                <li class="team team-bottom">Virginia<span></span></li>
+              <ul class="matchup" v-for="game in games" v-bind:key="game.gameId">
+                <li class="team team-top">    {{ game.team1Name }}<span></span></li>
+                <li class="team team-bottom"> {{ game.team2Name }}<span></span></li>
               </ul>
               <ul class="matchup">
                 <li class="team team-top">Wake Forest<span></span></li>
@@ -260,6 +260,9 @@ export default {
       ],
     };
   },
+
+  computed: { games: function() {
+    return [{team1Name:"team 1", team2Name: "team 2", gameId: 7 }]; }},
 };
 </script>
 
@@ -286,12 +289,11 @@ body {
   background-image: url("/assets/trophy.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding:  0 0 180px 0;
+  padding: 0 0 180px 0;
   position: relative;
   text-align: center;
   overflow: hidden;
   color: #fcfcfc;
-  
 }
 
 .hero h1 {
