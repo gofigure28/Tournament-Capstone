@@ -6,38 +6,80 @@
       v-bind:key="tournament.tournamentID"
       v-bind:tournament="tournament"
     />
-  </div>
+  
+  <label for="joinTournament" class="sr-only">Join Tournament</label>
+      <router-link :to="{ name: 'joinTournament' }">joinTournament</router-link>
+      <button class="btn" type="submit">
+
+          <create-team/>
+          <tournament-list/>
+ </div>
 </template>
 
 <script>
 import TournamentList from "../components/TournamentList";
 import JoinTournamentService from "../services/JoinTournamentService";
+import CreateTeam from "../components/CreateTeam";
+
 
 export default {
-  
-  name: "tournament-form",
   data() {
     return {
       tournament: {
         name: "",
-        startTime: "",
-        numberOfPlayers: "",
+        teamID: "",
       },
     };
   },
+  components: {
+      CreateTeam,
+      TournamentList,
+        },
+
   methods: {
-    addTournamentTeam(){
-      joinTournamentService.addTournamentTeam(this.tournament).then((response) =>{
-      if(response === 201){
-      this.$router.push("/viewAllTournaments");
+     
+    joinTournament() {
+        const teamID = parseInt(this.receivingTournament);
+        if( tournament_status != "Active") {
+            this.errorMsg = "Please select an active tournament";
+        } else if (
+            confirm("Join this tournament?")
+            this.createTeam;
+        ){
+            this.tournamentCard(this.tournamentID, teamID).then() => {
+                JoinTournamentService
+                .joinTournament(this.tournamentID)
+                .then((response) => {
+                    if (response.status === 200) {
+                        alert("You've successfully joined this tournament!");
+                         this.$store.commit("SAVE_BOARD", this.tournamentID);
+                        this.$router.push("/");
+              }
+            })
+            .catch((error) => {
+              if (error.response) {
+                this.errorMsg = `Error joining this tournament. Response recieved was "${error.response.statusText}".`;
+              } else if (error.request) {
+                this.errorMsg =
+                  "Error joining this tournament. Server could not be reached.";
+              } else {
+                this.errorMsg =
+                  "Error joining this tournament. Request could not be made.";
+              }
+            });
+        };
       }
-      }).catch(error =>{
-      console.log(error);
-      this.$router.push("/viewAllTournaments");
-      })
-  }
-},
-};
+    },
+  },
+computed: {
+    active() {
+      return this.$store.state.tournamentCard.filter(
+        (tournament) => tournament.status === "Active"
+      );
+    },
+    
+  };
+
 </script>
 
 <style scoped>
