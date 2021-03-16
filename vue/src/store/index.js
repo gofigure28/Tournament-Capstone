@@ -21,7 +21,7 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     tournaments: [],
-    allUsers: []
+    users: []
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -50,8 +50,8 @@ export default new Vuex.Store({
     STORE_TOURNAMENTS(state, tournaments){
       state.tournaments = tournaments;
     },
-    SET_USER_LIST(state, users) {
-      state.allUsers = allUsers;
+    STORE_USERS(state, users) {
+      state.users = users;
 
     }
 

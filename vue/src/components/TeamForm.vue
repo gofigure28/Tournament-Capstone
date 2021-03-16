@@ -15,10 +15,10 @@
       <div
         v-show="inputValue && apiLoaded"
         v-for="item in userList"
-        :key="item.name"
+        :key="item.username"
         class="dropdown-list"
       >
-        {{ item.name }}
+        {{ item.username }}
       </div>
     </div>
 </template>
@@ -56,13 +56,6 @@ export default {
         users: "",
       };
       this.$router.push({ path: "createTeam" });
-    },
-    createTeam() {
-      {
-        teamID: Number(this.$route.params.teamID);
-        teamName: this.teamname.title;
-        teamList: this.userList.users;
-      }
     },
     selectItem(theItem) {
       this.selectedItem = theItem;
