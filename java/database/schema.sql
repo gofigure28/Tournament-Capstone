@@ -1,6 +1,6 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS team_games, tournament_games, tournament_teams, team_player;
+DROP TABLE IF EXISTS team_games, tournament_games, tournament_teams, team_player, invited_players;
 
 DROP TABLE IF EXISTS users , tournaments , games , matches , teams;
 DROP SEQUENCE IF EXISTS seq_user_id;
@@ -92,6 +92,15 @@ CONSTRAINT      FK_team_id_id            FOREIGN KEY (team_id)          REFERENC
 CONSTRAINT      FK_tournament_id         FOREIGN KEY (tournament_id)    REFERENCES tournaments(tournament_id)
 );
 
+CREATE TABLE invited_players(
+        invite_id               serial,
+        inviter_id              int,
+        invited_id              int,
+        isHost                  boolean DEFAULT false,
+CONSTRAINT      PK_invite_id_id         PRIMARY KEY (invite_id),
+CONSTRAINT      FK_inviter_id_id        FOREIGN KEY (inviter_id)        REFERENCES users(user_id),
+CONSTRAINT      FK_invited_id_id        FOREIGN KEY (invited_id)        REFERENCES users(user_id)
+        );
 
                                                                 -- INSERT STATEMENTS
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');

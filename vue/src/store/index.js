@@ -21,7 +21,8 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     tournaments: [],
-    users: []
+    users: [],
+    invitedUsers: []
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -52,6 +53,15 @@ export default new Vuex.Store({
     },
     STORE_USERS(state, users) {
       state.users = users;
+
+    },
+
+    STORE_SELECTED(state, users) {
+      state.users = users;
+    },
+
+    STORE_INVITED(state, invitedUsers){
+      state.invitedUsers = invitedUsers;
 
     }
 
