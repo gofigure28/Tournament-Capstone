@@ -16,7 +16,7 @@ export default {
 
     getTournaments(){
         return http.get("/tournaments/");
-    }
+    },
 
 
 }

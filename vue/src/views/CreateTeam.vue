@@ -7,15 +7,14 @@
     
     <!-- The selected country name will be visible below, when selected -->
     {{ dropdownSelection.name }} 
-      <div class="bottom">
-  </div>
-    
+    <AddTeamForm/>
   </div>
 
 </template>
 
 <script>
 import TeamForm from '@/components/TeamForm.vue'
+import AddTeamForm from '../components/AddTeamForm.vue'
 export default {
   data () {
     return {
@@ -23,22 +22,24 @@ export default {
     }
   },
   components: {
-    TeamForm
+    TeamForm,
+    AddTeamForm
   }
 }
 </script>
-<style>
+
+    AddTeamForm<style>
 
 center{
   height:100
 }
 
 .bottom{
-  height:500px;
+  display:flex;
 }
 
 .top{
-  height:5rem;
+  height:50px;
 }
 
 </style>
