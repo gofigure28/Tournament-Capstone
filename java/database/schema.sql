@@ -104,7 +104,7 @@ INSERT INTO tournaments (tournament_name, tournament_id, start_date, number_of_p
         VALUES ('ironing', 2, '2021-03-11T10:43:00', 3, 2, 1, 3);
 INSERT INTO tournament_teams (team_id, tournament_id) VALUES (1, 1);
 INSERT INTO tournament_teams (team_id, tournament_id) VALUES (2,2);
-DELETE FROM tournament_teams;
+
                                                                 -- SELECT STATEMENTS
 
 SELECT * FROM users;
