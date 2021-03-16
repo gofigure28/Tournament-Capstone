@@ -26,6 +26,8 @@
 <script>
 import axios from "axios";
 export default {
+   name: "team-form",
+   props: ["users"],
   data() {
     return {
       inputValue: "",
@@ -50,7 +52,7 @@ export default {
       let currentInput = this.inputValue.toLowerCase();
       return currentName.includes(currentInput);
     },
-    addPlayer() {
+  /*  addPlayer() {
       this.$store.commit("SET_USER", this.user);
       this.userList = {
         users: "",
@@ -66,8 +68,8 @@ export default {
       this.selectedItem = {};
       this.$nextTick ( () => this.$refs.dropdowninput.focus() );
       this.$emit('on-item-reset');
-    }
-  },
+    } */
+  }, 
 };
 </script>
 
