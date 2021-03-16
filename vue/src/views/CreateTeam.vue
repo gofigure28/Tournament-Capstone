@@ -11,10 +11,10 @@
 
 
 <script>
-import matchForm from '../components/CreateTeam'
+import matchForm from '../components/TeamForm'
 
 export default {
-  components: {CreateTeam},
+  components: {TeamForm},
 
   methods: {},
 };
