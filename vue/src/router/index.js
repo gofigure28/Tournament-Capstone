@@ -95,12 +95,12 @@ const router = new Router({
       name: "bracketPage",
       component: TournamentBracket
     },
-
-    {
+ {
       path: "/createTeam",
-      name: "createteam",
-      component: TeamForm
+      name: "createTeam",
+      component: CreateTeam
     }
+   
   ]
 })
 

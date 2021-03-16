@@ -1,63 +1,85 @@
 
 <template>
-  <div class="dropdown">
-    <input
-      v-model.trim="inputValue"
-      class="dropdown-input"
-      type="text"
-      placeholder="Select Player"
-    />
-    <div
-      v-show="inputValue && apiLoaded"
-      v-for="item in userList"
-      :key="item.name"
-      class="dropdown-list"
-    >
-      {{ item.name }}
+  <form class="new-team-form" v-on:submit.prevent="saveTeam">
+    <div class="dropdown">
+      <input
+        v-if="Object.keys(selected.Item).length === 0"
+        ref="dropdowninput"
+        v-model.trim="inputValue"
+        class="dropdown-input"
+        type="text"
+        placeholder="Select Player"
+      />
+      <div v-else @click="resetSelection" class="dropdown-selected">
+        {{ selectedItem.name }}
+      </div>
+      <div
+        v-show="inputValue && apiLoaded"
+        v-for="item in userList"
+        :key="item.name"
+        class="dropdown-list"
+      >
+        {{ item.name }}
+      </div>
     </div>
-  </div>
+
+    <button class="button" type="submit">Save Team</button>
+  </form>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  data () {
+  data() {
     return {
-      inputValue: '',
+      inputValue: "",
       userList: [],
       apiLoaded: false,
-      apiUrl: '../components/AllUsers'
-    }
+      apiUrl: "../components/AllUsers",
+      selectedItem: {},
+    };
   },
-  mounted () {
-    this.getList()
+  mounted() {
+    this.getList();
   },
   methods: {
-    getList () {
-      axios.get(this.apiUrl).then( response => {
-        this.userList = response.data
-        this.apiLoaded = true
-      })
+    getList() {
+      axios.get(this.apiUrl).then((response) => {
+        this.userList = response.data;
+        this.apiLoaded = true;
+      });
     },
-    itemVisible (item) {
-      let currentName = item.name.toLowerCase()
-      let currentInput = this.inputValue.toLowerCase()
-      return currentName.includes(currentInput)
+    itemVisible(item) {
+      let currentName = item.name.toLowerCase();
+      let currentInput = this.inputValue.toLowerCase();
+      return currentName.includes(currentInput);
     },
-     createTeam() {
-          {
-              teamID: Number(this.$route.params.teamID)
-              teamName: this.teamname.title
-              addPlayer() {
-                this.$store.commit('SET_USER', this.user)
-                this.userList = {
-                  users: ''}
-                this.$router.push({path: 'createTeam'})
-              }
-             }
+    addPlayer() {
+      this.$store.commit("SET_USER", this.user);
+      this.userList = {
+        users: "",
+      };
+      this.$router.push({ path: "createTeam" });
+    },
+    createTeam() {
+      {
+        teamID: Number(this.$route.params.teamID);
+        teamName: this.teamname.title;
+        teamList: this.userList.users;
       }
+    },
+    selectItem(theItem) {
+      this.selectedItem = theItem;
+      this.inputValue = "";
+      this.$emit("on-item-sleected", theItem);
+    },
+    resetSelection() {
+      this.selectedItem = {};
+      this.$nextTick ( () => this.$refs.dropdowninput.focus() );
+      this.$emit('on-item-reset');
+    }
+  },
 };
-
 </script>
 
 <style>
@@ -66,6 +88,7 @@ export default {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 8px;
 }
 .dropdown-input,
 .dropdown-selected {
@@ -108,5 +131,17 @@ export default {
 }
 .dropdown-item:hover {
   background: #0072ce;
+}
+
+.button {
+  width: 80px;
+  padding: 10px 0px 10px 0px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  color: #fff;
+  background-color: #0072ce;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
 }
 </style>
