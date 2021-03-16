@@ -24,8 +24,7 @@ public interface TournamentDAO {
 	Tournament randomizeTeamList();
 
 	Tournament addTeamToTournament(int teamID, int tournamentID);
-	
-	Tournament addTeam(int userID, int tournamentID);
+
 	
 	Tournament addPlayer(int userID, int teamID);
 }

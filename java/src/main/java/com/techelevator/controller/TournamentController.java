@@ -2,8 +2,10 @@ package com.techelevator.controller;
 
 import com.techelevator.model.Tournament;
 import com.techelevator.model.TournamentTeam;
+import com.techelevator.dao.TeamsDAO;
 import com.techelevator.dao.TournamentDAO;
 import com.techelevator.model.Games;
+import com.techelevator.model.Teams;
 
 import java.util.List;
 import java.sql.Time;
@@ -34,6 +36,10 @@ public class TournamentController {
 	private TournamentDAO tournamentDAO;
 	
 	private Games match;
+	
+	private TeamsDAO teamsDAO;
+	
+	private Teams team;
 	
 	public TournamentController(TournamentDAO tournamentDAO) {
 		this.tournamentDAO = tournamentDAO;
@@ -72,7 +78,7 @@ public class TournamentController {
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value ="/add-team", method = RequestMethod.POST)
+	@RequestMapping(value ="/join-tournament", method = RequestMethod.POST)
 	public Tournament addTeam(@RequestBody TournamentTeam tournamentTeam) {
 		return tournamentDAO.addTeamToTournament(
 				tournamentTeam.getTeamID(),

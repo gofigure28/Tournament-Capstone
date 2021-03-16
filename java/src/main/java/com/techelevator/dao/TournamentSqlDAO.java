@@ -29,18 +29,21 @@ public class TournamentSqlDAO implements TournamentDAO {
 	}
 	
 	@Override
-	public Tournament addTeam(int userID, int tournamentID) {
-		String query = "INSERT INTO tournament_teams VALUES (?, ?)";
-		jdbcTemplate.update(query, userID, tournamentID);
-		return null;
-	}
-	
-	@Override
 	public Tournament addPlayer(int userID, int teamID) {
 		String query = "INSERT INTO team_player VALUES (?, ?)";
 		jdbcTemplate.update(query, userID, teamID);
 		return null;
 	}
+	
+	@Override
+	public Tournament addTeamToTournament(int teamID, int tournamentID) {
+		String query = "INSERT INTO tournament_teams (team_id, tournament_id) VALUES (?, ?);";
+		jdbcTemplate.update(query, teamID, tournamentID);
+		
+		
+		return null;
+	}
+
 
 
 	@Override
@@ -89,15 +92,6 @@ public class TournamentSqlDAO implements TournamentDAO {
 		return null;
 	}
 
-
-	@Override
-	public Tournament addTeamToTournament(int teamID, int tournamentID) {
-		String query = "INSERT INTO tournament_teams (team_id, tournament_id) VALUES (?, ?);";
-		jdbcTemplate.update(query, teamID, tournamentID);
-		
-		
-		return null;
-	}
 
 	@Override
 	public List<Games> generateGameList() {
