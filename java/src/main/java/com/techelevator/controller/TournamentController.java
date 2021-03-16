@@ -76,9 +76,22 @@ public class TournamentController {
 	public Tournament addTeam(@RequestBody TournamentTeam tournamentTeam) {
 		return tournamentDAO.addTeamToTournament(
 				tournamentTeam.getTeamID(),
-				tournamentTeam.getTeamID()
-				);
-		
+				tournamentTeam.getTournamentID()
+				);	
+	}
+	
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(value ="/add-player", method = RequestMethod.POST)
+	public Tournament addPlayer(@RequestBody TournamentTeam tournamentTeam) {
+		return tournamentDAO.addPlayer(
+				tournamentTeam.getTeamID(),
+				tournamentTeam.getUserID()
+				);	
+	}
+	
+	@RequestMapping(value ="/all-games", method = RequestMethod.GET)
+	public List<Games> getList() {
+		return tournamentDAO.generateGameList();
 	}
 	
 	

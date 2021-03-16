@@ -10,14 +10,27 @@ public class Games {
 	private String team;
 	private int numberOfPlayers;
 	private String winner;
+	private String organizer;
 	
-	public Games(String gameName, int gameID, LocalDateTime startTimeDate, String team, int numberOfPlayers, String winner) {
+	public Games(String gameName, int gameID, LocalDateTime startTimeDate, String team, int numberOfPlayers, String winner, String organizer) {
 		this.gameName = gameName;
 		this.gameID = gameID;
 		this.startTimeDate = startTimeDate;
 		this.team = team;
 		this.numberOfPlayers = numberOfPlayers;
 		this.winner = winner;
+		this.organizer = organizer;
+	}
+	
+	public Games() {
+		
+	}
+	public String getOrganizer() {
+		return organizer;
+	}
+
+	public void setOrganizer(String organizer) {
+		this.organizer = organizer;
 	}
 
 	public String getGameName() {

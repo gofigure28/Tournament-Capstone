@@ -27,6 +27,21 @@ public class TournamentSqlDAO implements TournamentDAO {
 	private TournamentSqlDAO(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
+	
+	@Override
+	public Tournament addTeam(int userID, int tournamentID) {
+		String query = "INSERT INTO tournament_teams VALUES (?, ?)";
+		jdbcTemplate.update(query, userID, tournamentID);
+		return null;
+	}
+	
+	@Override
+	public Tournament addPlayer(int userID, int teamID) {
+		String query = "INSERT INTO team_player VALUES (?, ?)";
+		jdbcTemplate.update(query, userID, teamID);
+		return null;
+	}
+
 
 	@Override
 	public Tournament create(String name, int matchID, Games games, LocalDateTime startTime, int numberOfPlayers) {
@@ -85,9 +100,15 @@ public class TournamentSqlDAO implements TournamentDAO {
 	}
 
 	@Override
-	public Tournament generateGameList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Games> generateGameList() {
+		String query = "SELECT game_name FROM games";
+		List<Games> allGames = new ArrayList<>();
+		SqlRowSet result = jdbcTemplate.queryForRowSet(query);
+		while(result.next()) {
+			Games game = mapGame(result);
+			allGames.add(game);
+		}	
+		return allGames;
 	}
 
 	@Override
@@ -116,7 +137,14 @@ public class TournamentSqlDAO implements TournamentDAO {
 	 return tournamentTeam;
 	}
 	
-
-
-
+	private Games mapGame(SqlRowSet rw) {
+	 Games game = new Games();
+	 game.setGameName(rw.getString("game_name"));
+	 game.setGameID(rw.getInt("game_id"));
+	 game.setStartTimeDate(rw.getTimestamp("start_time").toLocalDateTime());
+	 game.setOrganizer(rw.getString("organizer"));
+	 game.setNumberOfPlayers(rw.getInt("number_of_players"));
+	 game.setWinner(rw.getString("winning_team"));
+	 return game;
+	}
 }
