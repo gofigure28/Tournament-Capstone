@@ -2,7 +2,7 @@
 <template>
   <div>
    <center><h1>Create A New Team</h1></center> 
- <match-form/>
+ <team-form/>
 
      
   </div>
@@ -11,10 +11,10 @@
 
 
 <script>
-import matchForm from '../components/CreateTeam'
+import TeamForm from '../components/TeamForm'
 
 export default {
-  components: {CreateTeam},
+  components: {TeamForm},
 
   methods: {},
 };

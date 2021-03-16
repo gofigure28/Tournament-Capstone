@@ -19,7 +19,7 @@
 <script>
 import TournamentList from "../components/TournamentList";
 import JoinTournamentService from "../services/JoinTournamentService";
-import CreateTeam from "../components/CreateTeam";
+import TeamForm from "../components/TeamForm";
 
 
 export default {
@@ -32,7 +32,7 @@ export default {
     };
   },
   components: {
-      CreateTeam,
+      TeamForm,
       TournamentList,
         },
 
@@ -52,7 +52,7 @@ export default {
                 .then((response) => {
                     if (response.status === 200) {
                         alert("You've successfully joined this tournament!");
-                         this.$store.commit("SAVE_BOARD", this.tournamentID);
+                         this.$store.commit("SAVE_TOURNAMENT", this.tournamentID);
                         this.$router.push("/");
               }
             })
@@ -78,7 +78,7 @@ computed: {
       );
     },
     
-  };
+  }
 
 </script>
 
