@@ -7,7 +7,10 @@
       type="text"
       placeholder="Select Player"
     />
-    <div class="dropdown-list"></div>
+    <div v-for="item in itemList" :key="item.name" class="dropdown-item">
+  <img :src="item.flag class="dropdown-item-flag"/>
+  {{ item.name }}
+</div>
   </div>
 </template>
 
