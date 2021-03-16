@@ -31,16 +31,14 @@
     <title>Tournament Bracket</title>
 
     <body>
-      <header class="hero"> 
+      <header class="hero">
         <div class="hero-wrap">
-          
-         
-        <center> <h1 id="headline">The Winners Cup</h1> </center>
+          <center><h1 id="headline">The Winners Cup</h1></center>
         </div>
       </header>
 
       <section id="bracket">
-        <div class="container" >
+        <div class="container">
           <div class="split split-one">
             <div class="round round-one current">
               <div class="round-details">
@@ -247,7 +245,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      teamList: [
+        "team 1",
+        "team 2",
+        "team 3",
+        "team 4",
+        "team 5",
+        "team 6",
+        "team 7",
+        "team 8",
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -260,27 +273,25 @@ body {
   margin: 0;
 }
 
-#headline{
+#headline {
   color: white;
   font-size: 40px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   height: 50%;
   width: 50%;
-  
 }
 
-
 .hero {
-  
-  background-image: url('/assets/trophy.png');
+  background-image: url("/assets/trophy.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 150px 0 0 0;
+  padding:  0 0 180px 0;
   position: relative;
   text-align: center;
   overflow: hidden;
   color: #fcfcfc;
+  
 }
 
 .hero h1 {
@@ -410,17 +421,6 @@ body {
   height: 60px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-.score {
-  font-size: 11px;
-  text-transform: uppercase;
-  float: right;
-  color: #2c7399;
-  font-weight: bold;
-  font-family: "Roboto Condensed", sans-serif;
-  position: absolute;
-  right: 5px;
 }
 
 .team {
