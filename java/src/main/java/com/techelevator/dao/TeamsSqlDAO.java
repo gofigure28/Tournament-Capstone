@@ -1,6 +1,7 @@
 package com.techelevator.dao;
 
 import com.techelevator.model.Teams;
+import com.techelevator.model.User;
 
 import java.util.List;
 import java.sql.SQLException;
@@ -29,4 +30,5 @@ public class TeamsSqlDAO implements TeamsDAO {
 		}
 		return null;
 	}
+
 }

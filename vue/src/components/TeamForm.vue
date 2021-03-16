@@ -1,6 +1,5 @@
 
 <template>
-  <form class="new-team-form" v-on:submit.prevent="saveTeam">
     <div class="dropdown">
       <input
         v-if="Object.keys(selected.Item).length === 0"
@@ -22,9 +21,6 @@
         {{ item.name }}
       </div>
     </div>
-
-    <button class="button" type="submit">Save Team</button>
-  </form>
 </template>
 
 <script>
@@ -35,7 +31,7 @@ export default {
       inputValue: "",
       userList: [],
       apiLoaded: false,
-      apiUrl: "../components/AllUsers",
+      apiUrl: "http://localhost:8080/all-users",
       selectedItem: {},
     };
   },
@@ -50,7 +46,7 @@ export default {
       });
     },
     itemVisible(item) {
-      let currentName = item.name.toLowerCase();
+      let currentName = item.username.toLowerCase();
       let currentInput = this.inputValue.toLowerCase();
       return currentName.includes(currentInput);
     },

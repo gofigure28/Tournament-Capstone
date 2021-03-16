@@ -1,5 +1,7 @@
 package com.techelevator.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,32 +12,32 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.techelevator.dao.TeamsDAO;
+import com.techelevator.dao.UserDAO;
 import com.techelevator.model.Teams;
+import com.techelevator.model.User;
 
 @RestController
 @CrossOrigin
-public class TeamsController {
+public class UserController {
 	
 	public String authToken = "";
 	
-	private TeamsDAO teamsDAO;
+	private UserDAO userDAO;
 	
 	private Teams team;
 	
 	private final RestTemplate restTemplate = new RestTemplate();
 	
-	public TeamsController(TeamsDAO teamsDAO) {
-		this.teamsDAO = teamsDAO;
+	public UserController(UserDAO userDAO) {
+		this.userDAO = userDAO;
 	}
 	
 	public void setAuthToken(String authToken) {
 		this.authToken = authToken;
 	}
-	
-	@ResponseStatus(HttpStatus.CREATED)
-	@RequestMapping(value ="/create-team", method = RequestMethod.POST)
-	public Teams createTeam(@RequestBody Teams team) throws Exception {
-		return teamsDAO.createTeam(team.getTeamName());
+	@RequestMapping (value ="/all-users", method = RequestMethod.GET)
+	public List<User> findAll(){
+		return userDAO.findAll();
 	}
-
 }
+	
