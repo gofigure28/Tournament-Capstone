@@ -66,7 +66,7 @@ form input {
 form.new-tournament-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
   width: 100%;
   max-width: 1200px;
   padding: 8px 8px 8px 8px;
