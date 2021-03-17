@@ -4,7 +4,7 @@
       <h2>Player's Profile</h2>
     </head>
 
-    <body>
+    <body class="profile">
       <header></header>
 
       <main id="main-grid">
@@ -37,6 +37,7 @@
             <h3><i class="teams"></i> Teams</h3>
             <select name="" id="">
               Teams
+              <option value="fake"> -- Select -- </option>
               <option value="team1">Invisible Unicorns</option>
               <option value="team2">Cereal Killers</option>
               <option value="team3">Dad Jokes</option>
@@ -47,6 +48,7 @@
             <h3><i class="tourns"></i> Tournaments</h3>
             <select name="" id="">
               Tournaments
+              <option value="fake"> -- Select -- </option>
               <option value="tourn1">Top Golf Invitational</option>
               <option value="tourn2">Blackout 7s</option>
               <option value="tourn3">Pitch a Tent</option>
@@ -57,6 +59,7 @@
             <h3><i class="rankings"></i> Rankings</h3>
             <select name="" id="">
               Rankings
+              <option value="fake"> -- Select -- </option>
               <option value="rank1">Golf - #56343463</option>
               <option value="rank2">Pool - #23345234</option>
               <option value="rank3">Basketball - #350584308</option>
@@ -66,6 +69,7 @@
             <h3><i class="matches"></i>Matches</h3>
             <select name="" id="">
               Matches
+                            <option value="fake"> -- Select -- </option>
               <option value="match1">Invisible Unicorns</option>
               <option value="match2">Cereal Killers</option>
               <option value="match3">Dad Jokes</option>

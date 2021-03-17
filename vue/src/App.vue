@@ -66,7 +66,7 @@ export default {};
   width: 100%;
   border-radius: 8px;
   flex-direction: row;
-  background-color: #b1e9ff;
+  background-color: #d0f7ff;
   text-decoration: none;
   background-size: 400% 400%;
   position: relative;
