@@ -16,18 +16,17 @@
           <p>
             <strong>Contact Info</strong> <br />
             <strong>Name:</strong> Latrell Spenceer<br />
-            <strong>Email:</strong> latrell.spencer@usermail.com<br />
+            <strong>Email:</strong> lspencer@usermail.com<br />
           </p>
         </div>
         
         </div>
         <div class="player-quote">
-          <h4>
+          <h4>Player Quote <br /></h4>
             <i
-              >Representing Team internal server error, I pride myself in taking
-              down the best of the best. COME GET YOU SOME!!!!</i
+              >I needed to be broken. Because the moment when you’re broken is the moment when you can see what’s really happening.</i
             >
-          </h4>
+          
         </div>
         
 
