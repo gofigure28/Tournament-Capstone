@@ -24,7 +24,6 @@
 
 <script>
 import axios from 'axios'
-import TeamService from '../services/TeamService'
 export default {
   data () {
     return {

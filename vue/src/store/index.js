@@ -22,8 +22,8 @@ export default new Vuex.Store({
     user: currentUser || {},
     tournaments: [],
     users: [],
-    invitedUsers: [
-    ]
+    invitedUsers: [],
+    teamName: ''
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -63,6 +63,10 @@ export default new Vuex.Store({
 
     STORE_INVITED(state, invitedUsers){
       state.invitedUsers = invitedUsers;
+    },
+
+    NEW_TEAM(state, teamName){
+      state.teamName = teamName;
     }
 
 

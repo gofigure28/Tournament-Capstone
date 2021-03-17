@@ -16,7 +16,7 @@
         <div class="bottom">
       Team Name: {{ teamList.name }}
     </div>
-    <input type=button>Create Team </input>
+    <button type="button" v-on:click.prevent="commit">Create Team</button> 
   </div>
 </template>
 
@@ -50,8 +50,10 @@ export default {
     saveMembers(members) {
       this.teamList.members.push(members.target);
     },
-    commit(team) {
-      this.$store.commit("STORE_INVITED", team);
+    commit() {
+      this.$store.commit("STORE_INVITED", this.teamList.members);
+      this.$store.commit("NEW_TEAM", this.teamList.name);
+      this.$router.push("/bracketPage");
     },
     setPlayer(event) {
       this.teamList.members.push(event);
