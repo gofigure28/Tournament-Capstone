@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class ="logo">
-      <img class="logo" src="/assets/partyup.png" alt="Trophy Logo"/>
+      <img class="logo" src="/assets/winnerscup.png" alt="Winner's Cup"/>
     </div>
     <div class="textbox">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
