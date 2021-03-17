@@ -164,6 +164,8 @@
               </div>
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
+
+                
                 <li class="team team-bottom">&nbsp;<span>&nbsp;</span></li>
               </ul>
               <ul class="matchup">
@@ -283,37 +285,114 @@
               <div class="round-details">
                 Round 1<br /><span class="date">3/17/2021</span>
               </div>
-              <ul class="matchup">
-                <li class="team team-top">Minnesota<span></span></li>
-                <li class="team team-bottom">Northwestern<span></span></li>
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team1Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team2Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Michigan<span></span></li>
-                <li class="team team-bottom">Iowa<span></span></li>
+
+              <!-- Second Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team3Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team4Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Illinois<span></span></li>
-                <li class="team team-bottom">Wisconsin<span></span></li>
+
+              <!-- Third Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team5Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team6Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Purdue<span>36</span></li>
-                <li class="team team-bottom">Boise State<span></span></li>
+
+              <!-- Fourth Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team7Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team8Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Penn State<span></span></li>
-                <li class="team team-bottom">Indiana<span></span></li>
+
+              <!-- Fifth Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team9Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team10Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Ohio State<span></span></li>
-                <li class="team team-bottom">VCU<span></span></li>
+
+              <!-- Sixth Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team11Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team12Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">USC<span></span></li>
-                <li class="team team-bottom">Cal<span></span></li>
+              <!-- Seventh Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team13Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team14Name }} <span></span>
+                </li>
               </ul>
-              <ul class="matchup">
-                <li class="team team-top">Virginia Tech<span></span></li>
-                <li class="team team-bottom">Dartmouth<span></span></li>
+
+              <!-- Eight Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team15Name }} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team16Name }} <span></span>
+                </li>
               </ul>
             </div>
             <!-- END ROUND ONE -->
@@ -452,7 +531,7 @@ body {
   background-color: #e1e1e1;
   background-color: rgba(225, 225, 225, 0.9);
   padding-top: 20px;
-  font-size: 12px;
+  font-size: 10px;
   padding: 40px 0;
 }
 
