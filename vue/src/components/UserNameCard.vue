@@ -3,6 +3,7 @@
         <div class ="card">
             <center>
                 <h3>
+                    {{username}}
                 </h3>
             </center>
         </div>
@@ -14,7 +15,7 @@
 export default {
     name: 'name-card',
     components: {},
-    props: ["users"]
+    props: ["username"]
 
 }
 </script>
@@ -24,6 +25,7 @@ export default {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #d0f7ff;
     margin:auto;
+
 
 }
 

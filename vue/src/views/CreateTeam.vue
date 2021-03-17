@@ -10,11 +10,10 @@
     <div class="box">
       <input v-on:blur="saveName" type="text" placeholder="Team name" required />
     </div>
-      <div>
-        {{ teamList.members.username }}
+      <div v-for="member in teamList.members" :key="member.id">
+        <user-name-card :username="member.username" />
      </div>
-    <AddTeamForm />
-        <div>
+        <div class="bottom">
       Team Name: {{ teamList.name }}
     </div>
   </div>
@@ -22,7 +21,8 @@
 
 <script>
 import TeamForm from "@/components/TeamForm.vue";
-import AddTeamForm from "../components/AddTeamForm.vue";
+//import AddTeamForm from "../components/AddTeamForm.vue";
+import UserNameCard from '../components/UserNameCard.vue';
 export default {
   data() {
     return {
@@ -37,7 +37,8 @@ export default {
 
   components: {
     TeamForm,
-    AddTeamForm,
+    //AddTeamForm,
+    UserNameCard,
   },
   methods: {
     saveName(event) {

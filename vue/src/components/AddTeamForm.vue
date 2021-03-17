@@ -2,7 +2,7 @@
 <div>
     <div class ="head">
                   Selected Users
-        </div>
+    </div> 
     <div class= "actual">
         <NameCard 
             v-for="user in $store.state.users"
@@ -28,7 +28,8 @@ export default {
         userService.getAllUsers().then((resp) => {
         this.$store.commit('STORE_USERS', resp.data);
         })
-    }
+    },
+    props: ["username"]
 
 }
 </script>
