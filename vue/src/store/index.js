@@ -56,14 +56,15 @@ export default new Vuex.Store({
 
     },
 
-    STORE_SELECTED(state, users) {
-      state.users = users;
+    STORE_SELECTED(state, invitedUsers) {
+      state.invitedUsers = invitedUsers;
     },
 
     STORE_INVITED(state, invitedUsers){
       state.invitedUsers = invitedUsers;
-
     }
+
+
 
   }
 })
