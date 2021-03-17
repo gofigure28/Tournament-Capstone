@@ -21,7 +21,7 @@
       placeholder="Number of Teams"
       v-model="tournament.numberOfPlayers"
     />
-    <button class="button" type="submit">Save</button>
+    <button class="save" type="submit">Save</button>
   </form>
 </template>
 <script>
@@ -88,13 +88,5 @@ form.new-tournament-form {
   width: 60%;
   margin: auto;
 }
-button.button {
-  padding: 10px 0px 10px 0px;
-  margin: 20px;
-  color: #fff;
-  background-color: #0072CE;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-}
+
 </style>
