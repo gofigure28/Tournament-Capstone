@@ -8,7 +8,7 @@
     <!-- The selected country name will be visible below, when selected -->
     {{ dropdownSelection.name }} 
     <div class="box">
-      <input type="text"/>
+      <input type="text" placeholder = "Team name"/>
       
     </div>
     <AddTeamForm/>
@@ -38,6 +38,8 @@ export default {
   height: 40px;
   display:flex;
   justify-content: center;
+  background-color:ivory;
+  box-shadow:none;
 }
 
 center{
