@@ -22,7 +22,7 @@ ul {
 button {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: ;
   width: auto;
   overflow: visible;
   background: transparent;
@@ -32,6 +32,9 @@ button {
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none;
+}
+button.save {
+  margin: 10;
 }
 button::-moz-focus-inner {
   border: 0;

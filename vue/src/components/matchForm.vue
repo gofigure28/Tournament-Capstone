@@ -28,7 +28,7 @@
       placeholder="Number of Players"
       v-model="match.numberOfPlayers"
     />
-    <button class= "button" type='submit'>Save</button>
+    <button class= "save" type='submit'>Save</button>
   </form>
 </template>
 <script>
@@ -84,11 +84,11 @@ form input{
   margin: auto;
 }
 
-button.button {
-  width: 80px;
-  padding: 10px 0px 10px 0px;
-  margin: 20px;
-  border: 1px solid #ddd;
+button.save {
+  padding: 10px 20px;
+  max-width: 200px;
+  margin-top:20px;
+  margin-bottom: 20px;
   color: #fff;
   background-color: #0072ce;
   border-radius: 4px;
