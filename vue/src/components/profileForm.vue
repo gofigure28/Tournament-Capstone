@@ -1,78 +1,82 @@
 <template>
-
-  <div>
-    <center><h2>Player's Profile</h2></center>
+  <div class="player-profile">
     <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Student Profile</title>
-      
-      <link class = "student_picture"
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto+Slab"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="grid.css" />
+      <h2>Player's Profile</h2>
     </head>
 
     <body>
-      <header>
-     
-      </header>
+      <header></header>
 
       <main id="main-grid">
         <h1 id="headline">xXENCOR3Xx</h1>
 
-        <div id="student-picture">
-          <img src="/assets/profile.png" alt="Profile Pic" />
-        </div>
-        <div id="player-quote" class="player-quote">
-          <h2>
-           <i>Repersenting Team internal server error, I pride myself in taking down the best of the best. COME GET YOU SOME!!!!</i>
-          </h2>
-        </div>
-
-    
-
-        <div id="player-contact" class="profile-details">
-            
+        <div class="profile-info">
+          <img class="prof-pic" src="/assets/profile.png" alt="Profile Pic" />
+          <div class="profile-details">
           <p>
-            Contact Info <br>
-            Get You Some | Charlotte,NC<br />
-            teamInternalServerError@gamermail.com<br />
-            Dial 1-900-MIX-A-LOT
+            <strong>Contact Info</strong> <br />
+            <strong>Name:</strong> Latrell Spenceer<br />
+            <strong>Email:</strong> latrell.spencer@usermail.com<br />
           </p>
         </div>
+        
+        </div>
+        <div class="player-quote">
+          <h4>
+            <i
+              >Representing Team internal server error, I pride myself in taking
+              down the best of the best. COME GET YOU SOME!!!!</i
+            >
+          </h4>
+        </div>
+        
+
+        
 
         <div id="experience-grid">
-          <div id="experience-code">
-            <h3><i class="fas fa-code"></i> Teams</h3>
-            <select name="" id="">Teams</select>
-      
+          <div id="profile-teams">
+            <h3><i class="teams"></i> Teams</h3>
+            <select name="" id="">
+              Teams
+              <option value="team1">Invisible Unicorns</option>
+              <option value="team2">Cereal Killers</option>
+              <option value="team3">Dad Jokes</option>
+              <option value="team4">Definitely Not Drunk</option>
+            </select>
           </div>
-          <div id="experience-database">
-            <h3><i class="fas fa-database"></i> Tournaments</h3>
-            <select name="" id=""> Tournaments</select>
+          <div id="profile-tourns">
+            <h3><i class="tourns"></i> Tournaments</h3>
+            <select name="" id="">
+              Tournaments
+              <option value="tourn1">Top Golf Invitational</option>
+              <option value="tourn2">Blackout 7s</option>
+              <option value="tourn3">Pitch a Tent</option>
+              <option value="tourn4">Buzzed Pool</option>
+            </select>
           </div>
-          <div id="experience-web">
-            <h3><i class="fas fa-info"></i> Rankings</h3>
-            <select name="" id=""> Rankings</select>
+          <div id="profile-ranks">
+            <h3><i class="rankings"></i> Rankings</h3>
+            <select name="" id="">
+              Rankings
+              <option value="rank1">Golf - #56343463</option>
+              <option value="rank2">Pool - #23345234</option>
+              <option value="rank3">Basketball - #350584308</option>
+            </select>
           </div>
-          <div id="experience-design">
-            <h3><i class="fas fa-palette"></i> Matches</h3>
-             <select name="" id=""> Rankings</select>
+          <div id="profile-matches">
+            <h3><i class="matches"></i>Matches</h3>
+            <select name="" id="">
+              Matches
+              <option value="match1">Invisible Unicorns</option>
+              <option value="match2">Cereal Killers</option>
+              <option value="match3">Dad Jokes</option>
+              <option value="match4">Definitely Not Drunk</option>
+            </select>
           </div>
         </div>
       </main>
       <footer>
-        <p>Copyright: team InternalServerError, 2021 &copy;</p>
+        <p></p>
       </footer>
     </body>
   </div>
@@ -84,59 +88,59 @@ export default {};
 </script>
 
 <style>
-.student_picture{
-  border-radius:25px;
+
+#experience-grid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+#experience-grid > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+#experience-grid> div > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+}
+
+.profile-info{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.player-profile {
+  display: flex;
+  align-content: center;
+  margin: auto;
+  border-radius: 8px;
+}
+.prof-pic {
+  border-radius: 12px;
+  max-height: 220px;
   position: center;
 }
 
-.profile-details{
+.profile-details {
   display: flex;
   padding: 20px;
   line-height: 2em;
 }
+.player-quote {
+  padding: 20px;
+}
 
-
+#main-grid {
+  display:flex;
+  flex-direction: column;
+  padding: 10px 20px 10px 10px;
+}
 </style>
-
-
-/*
-
-thought a form made sense, but this just broke the page 
-<form class="ui form" @submit.prevent="updateProfile">
-          <div class="field" :class="{ error: errors.has('name') }">
-            <label>Full Name</label>
-            <input type="text" name="name" v-model="name" v-validate="'required'">
-            <span v-show="errors.has('name')" class="is-danger">{{ errors.first('name') }}</span>
-          </div>
-
-          <div class="field" :class="{ error: errors.has('name') }">
-            <label>Username</label>
-            <input type="text" name="username" v-model="username" v-validate="'required'">
-            <span v-show="errors.has('username')" class="is-danger">{{ errors.first('username') }}</span>
-          </div>
-
-          <div class="field" :class="{ error: errors.has('email') }">
-            <label>Email</label>
-            <input type="email" name="email" v-model="email" v-validate="'required|email'" placeholder="Email">
-            <span v-show="errors.has('email')" class="is-danger">{{ errors.first('email') }}</span>
-          </div>
-
-          <div class="field">
-            <label>Bio</label>
-            <textarea v-model="bio" rows="5" placeholder="A breif bio of you"></textarea>
-          </div>
-
-          <div class="field">
-            <label>Location</label>
-            <input type="text" v-model="location" placeholder="Your location">
-          </div>
-
-          <div class="field">
-            <label>Website URL</label>
-            <input type="url" v-model="websiteUrl" placeholder="Website URL">
-          </div>
-
-          <button class="ui button primary">Update profile</button>
-        </form>*/
-
-
