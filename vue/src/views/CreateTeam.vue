@@ -16,11 +16,13 @@
         <div class="bottom">
       Team Name: {{ teamList.name }}
     </div>
+    <input type=button>Create Team </input>
   </div>
 </template>
 
 <script>
 import TeamForm from "@/components/TeamForm.vue";
+import TeamService from "@/services/TeamService.js";
 //import AddTeamForm from "../components/AddTeamForm.vue";
 import UserNameCard from '../components/UserNameCard.vue';
 export default {
@@ -54,6 +56,16 @@ export default {
     setPlayer(event) {
       this.teamList.members.push(event);
     },
+        joinTournament() {
+      TeamService.sendUserList().then((response) =>{
+      if(response === 201){
+      this.$router.push("/bracketPage");
+      }
+      }).catch(error =>{
+      console.log(error);
+      this.$router.push("/bracketPage");
+      })
+    }
   },
 };
 </script>

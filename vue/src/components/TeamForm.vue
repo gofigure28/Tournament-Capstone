@@ -60,16 +60,7 @@ export default {
         this.apiLoaded = true
       })
     },
-    joinTournament() {
-      TeamService.sendUserList().then((response) =>{
-      if(response === 201){
-      this.$router.push("/bracketPage");
-      }
-      }).catch(error =>{
-      console.log(error);
-      this.$router.push("/bracketPage");
-      })
-    }
+
   }
 }
 </script>
