@@ -66,8 +66,6 @@ public class TournamentController {
 		
 		return tournamentDAO.create(
 				newTournament.getName(), 
-				newTournament.getMatchID(), 	
-				newTournament.getMatch(),
 				newTournament.getStartTime(),
 				newTournament.getNumberOfPlayers());
 	}

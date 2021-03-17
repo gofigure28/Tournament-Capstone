@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.techelevator.dao.TeamsDAO;
+import com.techelevator.model.CreateTeamRequest;
 import com.techelevator.model.Teams;
 
 @RestController
@@ -34,7 +35,10 @@ public class TeamsController {
 	
 	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(value ="/create-team", method = RequestMethod.POST)
-	public Teams createTeam(@RequestBody Teams team) throws Exception {
+	public Teams createTeam(@RequestBody CreateTeamRequest createTeamRequest) throws Exception {
+		//Create the team
+		
+		//call DAO and insert team invites into invite_player
 		return teamsDAO.createTeam(team.getTeamName());
 	}
 

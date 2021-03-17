@@ -116,6 +116,33 @@ SELECT * FROM tournaments;
 SELECT * FROM games;
 SELECT * FROM team;
 
+INSERT INTO invited_players(inviter_id, invited_id) (
+        SELECT
+              (SELECT user_id FROM users WHERE user_id = 1),
+              (SELECT user_id FROM users WHERE user_id = 2)      
+);
+
+
+CREATE USER final_capstone_owner
+WITH PASSWORD 'finalcapstone';
+
+GRANT ALL
+ON ALL TABLES IN SCHEMA public
+TO final_capstone_owner;
+
+GRANT ALL
+ON ALL SEQUENCES IN SCHEMA public
+TO final_capstone_owner;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON ALL TABLES IN SCHEMA public
+TO final_capstone_appuser;
+
+GRANT USAGE, SELECT
+ON ALL SEQUENCES IN SCHEMA public
+TO final_capstone_appuser;
+
+
                                                                         --MAY NEED 
 --ALTER TABLE 
 --      constraint  name                constraint-type         columns  value        

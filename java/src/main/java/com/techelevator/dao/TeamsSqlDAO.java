@@ -31,4 +31,20 @@ public class TeamsSqlDAO implements TeamsDAO {
 		return null;
 	}
 
+	@Override
+	public Teams invite(int inviterID, int invitedID) {
+		String query = "INSERT INTO invited_players(inviter_id, invited_id) (\r\n" + 
+				"        SELECT\r\n" + 
+				"              (SELECT user_id FROM users WHERE user_id = ?),\r\n" + 
+				"              (SELECT user_id FROM users WHERE user_id = ?)      \r\n" + 
+				")";
+		return null;
+	}
+
+	@Override
+	public Teams finalizeInvite() {
+		
+		return null;
+	}
+
 }

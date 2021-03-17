@@ -14,7 +14,7 @@ public interface TournamentDAO {
 	
 	Tournament get(int id);
 
-	Tournament create(String name, int matchID, Games games, LocalDateTime startTime, int numberOfPlayers)
+	Tournament create(String name, LocalDateTime startTime, int numberOfPlayers)
 			throws Exception;
 	
 	String getName(int id);
