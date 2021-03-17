@@ -41,11 +41,11 @@ public class UserSqlDAO implements UserDAO {
     @Override
     public List<User> findAll() {
         List<User> users = new ArrayList<>();
-        String sql = "select * from users";
+        String sql = "select username from users";
 
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         while(results.next()) {
-            User user = mapRowToUser(results);
+            User user = mapUsername(results);
             users.add(user);
         }
 
@@ -94,5 +94,11 @@ public class UserSqlDAO implements UserDAO {
         user.setAuthorities(rs.getString("role"));
         user.setActivated(true);
         return user;
+    }
+    
+    private User mapUsername(SqlRowSet rs) {
+    	User user = new User();
+    	user.setUsername(rs.getString("username"));
+    	return user;
     }
 }

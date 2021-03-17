@@ -8,15 +8,15 @@
     />
     {{ dropdownSelection.name }}
     <div class="box">
-      <input v-on:blur="saveName" type="text" placeholder="Team name" />
-    </div>
-    <div>
-      {{ teamList.name }}
+      <input v-on:blur="saveName" type="text" placeholder="Team name" required />
     </div>
       <div>
-        {{ teamList.members[0].username }}
-      </div>
+        {{ teamList.members.username }}
+     </div>
     <AddTeamForm />
+        <div>
+      Team Name: {{ teamList.name }}
+    </div>
   </div>
 </template>
 
@@ -34,6 +34,7 @@ export default {
       teamName: "",
     };
   },
+
   components: {
     TeamForm,
     AddTeamForm,
@@ -62,7 +63,7 @@ export default {
   height: 40px;
   display: flex;
   justify-content: center;
-  background-color: ivory;
+  background-color: rgb(174, 236, 255);
   box-shadow: none;
 }
 
