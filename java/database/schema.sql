@@ -28,7 +28,6 @@ CREATE TABLE tournaments(
         number_of_participants  int             NOT NULL,
         team_id                 serial                  ,
         ranking_of_teams        int                     ,
-        match_id                int             NOT NULL,
         
 CONSTRAINT       PK_tournament_id     PRIMARY KEY (tournament_id)              
 );
@@ -101,14 +100,12 @@ CONSTRAINT      PK_invite_id_id         PRIMARY KEY (invite_id),
 CONSTRAINT      FK_inviter_id_id        FOREIGN KEY (inviter_id)        REFERENCES users(user_id),
 CONSTRAINT      FK_invited_id_id        FOREIGN KEY (invited_id)        REFERENCES users(user_id)
         );
+        
+SELECT * FROM games;
 
                                                                 -- INSERT STATEMENTS
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
-INSERT INTO tournaments (tournament_name, tournament_id, start_date, number_of_participants, team_id, ranking_of_teams, match_id) 
-        VALUES ('curling', 1, '2021-03-11T10:43:00', 3, 2, 1, 3);
-INSERT INTO tournaments (tournament_name, tournament_id, start_date, number_of_participants, team_id, ranking_of_teams, match_id) 
-        VALUES ('ironing', 2, '2021-03-11T10:43:00', 3, 2, 1, 3);
                                                                 -- SELECT STATEMENTS
 
 SELECT * FROM users;
@@ -121,10 +118,6 @@ INSERT INTO invited_players(inviter_id, invited_id) (
               (SELECT user_id FROM users WHERE user_id = 1),
               (SELECT user_id FROM users WHERE user_id = 2)      
 );
-
-
-CREATE USER final_capstone_owner
-WITH PASSWORD 'finalcapstone';
 
 GRANT ALL
 ON ALL TABLES IN SCHEMA public
