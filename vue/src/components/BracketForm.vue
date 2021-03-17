@@ -44,39 +44,62 @@
               <div class="round-details">
                 Round 1<br /><span class="date">Insert Date Here</span>
               </div>
-              <ul class="matchup" v-for="game in games" v-bind:key="game.gameId">
-                <li class="team team-top">    {{ game.team1Name }}<span></span></li>
-                <li class="team team-bottom"> {{ game.team2Name }}<span></span></li>
+              <!-- First Set of teams-->
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ teamList}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team2Name }} <span></span>
+                </li>
               </ul>
+
+              <!-- Second Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">Wake Forest<span></span></li>
                 <li class="team team-bottom">Clemson<span></span></li>
               </ul>
+              <!-- Third Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">North Carolina<span></span></li>
                 <li class="team team-bottom">Florida State<span></span></li>
               </ul>
+
+              <!-- Fourth Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">NC State<span></span></li>
                 <li class="team team-bottom">Maryland<span></span></li>
               </ul>
+
+              <!-- Fifth Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">Georgia Tech<span></span></li>
                 <li class="team team-bottom">Georgia<span></span></li>
               </ul>
+
+              <!-- Sixth Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">Auburn<span></span></li>
                 <li class="team team-bottom">Florida<span></span></li>
               </ul>
+
+              <!-- Seventh Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">Kentucky<span></span></li>
                 <li class="team team-bottom">Alabama<span></span></li>
               </ul>
+
+              <!-- Eight Set of teams-->
               <ul class="matchup">
                 <li class="team team-top">Vanderbilt<span></span></li>
                 <li class="team team-bottom">Gonzaga<span></span></li>
               </ul>
             </div>
+
             <!-- END ROUND ONE -->
 
             <div class="round round-two">
@@ -261,8 +284,31 @@ export default {
     };
   },
 
-  computed: { games: function() {
-    return [{team1Name:"team 1", team2Name: "team 2", gameId: 7 }]; }},
+  computed: {
+    games: function () {
+      return [{ team1Name: "team 1", team2Name: "team 2", gameId: 7 }];
+    },
+
+    shuffled: function (teamList) {
+      let currentIndex = teamList.length,
+        temporaryValue,
+        randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = teamList[currentIndex];
+        teamList[currentIndex] = teamList[randomIndex];
+        teamList[randomIndex] = temporaryValue;
+      }
+
+      return teamList;
+    },
+  },
 };
 </script>
 
