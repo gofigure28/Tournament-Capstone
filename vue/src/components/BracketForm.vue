@@ -37,6 +37,8 @@
         </div>
       </header>
 
+      <section><button>Click me</button></section>
+
       <section id="bracket">
         <div class="container">
           <div class="split split-one">
