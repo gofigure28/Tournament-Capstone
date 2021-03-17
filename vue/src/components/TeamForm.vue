@@ -24,6 +24,7 @@
 
 <script>
 import axios from 'axios'
+import TeamService from '../services/TeamService'
 export default {
   data () {
     return {
@@ -57,6 +58,16 @@ export default {
       axios.get(this.apiUrl).then( response => {
         this.itemList = response.data
         this.apiLoaded = true
+      })
+    },
+    joinTournament() {
+      TeamService.sendUserList().then((response) =>{
+      if(response === 201){
+      this.$router.push("/bracketPage");
+      }
+      }).catch(error =>{
+      console.log(error);
+      this.$router.push("/bracketPage");
       })
     }
   }
