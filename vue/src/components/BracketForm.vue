@@ -42,7 +42,7 @@
           <div class="split split-one">
             <div class="round round-one current">
               <div class="round-details">
-                Round 1<br /><span class="date">Insert Date Here</span>
+                Round 1<br /><span class="date">3/17/2021</span>
               </div>
               <!-- First Set of teams-->
               <ul
@@ -160,7 +160,7 @@
 
             <div class="round round-two">
               <div class="round-details">
-                Round 2<br /><span class="date">Insert Date Here</span>
+                Round 2<br /><span class="date">3/24/2021</span>
               </div>
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
@@ -183,7 +183,7 @@
 
             <div class="round round-three">
               <div class="round-details">
-                Round 3<br /><span class="date">Insert Date Here</span>
+                Round 3<br /><span class="date">3/31/2021</span>
               </div>
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
@@ -200,7 +200,7 @@
           <div class="champion">
             <div class="semis-l">
               <div class="round-details">
-                WEST semifinals <br /><span class="date">Insert Date Here</span>
+                WEST semifinals <br /><span class="date">4/1/2021</span>
               </div>
               <ul class="matchup championship">
                 <li class="team team-top">
@@ -214,8 +214,9 @@
             <div class="final">
               <i class="fa fa-trophy"></i>
               <div class="round-details">
-                WINNER'S CUP <br /><span class="date">Insert Date Here</span>
+                WINNER'S CUP <br /><span class="date">4/8/2021</span>
               </div>
+
               <ul class="matchup championship">
                 <li class="team team-top">
                   &nbsp;<span class="vote-count">&nbsp;</span>
@@ -227,7 +228,7 @@
             </div>
             <div class="semis-r">
               <div class="round-details">
-                EAST semifinals <br /><span class="date">Insert Date Here</span>
+                EAST semifinals <br /><span class="date">4/1/2021</span>
               </div>
               <ul class="matchup championship">
                 <li class="team team-top">
@@ -243,7 +244,7 @@
           <div class="split split-two">
             <div class="round round-three">
               <div class="round-details">
-                Round 3<br /><span class="date">Insert Date Here</span>
+                Round 3<br /><span class="date">3/31/2021</span>
               </div>
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
@@ -258,7 +259,7 @@
 
             <div class="round round-two">
               <div class="round-details">
-                Round 2<br /><span class="date">Insert Date Here</span>
+                Round 2<br /><span class="date">3/24/2021</span>
               </div>
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
@@ -280,7 +281,7 @@
             <!-- END ROUND TWO -->
             <div class="round round-one current">
               <div class="round-details">
-                Round 1<br /><span class="date">Insert Date Here</span>
+                Round 1<br /><span class="date">3/17/2021</span>
               </div>
               <ul class="matchup">
                 <li class="team team-top">Minnesota<span></span></li>
@@ -370,22 +371,6 @@ export default {
       ];
     },
 
-    shuffled: function (teamList) {
-      let currentIndex = teamList.length,
-        temporaryValue,
-        randomIndex;
-
-      while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        temporaryValue = teamList[currentIndex];
-        teamList[currentIndex] = teamList[randomIndex];
-        teamList[randomIndex] = temporaryValue;
-      }
-
-      return teamList;
-    },
   },
 };
 </script>
@@ -783,5 +768,7 @@ body {
     margin: 5px 0 10px;
     font-size: 18px;
   }
+
+  
 }
 </style>
