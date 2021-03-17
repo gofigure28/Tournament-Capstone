@@ -35,46 +35,31 @@
         <div id="experience-grid">
           <div id="profile-teams">
             <h3><i class="teams"></i> Teams</h3>
-            <select name="" id="">
-              Teams
-              <option value="fake"> -- Select -- </option>
-              <option value="team1">Invisible Unicorns</option>
-              <option value="team2">Cereal Killers</option>
-              <option value="team3">Dad Jokes</option>
-              <option value="team4">Definitely Not Drunk</option>
-            </select>
+              <button class="team1">Invisible Unicorns</button>
+              <button class="team2">Cereal Killers</button>
+              <button class="team3">Dad Jokes</button>
+              <button class="team4">Definitely Not Drunk</button>
+              
           </div>
           <div id="profile-tourns">
-            <h3><i class="tourns"></i> Tournaments</h3>
-            <select name="" id="">
-              Tournaments
-              <option value="fake"> -- Select -- </option>
-              <option value="tourn1">Top Golf Invitational</option>
-              <option value="tourn2">Blackout 7s</option>
-              <option value="tourn3">Pitch a Tent</option>
-              <option value="tourn4">Buzzed Pool</option>
-            </select>
+            <h3><i class="tourns"></i> Tournaments</h3>           
+              <button class="tourn1">Top Golf Invitational</button>
+              <button class="tourn2">Blackout 7s</button>
+              <button class="tourn3">Pitch a Tent</button>
+              <button class="tourn4">Buzzed Pool</button>
           </div>
           <div id="profile-ranks">
-            <h3><i class="rankings"></i> Rankings</h3>
-            <select name="" id="">
-              Rankings
-              <option value="fake"> -- Select -- </option>
-              <option value="rank1">Golf - #56343463</option>
-              <option value="rank2">Pool - #23345234</option>
-              <option value="rank3">Basketball - #350584308</option>
-            </select>
-          </div>
+            <h3><i class="rankings"></i> Rankings</h3> 
+              <button class="rank1">Golf - #56343463</button>
+              <button class="rank2">Pool - #23345234</button>
+              <button class="rank3">Basketball - #350584308</button>
+                      </div>
           <div id="profile-matches">
-            <h3><i class="matches"></i>Matches</h3>
-            <select name="" id="">
-              Matches
-                            <option value="fake"> -- Select -- </option>
-              <option value="match1">Invisible Unicorns</option>
-              <option value="match2">Cereal Killers</option>
-              <option value="match3">Dad Jokes</option>
-              <option value="match4">Definitely Not Drunk</option>
-            </select>
+            <h3><i class="matches"></i>Matches</h3>          
+              <button class="match1">Invisible Unicorns</button>
+              <button class="match2">Cereal Killers</button>
+              <button class="match3">Dad Jokes</button>
+              <button class="match4">Definitely Not Drunk</button>
           </div>
         </div>
       </main>

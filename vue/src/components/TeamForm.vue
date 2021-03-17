@@ -6,7 +6,7 @@
             v-model.trim="inputValue" 
             class="dropdown-input" 
             type="text" 
-            placeholder="Search Users" />
+            placeholder="Find country" />
     <div v-else @click="resetSelection" class="dropdown-selected">
       <img :src="selectedItem.flag" class="dropdown-item-flag" />
       {{ selectedItem.username }}

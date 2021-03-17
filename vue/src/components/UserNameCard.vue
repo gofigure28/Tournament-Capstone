@@ -3,7 +3,6 @@
         <div class ="card">
             <center>
                 <h3>
-                    {{users.username}}
                 </h3>
             </center>
         </div>

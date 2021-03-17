@@ -1,57 +1,81 @@
 
 <template>
   <div>
-    <div class="top">
-    </div>
-    <TeamForm @on-item-selected="dropdownSelection = $event" @on-item-reset="dropdownSelection = {}" />
-    
-    <!-- The selected country name will be visible below, when selected -->
-    {{ dropdownSelection.name }} 
+    <div class="top"></div>
+    <TeamForm
+      @on-item-selected="setPlayer"
+      @on-item-reset="dropdownSelection = {}"
+    />
+    {{ dropdownSelection.name }}
     <div class="box">
-      <input type="text" placeholder = "Team name"/>
-      
+      <input v-on:blur="saveName" type="text" placeholder="Team name" required />
     </div>
-    <AddTeamForm/>
+      <div>
+        {{ teamList.members.username }}
+     </div>
+    <AddTeamForm />
+        <div>
+      Team Name: {{ teamList.name }}
+    </div>
   </div>
-
 </template>
 
 <script>
-import TeamForm from '@/components/TeamForm.vue'
-import AddTeamForm from '../components/AddTeamForm.vue'
+import TeamForm from "@/components/TeamForm.vue";
+import AddTeamForm from "../components/AddTeamForm.vue";
 export default {
-  data () {
+  data() {
     return {
-      dropdownSelection: {}
-    }
+      dropdownSelection: {},
+      teamList: {
+        members: [],
+        name: "",
+      },
+      teamName: "",
+    };
   },
+
   components: {
     TeamForm,
-    AddTeamForm
-  }
-}
+    AddTeamForm,
+  },
+  methods: {
+    saveName(event) {
+      this.teamName = event.target.value;
+      this.teamList.name = event.target.value;
+    },
+    saveMembers(members) {
+      this.teamList.members.push(members.target);
+    },
+    commit(team) {
+      this.$store.commit("STORE_INVITED", team);
+    },
+    setPlayer(event) {
+      this.teamList.members.push(event);
+    },
+  },
+};
 </script>
 
 <style>
-.box{
+.box {
   margin-top: 20px;
   height: 40px;
-  display:flex;
+  display: flex;
   justify-content: center;
-  background-color:ivory;
-  box-shadow:none;
+  background-color: rgb(174, 236, 255);
+  box-shadow: none;
 }
 
-center{
-  height:100
+center {
+  height: 100;
 }
 
-.bottom{
-  display:flex;
+.bottom {
+  display: flex;
 }
 
-.top{
-  height:50px;
+.top {
+  height: 50px;
 }
-
 </style>
