@@ -51,7 +51,7 @@
                 v-bind:key="game.gameId"
               >
                 <li class="team team-top">
-                  {{ teamList}} <span></span>
+                  {{ game.team1Name}} <span></span>
                 </li>
                 <li class="team team-bottom">
                   {{ game.team2Name }} <span></span>
@@ -59,44 +59,102 @@
               </ul>
 
               <!-- Second Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">Wake Forest<span></span></li>
-                <li class="team team-bottom">Clemson<span></span></li>
-              </ul>
-              <!-- Third Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">North Carolina<span></span></li>
-                <li class="team team-bottom">Florida State<span></span></li>
+               <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team3Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team4Name }} <span></span>
+                </li>
               </ul>
 
+              <!-- Third Set of teams-->
+           <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team5Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team6Name }} <span></span>
+                </li>
+              </ul>
+
+
               <!-- Fourth Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">NC State<span></span></li>
-                <li class="team team-bottom">Maryland<span></span></li>
+                <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team7Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team8Name }} <span></span>
+                </li>
               </ul>
 
               <!-- Fifth Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">Georgia Tech<span></span></li>
-                <li class="team team-bottom">Georgia<span></span></li>
+              <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team9Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team10Name }} <span></span>
+                </li>
               </ul>
+
 
               <!-- Sixth Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">Auburn<span></span></li>
-                <li class="team team-bottom">Florida<span></span></li>
+                 <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team11Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team12Name }} <span></span>
+                </li>
               </ul>
-
               <!-- Seventh Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">Kentucky<span></span></li>
-                <li class="team team-bottom">Alabama<span></span></li>
+                <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team13Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team14Name }} <span></span>
+                </li>
               </ul>
 
               <!-- Eight Set of teams-->
-              <ul class="matchup">
-                <li class="team team-top">Vanderbilt<span></span></li>
-                <li class="team team-bottom">Gonzaga<span></span></li>
+                  <ul
+                class="matchup"
+                v-for="game in games"
+                v-bind:key="game.gameId"
+              >
+                <li class="team team-top">
+                  {{ game.team15Name}} <span></span>
+                </li>
+                <li class="team team-bottom">
+                  {{ game.team16Name }} <span></span>
+                </li>
               </ul>
             </div>
 
@@ -272,42 +330,44 @@ export default {
   data() {
     return {
       teamList: [
-        "team 1",
-        "team 2",
-        "team 3",
-        "team 4",
-        "team 5",
-        "team 6",
-        "team 7",
-        "team 8",
+        "team 1"
+      
       ],
     };
   },
 
   computed: {
     games: function () {
-      return [{ team1Name: "team 1", team2Name: "team 2", gameId: 7 }];
+      return [{ team1Name:  "team 1",  team2Name:   "team 2",   gameId1:7, 
+                team3Name:  "team 3",  team4Name:   "team 4",   gameId2:8,
+                team5Name:  "team 5",  team6Name:   "team 6",   gameId3:9, 
+                team7Name:  "team 7",  team8Name:   "team 8",   gameId4:10,
+                team9Name:  "team 9",  team10Name:  "team 10",  gameId5:11,
+                team11Name: "team 11", team12Name:  "team 12",  gameId6:15,
+                team13Name: "team 13", team14Name:  "team 14",  gameId7:3,
+                team15Name: "team 15", team16Name:  "team 16",  gameId8:5,
+
+                }];
     },
 
-    shuffled: function (teamList) {
-      let currentIndex = teamList.length,
-        temporaryValue,
-        randomIndex;
+                // shuffled: function (teamList) {
+                //   let currentIndex = teamList.length,
+                //     temporaryValue,
+                //     randomIndex;
 
-      // While there remain elements to shuffle...
-      while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+                
+                //   while (0 !== currentIndex) {
+                //     randomIndex = Math.floor(Math.random() * currentIndex);
+                //     currentIndex -= 1;
 
-        // And swap it with the current element.
-        temporaryValue = teamList[currentIndex];
-        teamList[currentIndex] = teamList[randomIndex];
-        teamList[randomIndex] = temporaryValue;
-      }
+                    
+                //     temporaryValue = teamList[currentIndex];
+                //     teamList[currentIndex] = teamList[randomIndex];
+                //     teamList[randomIndex] = temporaryValue;
+                //   }
 
-      return teamList;
-    },
+                //   return teamList;
+                // },
   },
 };
 </script>
