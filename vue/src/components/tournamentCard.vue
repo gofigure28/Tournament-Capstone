@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class = "card">
+      <div class = "card"  v-on:click.prevent="send">
           <center>
           <h2>title: {{tournament.name}}</h2>
           <h3>starting time: {{tournament.startTime}}</h3>
@@ -13,8 +13,12 @@
 export default {
     name: 'tournament-card',
     components: { },
-    props: ["tournament"]
-
+    props: ["tournament"],
+    methods: {
+        send(){
+            this.$router.push("/createTeam");
+        }
+    }
     }
 </script>
 
@@ -28,8 +32,6 @@ export default {
     margin-bottom: 10px;
     vertical-align: middle;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h2{
