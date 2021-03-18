@@ -112,7 +112,6 @@ h1{
   width: 100%;
   margin-bottom: 10px;
   color: #0072ce;
-  background-color: #d0f7ff;
   border-radius: 4px;
   justify-content:center;
   font-size: 18px;
