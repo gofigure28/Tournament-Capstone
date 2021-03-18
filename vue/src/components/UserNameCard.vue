@@ -23,8 +23,9 @@ export default {
 <style>
 .card{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #d0f7ff;
+    background-color: #73d5e9;
     margin:auto;
+    border-radius:8px;
 
 }
 
@@ -35,6 +36,7 @@ h3{
   margin-left:20px;
   height:35px;
   font-size:20px;
+  padding-top:5px;
 }
 
 </style>

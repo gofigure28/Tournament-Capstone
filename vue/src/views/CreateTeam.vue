@@ -1,7 +1,9 @@
 
 <template>
   <div class="main">
-    <div class="top"></div>
+    <div class="top">
+      <h2> Create a team </h2>
+    </div>
     <label for="name-input" class="sr-only">Search users</label>
     <TeamForm
       @on-item-selected="setPlayer"
@@ -11,6 +13,9 @@
     <label for="name-input" class="sr-only">Team name</label>
     <div class="box">
       <input class="inputbox" v-on:blur="saveName" type="text" required />
+    </div>
+    <div class="head">
+      <h2> Selected Users </h2>
     </div>
       <div v-for="member in teamList.members" :key="member.id">
         <user-name-card :username="member.username" />
@@ -78,6 +83,27 @@ export default {
 </script>
 
 <style>
+.head{
+     display:flex;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #0072ce;
+  background-color: #d0f7ff;
+  border-radius: 4px;
+  justify-content:center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top:100px;
+  margin-bottom:20px;
+  border-radius: 8px;
+}
+
+h2{
+  text-align:center;
+  font-size: 16px;
+}
+
 .main{
   padding:8px 8px 8px 8px;
 }
