@@ -298,7 +298,7 @@
                 v-bind:key="game.gameId"
               >
                 <li class="team team-top">
-                  {{ game.team1Name }} <span></span>
+                  {{ game.team2Name }} <span></span>
                 </li>
                 <li class="team team-bottom">
                   {{ game.team2Name }} <span></span>
@@ -423,35 +423,35 @@ export default {
       return [
         {
           team1Name: "team 1",
-          team2Name: "team 2",
+          team2Name: "ADD TEAM",
           gameId1: 7,
 
-          team3Name: "team 3",
-          team4Name: "team 4",
+          team3Name: "ADD TEAM",
+          team4Name: "ADD TEAM",
           gameId2: 8,
 
-          team5Name: "team 5",
-          team6Name: "team 6",
+          team5Name: "ADD TEAM",
+          team6Name: "ADD TEAM",
           gameId3: 9,
 
-          team7Name: "team 7",
-          team8Name: "team 8",
+          team7Name: "ADD TEAM",
+          team8Name: "ADD TEAM",
           gameId4: 10,
 
-          team9Name: "team 9",
-          team10Name: "team 10",
+          team9Name: "ADD TEAM",
+          team10Name: "ADD TEAM",
           gameId5: 11,
 
-          team11Name: "team 11",
-          team12Name: "team 12",
+          team11Name: "ADD TEAM",
+          team12Name: "ADD TEAM",
           gameId6: 15,
 
-          team13Name: "team 13",
-          team14Name: "team 14",
+          team13Name: "ADD TEAM",
+          team14Name: "ADD TEAM",
           gameId7: 3,
 
-          team15Name: "team 15",
-          team16Name: "team 16",
+          team15Name: "ADD TEAM",
+          team16Name: "ADD TEAM",
           gameId8: 5,
         },
       ];
@@ -657,6 +657,7 @@ body {
 
 .champion li,
 .round li {
+  max-width: fixed;
   background-color: #fff;
   box-shadow: none;
   opacity: 0.45;
