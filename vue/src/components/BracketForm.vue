@@ -35,15 +35,22 @@
         <div class="hero-wrap">
           <center><h1 id="headline">The Winners Cup</h1></center>
         </div>
-      </header>&nbsp;
-
-      <div></div>&nbsp;
- <button class="t-button">
-        <router-link class="t-routerlink"  color="#0072ce" v-bind:to="{ name: 'createTeam' }">
-          <h4> Add Team To Bracket </h4>
-        </router-link>
-      </button>
-      <div></div>&nbsp;
+      </header>
+      &nbsp;
+      <div class="t-button-div">
+        <div></div>
+        &nbsp;
+        <button class="t-button">
+          <router-link
+            class="t-routerlink"
+            color="#0072ce"
+            v-bind:to="{ name: 'createTeam' }"
+          >
+            <h4>Add Team To Bracket</h4>
+          </router-link>
+        </button>
+      </div>
+       &nbsp;
       <section id="bracket">
         <div class="container">
           <div class="split split-one">
@@ -60,6 +67,7 @@
                 <li class="team team-top">
                   {{ game.team1Name }} <span></span>
                 </li>
+
                 <li class="team team-bottom">
                   {{ game.team2Name }} <span></span>
                 </li>
@@ -422,7 +430,7 @@ export default {
     games: function () {
       return [
         {
-          team1Name: "team 1",
+          team1Name: "test",
           team2Name: "ADD TEAM",
           gameId1: 7,
 
@@ -469,11 +477,6 @@ body {
   min-height: 100%;
   margin: 0;
 }
-
-
-
-
-
 
 #headline {
   color: white;
@@ -753,30 +756,32 @@ body {
   font-family: "Istok Web", sans-serif;
   color: #3f915f;
 }
-.t-routerlink{
+.t-routerlink {
   text-decoration: none;
   color: #0072ce;
-  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
- 
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
-  .t-button {
-  display:flexbox;
+.t-button {
+  display: flexbox;
   padding: none;
   width: 50%;
   color: #d0f7ff;
   background-color: #d0f7ff;
   border-radius: 4px;
   font-size: 14px;
-  cursor:pointer;
-  
+  cursor: pointer;
 }
-button:hover{
+
+.t-button-div {
+  display: flex;
+  justify-content: center;
+}
+button:hover {
   background-color: #48a4f0;
   padding: 15px 35px;
   transform: scale(1.1);
 }
-
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {
