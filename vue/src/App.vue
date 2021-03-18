@@ -12,32 +12,32 @@
     </transition>
     <div class="nav" id="nav">
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'home' }">
+        <router-link color="blue" class="router-link-active" v-bind:to="{ name: 'home' }">
           <img class="icon" src="/assets/home.png" alt="Home" />
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'logout' }">
+        <router-link color="blue" class="router-link-active" v-bind:to="{ name: 'logout' }">
           <img class="icon" src="/assets/logout.png" alt="Logout" />
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'createTournament' }">
+        <router-link class="router-link-active" v-bind:to="{ name: 'createTournament' }">
+                  <img class="icon" src="/assets/calendar.png" alt="New Tournament" />
         </router-link>
-        <img class="icon" src="/assets/calendar.png" alt="New Tournament" />
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'createMatch' }">
+        <router-link color="blue" class="router-link-active" v-bind:to="{ name: 'createMatch' }">
           <img class="icon" src="/assets/plus.png" alt="New Match" />
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'browseTournament' }">
+        <router-link color="blue" class="router-link-active" v-bind:to="{ name: 'browseTournament' }">
           <img class="icon" src="/assets/bracket.png" alt="Browse" />
         </router-link>
       </button>
       <button class="btn_icon" v-if="$store.state.token != ''">
-        <router-link color="blue" v-bind:to="{ name: 'playerProfile' }">
+        <router-link color="blue" class="router-link-active" v-bind:to="{ name: 'playerProfile' }">
           <img class="icon" src="/assets/user.png" alt="Profile" />
         </router-link>
       </button>
@@ -48,6 +48,11 @@
 export default {};
 </script>
 <style scoped>
+.router-link-active{
+  display:inline-block;
+  width:100%;
+}
+
 /* Global styles */
 .fade-enter,
 .fade-leave-to {
