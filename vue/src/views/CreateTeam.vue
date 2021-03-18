@@ -1,22 +1,27 @@
 
 <template>
-  <div>
+  <div class="main">
     <div class="top"></div>
+    <label for="name-input" class="sr-only">Search users</label>
     <TeamForm
       @on-item-selected="setPlayer"
       @on-item-reset="dropdownSelection = {}"
     />
     {{ dropdownSelection.name }}
+    <label for="name-input" class="sr-only">Team name</label>
     <div class="box">
-      <input v-on:blur="saveName" type="text" placeholder="Team name" required />
+      <input class="inputbox" v-on:blur="saveName" type="text" required />
     </div>
       <div v-for="member in teamList.members" :key="member.id">
         <user-name-card :username="member.username" />
      </div>
         <div class="bottom">
-      Team Name: {{ teamList.name }}
     </div>
-    <button type="button" v-on:click.prevent="commit">Create Team</button> 
+    <div class="create" v-on:click.prevent="commit">
+    <button type="button">
+      <p>Create Team</p>
+    </button> 
+    </div>
   </div>
 </template>
 
@@ -73,12 +78,65 @@ export default {
 </script>
 
 <style>
+.main{
+  padding:8px 8px 8px 8px;
+}
+
+.inputbox{
+  padding: 20px 20px 20px 20px;
+}
+
+.dropdown{
+  z-index:+1;
+}
+
+label{
+    display: flex;
+  flex-direction: column;
+  align-items: center;  
+  width: 100%;
+  max-width: 1200px;
+  padding: 8px 8px 8px 8px;
+  border-radius: 80px;
+  margin: 0 auto;
+  color: #0072CE;
+}
+.create{
+    display:flex;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #0072ce;
+  background-color: #d0f7ff;
+  border-radius: 4px;
+  justify-content:center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top:100px;
+  margin-bottom:100px;
+  border-radius: 8px;
+
+}
+
+.create:hover{
+  background-color: #a9d6ff;
+}
+
+.inputbox{
+    position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border:none;
+  height: 100%;
+}
+
 .box {
-  margin-top: 20px;
-  height: 40px;
+  margin-top: 5px;
+  height: 50px;
   display: flex;
   justify-content: center;
-  background-color: rgb(174, 236, 255);
+  background-color: #eff9ff;
   box-shadow: none;
 }
 

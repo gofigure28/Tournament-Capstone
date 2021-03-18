@@ -1,10 +1,10 @@
 <template>
     <div>
       <div class = "card"  v-on:click.prevent="send">
-          <center>
+          <div class="content">
           <h2>title: {{tournament.name}}</h2>
           <h3>starting time: {{tournament.startTime}}</h3>
-          </center>
+          </div>
      </div>
     </div>
 </template>
@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style scoped>
+.content{
+    margin-left:20px;
+}
+
 .card{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display:flex;

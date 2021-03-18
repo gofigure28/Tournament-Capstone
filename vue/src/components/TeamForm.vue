@@ -6,7 +6,7 @@
             v-model.trim="inputValue" 
             class="dropdown-input" 
             type="text" 
-            placeholder="Find country" />
+             />
     <div v-else @click="resetSelection" class="dropdown-selected">
       <img :src="selectedItem.flag" class="dropdown-item-flag" />
       {{ selectedItem.username }}
@@ -79,7 +79,7 @@ export default {
   width: 100%;
   padding: 10px 16px;
   border: 1px solid transparent;
-  background: #edf2f7;
+  background: #ffffff;
   line-height: 1.5em;
   outline: none;
   border-radius: 8px;

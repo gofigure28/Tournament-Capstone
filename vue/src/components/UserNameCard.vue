@@ -26,7 +26,15 @@ export default {
     background-color: #d0f7ff;
     margin:auto;
 
+}
 
+h3{
+      text-decoration: none;
+  color: #0072ce;
+  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  margin-left:20px;
+  height:35px;
+  font-size:20px;
 }
 
 </style>
