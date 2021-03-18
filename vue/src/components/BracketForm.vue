@@ -32,9 +32,9 @@
 
     <body>
       <header class="hero">
-        <div class="hero-wrap">
-          <center><h1 id="headline">The Winners Cup</h1></center>
-        </div>
+        <div class ="logo">
+      <img class="logo" src="/assets/winnerscup.png" alt="Winner's Cup"/>
+    </div>
       </header>
       &nbsp;
       <div class="t-button-div">
@@ -478,6 +478,8 @@ body {
   margin: 0;
 }
 
+
+
 #headline {
   color: white;
   font-size: 40px;
@@ -775,10 +777,11 @@ button:hover {
 }
 
 .hero {
-  background-image: url("/assets/trophy.png");
+  background-image: url("/assets/winnerscup.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0 0 180px 0;
+  padding: 0 0 0 0;
+  margin: 20px;
   position: relative;
   text-align: center;
   overflow: hidden;
