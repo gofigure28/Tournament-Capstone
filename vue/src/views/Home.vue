@@ -149,25 +149,22 @@ h3{
 }
 
 button {
-  display:inline-block;
-  padding: 30px 20px;
+  display:flexbox;
+  padding: 10px 20px;
   width: 100%;
   margin-bottom: 10px;
   color: #83c7ff;
   background-color: #d0f7ff;
   border-radius: 4px;
-  height:50px;
   font-size: 14px;
-  border-bottom:5px;
   cursor: pointer;
 }
 
 button:hover{
   background-color: #48a4f0;
-}
-
-button:focus{
-  background:linear-gradient(#1a82d8, #48a4f0, #1a82d8 );
+  /*  Making button bigger on hover  */
+  padding: 15px 35px;
+  transform: scale(1.1);
 }
 
 .nav-buttons {
@@ -176,7 +173,7 @@ button:focus{
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: auto;
-  width: 100%;
+  width: 200px;
   margin-bottom:50px;
 }
 
