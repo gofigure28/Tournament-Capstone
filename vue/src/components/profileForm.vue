@@ -100,7 +100,7 @@ export default {};
 }
 
 .profile-info{
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   padding: 20px;
 }
@@ -119,6 +119,7 @@ export default {};
 
 .profile-details {
   display: flex;
+  flex-direction: column;
   padding: 20px;
   line-height: 2em;
 }

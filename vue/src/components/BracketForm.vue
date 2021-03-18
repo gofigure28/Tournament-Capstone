@@ -468,11 +468,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 body {
   font-family: "Istok Web", sans-serif;
   background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg")
-    no-repeat #000;
+    no-repeat;
   background-size: cover;
   min-height: 100%;
   margin: 0;
@@ -772,6 +772,7 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 .t-button-div {
   display: flex;
@@ -782,6 +783,8 @@ button:hover {
   padding: 15px 35px;
   transform: scale(1.1);
 }
+=======
+>>>>>>> 969d2ddfbf89f0a8f7b38eb965dbddc945482b07
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {
