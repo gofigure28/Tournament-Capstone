@@ -35,10 +35,15 @@
         <div class="hero-wrap">
           <center><h1 id="headline">The Winners Cup</h1></center>
         </div>
-      </header>
+      </header>&nbsp;
 
-      <section><button>Click me</button></section>
-
+      <div></div>&nbsp;
+ <button class="t-button">
+        <router-link class="t-routerlink"  color="#0072ce" v-bind:to="{ name: 'createTeam' }">
+          <h4> Add Team To Bracket </h4>
+        </router-link>
+      </button>
+      <div></div>&nbsp;
       <section id="bracket">
         <div class="container">
           <div class="split split-one">
@@ -167,7 +172,6 @@
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
 
-                
                 <li class="team team-bottom">&nbsp;<span>&nbsp;</span></li>
               </ul>
               <ul class="matchup">
@@ -215,6 +219,7 @@
                 </li>
               </ul>
             </div>
+
             <div class="final">
               <i class="fa fa-trophy"></i>
               <div class="round-details">
@@ -451,7 +456,6 @@ export default {
         },
       ];
     },
-
   },
 };
 </script>
@@ -465,6 +469,11 @@ body {
   min-height: 100%;
   margin: 0;
 }
+
+
+
+
+
 
 #headline {
   color: white;
@@ -743,6 +752,30 @@ body {
   font-family: "Istok Web", sans-serif;
   color: #3f915f;
 }
+.t-routerlink{
+  text-decoration: none;
+  color: #0072ce;
+  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+ 
+}
+
+  .t-button {
+  display:flexbox;
+  padding: none;
+  width: 50%;
+  color: #d0f7ff;
+  background-color: #d0f7ff;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor:pointer;
+  
+}
+button:hover{
+  background-color: #48a4f0;
+  padding: 15px 35px;
+  transform: scale(1.1);
+}
+
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {
@@ -849,7 +882,5 @@ body {
     margin: 5px 0 10px;
     font-size: 18px;
   }
-
-  
 }
 </style>
