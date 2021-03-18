@@ -1,14 +1,16 @@
 <template>
   <div class="home">
-    <div class ="logo">
-      <img class="logo" src="/assets/winnerscup.png" alt="Winner's Cup"/>
-    </div>
-    <div id="slider">
+        <!-- <div id="slider">
       <figure>
         <img src="/assets/champ1.jpg"/>
          <img src="/assets/champ2.jpg"/>
           <img src="/assets/champ3.jpg"/>
+          <img src="/assets/champ4.jpg"/>
+          <img src="/assets/champ5.jpg"/>
       </figure>
+    </div> -->
+    <div class ="logo">
+      <img class="logo" src="/assets/winnerscup.png" alt="Winner's Cup"/>
     </div>
 
     <div class="textbox">
@@ -50,6 +52,7 @@ export default {
 #slider{
   overflow:hidden;
   margin: 10px 20px 10px 20px;
+  border-radius:10ps;
 }
 
 #slider figure{
@@ -57,11 +60,11 @@ export default {
   width: 500%;
   margin:0;
   left:0;
-  animation: 15s slider infinite;
+  animation: 20s slider infinite;
 }
 
 #slider figure img{
-  width: 33%;
+  width: 20%;
   float:left;
 }
 
