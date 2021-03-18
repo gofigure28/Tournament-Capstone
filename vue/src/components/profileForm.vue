@@ -100,9 +100,12 @@ export default {};
 }
 
 .profile-info{
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   padding: 20px;
+}
+.profile-info p {
+  display: block;
 }
 
 .player-profile {
