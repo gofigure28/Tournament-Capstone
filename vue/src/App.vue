@@ -74,9 +74,11 @@ export default {};
   background-color: #d0f7ff;
   text-decoration: none;
   background-size: 400% 400%;
-  position: relative;
+  position: fixed;
   z-index:100;
 }
+
+
 .nav {
   display: flex;
   justify-content: center;
@@ -86,7 +88,7 @@ export default {};
   background-color: #b1e9ff;
   text-decoration: none;
   background-size: 500%;
-  position: relative;
+  position: fixed;
 }
 
 .btn {

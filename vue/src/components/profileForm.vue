@@ -123,7 +123,7 @@ export default {};
 .profile-details {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   line-height: 2em;
 }
 .player-quote {

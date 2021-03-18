@@ -65,11 +65,11 @@
                 v-bind:key="game.gameId"
               >
                 <li class="team team-top">
-                  {{ $store.state.teamName }} <span></span>
+                  {{ game.team1Name }} <span></span>
                 </li>
 
-                <li class="team team-bottom" v-on:click.prevent="send">
-                  {{ game.team2Name }}
+                <li class="team team-bottom">
+                  {{ game.team2Name }} <span></span>
                 </li>
               </ul>
 
@@ -79,10 +79,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team3Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team4Name }} <span></span>
                 </li>
               </ul>
@@ -93,10 +93,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team5Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team6Name }} <span></span>
                 </li>
               </ul>
@@ -107,10 +107,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team7Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team8Name }} <span></span>
                 </li>
               </ul>
@@ -121,10 +121,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team9Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team10Name }} <span></span>
                 </li>
               </ul>
@@ -135,10 +135,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team11Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team12Name }} <span></span>
                 </li>
               </ul>
@@ -148,10 +148,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team13Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team14Name }} <span></span>
                 </li>
               </ul>
@@ -162,10 +162,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team15Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team16Name }} <span></span>
                 </li>
               </ul>
@@ -305,10 +305,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team2Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team2Name }} <span></span>
                 </li>
               </ul>
@@ -319,10 +319,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team3Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team4Name }} <span></span>
                 </li>
               </ul>
@@ -333,10 +333,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team5Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team6Name }} <span></span>
                 </li>
               </ul>
@@ -347,10 +347,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team7Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team8Name }} <span></span>
                 </li>
               </ul>
@@ -361,10 +361,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team9Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team10Name }} <span></span>
                 </li>
               </ul>
@@ -375,10 +375,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team11Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team12Name }} <span></span>
                 </li>
               </ul>
@@ -388,10 +388,10 @@
                 v-for="game in games"
                 v-bind:key="game.gameId"
               >
-                <li class="team team-top" v-on:click.prevent="send">
+                <li class="team team-top">
                   {{ game.team13Name }} <span></span>
                 </li>
-                <li class="team team-bottom" v-on:click.prevent="send">
+                <li class="team team-bottom">
                   {{ game.team14Name }} <span></span>
                 </li>
               </ul>
@@ -425,18 +425,12 @@ export default {
       teamList: ["team 1"],
     };
   },
-  props: ["teamName"],
-  methods: {
-    send(){
-      this.$router.push("/createTeam");
-    }
-  },
 
   computed: {
     games: function () {
       return [
         {
-          team1Name: "",
+          team1Name: "test",
           team2Name: "ADD TEAM",
           gameId1: 7,
 
@@ -495,7 +489,9 @@ body {
   width: 50%;
 }
 
-
+.logo {
+  padding-block-start: 1em;
+}
 
 .hero h1 {
   font-family: "Holtwood One SC", serif;
@@ -783,8 +779,6 @@ button:hover {
 }
 
 .hero {
-  background-image: url("/assets/winnerscup.png");
-  background-repeat: no-repeat;
   background-position: center;
   padding: 0 0 0 0;
   margin: 20px;
