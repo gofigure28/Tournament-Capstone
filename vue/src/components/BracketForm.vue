@@ -460,11 +460,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 body {
   font-family: "Istok Web", sans-serif;
   background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg")
-    no-repeat #000;
+    no-repeat;
   background-size: cover;
   min-height: 100%;
   margin: 0;
@@ -770,11 +770,6 @@ body {
   font-size: 14px;
   cursor:pointer;
   
-}
-button:hover{
-  background-color: #48a4f0;
-  padding: 15px 35px;
-  transform: scale(1.1);
 }
 
 

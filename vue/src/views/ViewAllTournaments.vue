@@ -33,7 +33,12 @@ export default {
 
 
 
-<style>
+<style scoped>
+div.tournament-container{
+  height:100%px;
+  background-color:none;
+  opacity:100%;
+}
 h1{
   text-align:center;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
