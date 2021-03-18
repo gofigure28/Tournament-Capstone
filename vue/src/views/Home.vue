@@ -128,6 +128,7 @@ a.routerlink{
   color: #0072ce;
   width:100%;
   height:fit-content;
+  padding:0;
 }
 
 h1{
@@ -150,7 +151,8 @@ h3{
 }
 
 button {
-  display:flexbox;
+  display:flex;
+  width:100%;
   padding: 10px 20px;
   width: 100%;
   margin-bottom: 10px;
