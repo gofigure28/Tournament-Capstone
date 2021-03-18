@@ -2,7 +2,7 @@
 <template>
   <div class="main">
     <div class="top">
-      <h2> Create a team </h2>
+      <h1> Create a team </h1>
     </div>
     <label for="name-input" class="sr-only">Search users</label>
     <TeamForm
@@ -15,11 +15,13 @@
       <input class="inputbox" v-on:blur="saveName" type="text" required />
     </div>
     <div class="head">
-      <h2> Selected Users </h2>
+      <p> Selected Users </p>
     </div>
+    <transition-group name="fade" tag="ul">
       <div v-for="member in teamList.members" :key="member.id">
         <user-name-card :username="member.username" />
      </div>
+    </transition-group>
         <div class="bottom">
     </div>
     <div class="create" v-on:click.prevent="commit">
@@ -83,6 +85,27 @@ export default {
 </script>
 
 <style>
+p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display:flex;
+    
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+h1{
+  text-align:center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style:italic;
+  text-shadow:4px 4px rgb(219, 219, 219);
+}
 .head{
      display:flex;
   padding: 10px 20px;
@@ -95,13 +118,15 @@ export default {
   font-size: 18px;
   cursor: pointer;
   margin-top:100px;
-  margin-bottom:20px;
+  margin-bottom:8px;;
   border-radius: 8px;
 }
 
 h2{
   text-align:center;
   font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style:none;
 }
 
 .main{
@@ -126,6 +151,7 @@ label{
   border-radius: 80px;
   margin: 0 auto;
   color: #0072CE;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .create{
     display:flex;

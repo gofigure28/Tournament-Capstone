@@ -24,16 +24,15 @@ export default {
 .card{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #73d5e9;
-    margin:auto;
-    border-radius:8px;
+    margin:auto; 
+    border-radius:6px;
 
 }
 
 h3{
       text-decoration: none;
   color: #0072ce;
-  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-  margin-left:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   height:35px;
   font-size:20px;
   padding-top:5px;

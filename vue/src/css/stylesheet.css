@@ -58,6 +58,7 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
+  max-height: 100%;
   font: 1.6rem/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
   background:repeating-linear-gradient(30deg, #3A86F7, #23A6D5,  #9EFAF2 , #23D5AB);
   background-size:400% 400%;
@@ -93,6 +94,12 @@ body {
 @media screen and (max-width: 500px){
   .nav{
    background:white; 
+   position:fixed;
+   bottom: 0;
+  }
+  .navTop{
+    position:fixed;
+    top: 0;
   }
 }
 /*END RESETS*/

@@ -101,6 +101,7 @@ export default {};
 }
 .btn_icon:hover {
   background-color: #43a9fc;
+  padding: 0px !important;
 }
 .logo {
   display: flex;
