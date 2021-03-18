@@ -487,16 +487,7 @@ body {
   width: 50%;
 }
 
-.hero {
-  background-image: url("/assets/trophy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0 0 180px 0;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  color: #fcfcfc;
-}
+
 
 .hero h1 {
   font-family: "Holtwood One SC", serif;
@@ -781,6 +772,17 @@ button:hover {
   background-color: #48a4f0;
   padding: 15px 35px;
   transform: scale(1.1);
+}
+
+.hero {
+  background-image: url("/assets/trophy.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 0 180px 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  color: #0072ce;
 }
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
