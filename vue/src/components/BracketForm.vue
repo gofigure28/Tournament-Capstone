@@ -772,7 +772,6 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
-<<<<<<< HEAD
 
 .t-button-div {
   display: flex;
@@ -783,8 +782,6 @@ button:hover {
   padding: 15px 35px;
   transform: scale(1.1);
 }
-=======
->>>>>>> 969d2ddfbf89f0a8f7b38eb965dbddc945482b07
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {
