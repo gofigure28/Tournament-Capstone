@@ -10,9 +10,7 @@
             v-bind:user="user"/>
     </div>
 
-  <div class ="button">
-      <button type="button">Create Team</button> 
-  </div>
+ 
 </div>
 </template>
 

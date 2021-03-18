@@ -35,8 +35,15 @@
         <div class="hero-wrap">
           <center><h1 id="headline">The Winners Cup</h1></center>
         </div>
-      </header>
+      </header>&nbsp;
 
+      <div></div>&nbsp;
+ <button class="t-button">
+        <router-link class="t-routerlink"  color="#0072ce" v-bind:to="{ name: 'createTeam' }">
+          <h4> Add Team To Bracket </h4>
+        </router-link>
+      </button>
+      <div></div>&nbsp;
       <section id="bracket">
         <div class="container">
           <div class="split split-one">
@@ -165,7 +172,6 @@
               <ul class="matchup">
                 <li class="team team-top">&nbsp;<span>&nbsp;</span></li>
 
-                
                 <li class="team team-bottom">&nbsp;<span>&nbsp;</span></li>
               </ul>
               <ul class="matchup">
@@ -213,6 +219,7 @@
                 </li>
               </ul>
             </div>
+
             <div class="final">
               <i class="fa fa-trophy"></i>
               <div class="round-details">
@@ -291,7 +298,7 @@
                 v-bind:key="game.gameId"
               >
                 <li class="team team-top">
-                  {{ game.team1Name }} <span></span>
+                  {{ game.team2Name }} <span></span>
                 </li>
                 <li class="team team-bottom">
                   {{ game.team2Name }} <span></span>
@@ -416,40 +423,39 @@ export default {
       return [
         {
           team1Name: "team 1",
-          team2Name: "team 2",
+          team2Name: "ADD TEAM",
           gameId1: 7,
 
-          team3Name: "team 3",
-          team4Name: "team 4",
+          team3Name: "ADD TEAM",
+          team4Name: "ADD TEAM",
           gameId2: 8,
 
-          team5Name: "team 5",
-          team6Name: "team 6",
+          team5Name: "ADD TEAM",
+          team6Name: "ADD TEAM",
           gameId3: 9,
 
-          team7Name: "team 7",
-          team8Name: "team 8",
+          team7Name: "ADD TEAM",
+          team8Name: "ADD TEAM",
           gameId4: 10,
 
-          team9Name: "team 9",
-          team10Name: "team 10",
+          team9Name: "ADD TEAM",
+          team10Name: "ADD TEAM",
           gameId5: 11,
 
-          team11Name: "team 11",
-          team12Name: "team 12",
+          team11Name: "ADD TEAM",
+          team12Name: "ADD TEAM",
           gameId6: 15,
 
-          team13Name: "team 13",
-          team14Name: "team 14",
+          team13Name: "ADD TEAM",
+          team14Name: "ADD TEAM",
           gameId7: 3,
 
-          team15Name: "team 15",
-          team16Name: "team 16",
+          team15Name: "ADD TEAM",
+          team16Name: "ADD TEAM",
           gameId8: 5,
         },
       ];
     },
-
   },
 };
 </script>
@@ -463,6 +469,11 @@ body {
   min-height: 100%;
   margin: 0;
 }
+
+
+
+
+
 
 #headline {
   color: white;
@@ -646,6 +657,7 @@ body {
 
 .champion li,
 .round li {
+  max-width: fixed;
   background-color: #fff;
   box-shadow: none;
   opacity: 0.45;
@@ -741,6 +753,30 @@ body {
   font-family: "Istok Web", sans-serif;
   color: #3f915f;
 }
+.t-routerlink{
+  text-decoration: none;
+  color: #0072ce;
+  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+ 
+}
+
+  .t-button {
+  display:flexbox;
+  padding: none;
+  width: 50%;
+  color: #d0f7ff;
+  background-color: #d0f7ff;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor:pointer;
+  
+}
+button:hover{
+  background-color: #48a4f0;
+  padding: 15px 35px;
+  transform: scale(1.1);
+}
+
 
 @media screen and (min-width: 981px) and (max-width: 1099px) {
   .container {
@@ -847,7 +883,5 @@ body {
     margin: 5px 0 10px;
     font-size: 18px;
   }
-
-  
 }
 </style>
