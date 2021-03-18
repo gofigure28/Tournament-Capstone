@@ -74,7 +74,7 @@ export default {};
   background-color: #d0f7ff;
   text-decoration: none;
   background-size: 400% 400%;
-  position: fixed;
+  position: relative;
   z-index:100;
 }
 .nav {
@@ -86,7 +86,7 @@ export default {};
   background-color: #b1e9ff;
   text-decoration: none;
   background-size: 500%;
-  position: fixed;
+  position: relative;
 }
 
 .btn {
@@ -119,10 +119,9 @@ export default {};
   margin: 10px;
 }
 #app {
-  margin: 2rem 0 4rem 0;
+  margin: 4rem 0 4rem 0;
   padding: 0;
   background-color: #eff9ff;
-  border-radius: 8px;
   padding-top: 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
