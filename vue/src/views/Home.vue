@@ -123,10 +123,11 @@ export default {
   margin: 0 auto;
 }
 
-.routerlink{
+a.routerlink{
   text-decoration: none;
   color: #0072ce;
-  font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  width:100%;
+  height:fit-content;
 }
 
 h1{
@@ -140,8 +141,8 @@ h1{
 h4{
   margin: auto;
   font-style: italic;
-  display:flex;
-  justify-content:center;;
+  display:inline-block;
+  justify-content:center;
 }
 
 h3{
@@ -149,10 +150,12 @@ h3{
 }
 
 button {
-  display:inline-block;
+  display:flex;
+  justify-content:center;
   padding: 30px 20px;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3px;
   color: #83c7ff;
   background-color: #d0f7ff;
   border-radius: 4px;
