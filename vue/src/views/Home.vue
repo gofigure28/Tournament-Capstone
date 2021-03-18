@@ -1,8 +1,18 @@
 <template>
   <div class="home">
+        <!-- <div id="slider">
+      <figure>
+        <img src="/assets/champ1.jpg"/>
+         <img src="/assets/champ2.jpg"/>
+          <img src="/assets/champ3.jpg"/>
+          <img src="/assets/champ4.jpg"/>
+          <img src="/assets/champ5.jpg"/>
+      </figure>
+    </div> -->
     <div class ="logo">
       <img class="logo" src="/assets/winnerscup.png" alt="Winner's Cup"/>
     </div>
+
     <div class="textbox">
     <center> <h1>Welcome to the Tournament of Champions </h1> </center>
     </div>
@@ -39,6 +49,57 @@ export default {
 </script>
 
 <style scoped>
+#slider{
+  overflow:hidden;
+  margin: 10px 20px 10px 20px;
+  border-radius:10ps;
+}
+
+#slider figure{
+  position:relative;
+  width: 500%;
+  margin:0;
+  left:0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img{
+  width: 20%;
+  float:left;
+}
+
+@keyframes slider{
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100%{
+    left:-400%;
+  }
+  
+
+}
 
 
 .textbox{
@@ -78,8 +139,9 @@ h1{
 }
 h4{
   margin: auto;
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-style: italic;
+  display:flex;
+  justify-content:center;;
 }
 
 h3{
