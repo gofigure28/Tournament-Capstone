@@ -8,17 +8,19 @@
       <header></header>
 
       <main id="main-grid">
-        <h1 id="headline">xXENCOR3Xx</h1>
+        <div class="border">
+        <h1 id="headline">User</h1>
 
         <div class="profile-info">
           <img class="prof-pic" src="/assets/profile.png" alt="Profile Pic" />
           <div class="profile-details">
           <p>
-            <strong>Contact Info</strong> <br />
-            <strong>Name:</strong> Latrell Spenceer<br />
-            <strong>Email:</strong> lspencer@usermail.com<br />
+            <strong>Contact Info:</strong> <br />
+            <strong>Name:</strong> User <br />
+            <strong>Email:</strong> lorem@ipsum.dolor<br />
           </p>
         </div>
+     
         
         </div>
         <div class="player-quote">
@@ -28,6 +30,7 @@
             >
           
         </div>
+         </div>
         
 
         
@@ -76,6 +79,11 @@ export default {};
 </script>
 
 <style>
+.border{
+  background-color:#eff9ff;
+  margin-top:20px;
+  border-radius:10px;
+}
 
 #experience-grid {
   min-height: 100%;
@@ -134,5 +142,7 @@ export default {};
   display:flex;
   flex-direction: column;
   padding: 10px 20px 10px 10px;
+}
+h4{
 }
 </style>

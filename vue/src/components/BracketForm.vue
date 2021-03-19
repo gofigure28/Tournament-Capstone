@@ -65,7 +65,7 @@
                 v-bind:key="game.gameId"
               >
                 <li class="team team-top">
-                  {{ game.team1Name }} <span></span>
+                {{game.teamName}}
                 </li>
 
                 <li class="team team-bottom">
@@ -423,6 +423,7 @@ export default {
   data() {
     return {
       teamList: ["team 1"],
+
     };
   },
 
@@ -430,7 +431,7 @@ export default {
     games: function () {
       return [
         {
-          team1Name: "test",
+          teamName: this.$store.state.teamName,
           team2Name: "ADD TEAM",
           gameId1: 7,
 

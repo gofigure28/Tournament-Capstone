@@ -69,7 +69,6 @@ export default {};
   display: flex;
   justify-content: center;
   width: 100%;
-  border-radius: 8px;
   flex-direction: row;
   background-color: #d0f7ff;
   text-decoration: none;

@@ -93,6 +93,8 @@ export default {
 h1{
   padding: 12px;
   margin: auto;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-shadow:5px 5px 5px  rgb(150, 150, 150);
 }
 
 .text-center .sr-only {

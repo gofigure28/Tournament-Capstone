@@ -102,9 +102,10 @@ p{
 }
 h1{
   text-align:center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style:italic;
-  text-shadow:4px 4px rgb(219, 219, 219);
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-shadow:5px 5px 5px  rgb(150, 150, 150);
+  
 }
 .head{
      display:flex;

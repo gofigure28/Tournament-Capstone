@@ -1,6 +1,7 @@
 <template>
   <div class="tournament-container">
-   <h1> All Tournaments </h1>
+   <h1> All Tournaments
+      </h1>
     <tournament-card v-for="tournament in $store.state.tournaments"
                      v-bind:key="tournament.tournamentID" 
                      v-bind:tournament="tournament"/>
@@ -41,9 +42,9 @@ div.tournament-container{
 }
 h1{
   text-align:center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-style:italic;
-  text-shadow:4px 4px rgb(219, 219, 219);
+  text-shadow:5px 5px 5px  rgb(150, 150, 150);
 }
 </style>
 

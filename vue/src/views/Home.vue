@@ -141,7 +141,6 @@ h1{
 }
 h4{
   margin: auto;
-  font-style: italic;
   display:inline-block;
   justify-content:center;
 }

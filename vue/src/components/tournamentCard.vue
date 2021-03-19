@@ -36,7 +36,7 @@ export default {
 .card{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     display:flex;
-    background-color: #d0f7ff;
+    background-color: #bff4ff;
     border-radius: 6px;
     margin-top: 10px;
     margin-bottom: 10px;
